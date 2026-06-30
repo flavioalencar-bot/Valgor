@@ -1,7 +1,29 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "standalone",
+  images: {
+    dangerouslyAllowSVG: true,
+  },
+  async redirects() {
+    return [
+      {
+        source: "/diagnostico-digital",
+        destination: "/valgor-score",
+        permanent: true,
+      },
+      {
+        source: "/fox-score",
+        destination: "/valgor-score",
+        permanent: true,
+      },
+      {
+        source: "/ancelar-score",
+        destination: "/valgor-score",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

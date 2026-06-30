@@ -1,0 +1,148 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model Project {
+  id           String   @id @default(cuid())
+  title        String
+  slug         String   @unique
+  category     String
+  segment      String   @default("site")
+  description  String?  @db.Text
+  objective    String?  @db.Text
+  result       String?  @db.Text
+  technologies String[] @default([])
+  url          String?
+  thumbnail    String?
+  featured     Boolean  @default(false)
+  published    Boolean  @default(true)
+  sortOrder    Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  company   String
+  quote     String   @db.Text
+  rating    Int      @default(5)
+  photo     String?
+  published Boolean  @default(true)
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Article {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  excerpt     String   @db.Text
+  content     String   @db.Text
+  category    String
+  coverImage  String?
+  published   Boolean  @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model FaqEntry {
+  id        String   @id @default(cuid())
+  pagePath  String
+  question  String
+  answer    String   @db.Text
+  sortOrder Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Banner {
+  id        String   @id @default(cuid())
+  title     String
+  subtitle  String?
+  ctaLabel  String?
+  ctaHref   String?
+  image     String?
+  active    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PageMeta {
+  id          String   @id @default(cuid())
+  path        String   @unique
+  title       String
+  description String   @db.Text
+  updatedAt   DateTime @updatedAt
+}
+
+model AdminSession {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model DigitalDiagnostic {
+  id                 String    @id @default(cuid())
+  companyName        String    @map("company_name")
+  responsibleName    String    @map("responsible_name")
+  email              String
+  whatsapp           String
+  city               String
+  segment            String?
+  websiteUrl         String?   @map("website_url")
+  instagramUrl       String?   @map("instagram_url")
+  googleBusinessUrl  String?   @map("google_business_url")
+  status             String    @default("pending")
+  progress           Int       @default(0)
+  processingStep     String?   @map("processing_step")
+  product            String    @default("fox-score")
+  score              Int?
+  classification     String?
+  performanceScore   Int?      @map("performance_score")
+  seoScore           Int?      @map("seo_score")
+  securityScore      Int?      @map("security_score")
+  responsiveScore    Int?      @map("responsive_score")
+  conversionScore    Int?      @map("conversion_score")
+  localPresenceScore Int?      @map("local_presence_score")
+  socialScore        Int?      @map("social_score")
+  uxScore            Int?      @map("ux_score")
+  authorityScore     Int?      @map("authority_score")
+  strengthsJson      Json      @default("[]") @map("strengths_json")
+  weaknessesJson     Json      @default("[]") @map("weaknesses_json")
+  recommendationsJson Json     @default("[]") @map("recommendations_json")
+  rawDataJson        Json?     @map("raw_data_json")
+  foxScoreJson       Json?     @map("fox_score_json")
+  commercialMessage  String?   @db.Text @map("commercial_message")
+  ctaLabel           String?   @map("cta_label")
+  errorMessage       String?   @db.Text @map("error_message")
+  consentAccepted    Boolean   @default(false) @map("consent_accepted")
+  consentAcceptedAt  DateTime? @map("consent_accepted_at")
+  ipAddress          String?   @map("ip_address")
+  contacted          Boolean   @default(false)
+  adminNotes         String?   @db.Text @map("admin_notes")
+  createdAt          DateTime  @default(now()) @map("created_at")
+  updatedAt          DateTime  @updatedAt @map("updated_at")
+  completedAt        DateTime? @map("completed_at")
+
+  @@map("digital_diagnostics")
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 40" role="img" aria-label="FOX IT">
+  <defs>
+    <linearGradient id="fox-mark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d6125c"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0, 2)">
+    <rect width="36" height="36" rx="10" fill="url(#fox-mark)"/>
+    <path fill="#fff" d="M11 12.5 8.5 7 13 9.5l2.5-3 2.5 3 4.5-2.5-2.5 5.5H11Z"/>
+    <path fill="#fff" d="M13.5 15.5c0-2.5 1.8-4.5 4.5-4.5s4.5 2 4.5 4.5v9.5h-9V15.5Z"/>
+    <path fill="#d6125c" d="M15.8 17.2a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Zm4.4 0a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>
+    <path fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" d="M16.5 22.5c.8.6 1.7.9 2.5.9s1.7-.3 2.5-.9"/>
+  </g>
+  <text x="46" y="28" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#111827" letter-spacing="-0.6">FOX</text>
+  <text x="102" y="28" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#d6125c" letter-spacing="0.8">IT</text>
+</svg>
