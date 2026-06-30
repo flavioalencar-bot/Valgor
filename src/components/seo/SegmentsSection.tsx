@@ -19,7 +19,7 @@ const segmentVisuals = [
   { icon: IconChart, accent: "from-emerald-500 to-teal-600" },
   { icon: IconBuilding, accent: "from-indigo-500 to-violet-600" },
   { icon: IconLayout, accent: "from-amber-500 to-orange-500" },
-  { icon: IconRocket, accent: "from-fox-500 to-rose-500" },
+  { icon: IconRocket, accent: "from-valgor-500 to-rose-500" },
   { icon: IconGrid, accent: "from-cyan-500 to-blue-600" },
 ] as const;
 
@@ -43,7 +43,7 @@ export function SegmentsSection() {
               <Link
                 key={seg.title}
                 href="/criacao-de-sites"
-                className="shadow-card group rounded-2xl border border-border bg-surface-card p-5 transition hover:-translate-y-0.5 hover:border-fox-500/25 hover:shadow-lg dark:shadow-none"
+                className="shadow-card group rounded-2xl border border-border bg-surface-card p-5 transition hover:-translate-y-0.5 hover:border-valgor-500/25 hover:shadow-lg dark:shadow-none"
               >
                 <div
                   className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${accent} shadow-sm transition group-hover:scale-110`}

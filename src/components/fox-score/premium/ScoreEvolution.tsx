@@ -18,7 +18,7 @@ export function ScoreEvolution({ ctx }: Props) {
       <CardHeader>
         <CardTitle className="text-lg">Como sua nota pode evoluir</CardTitle>
         <p className="text-sm text-muted">
-          Projeção até <strong className="text-fox-600 dark:text-fox-400">{target} pontos</strong>
+          Projeção até <strong className="text-valgor-600 dark:text-valgor-400">{target} pontos</strong>
         </p>
       </CardHeader>
       <CardContent>
@@ -29,7 +29,7 @@ export function ScoreEvolution({ ctx }: Props) {
           </div>
           <div className="h-3 overflow-hidden rounded-full bg-muted-bg">
             <motion.div
-              className="h-full rounded-full bg-gradient-to-r from-fox-500 to-emerald-500"
+              className="h-full rounded-full bg-gradient-to-r from-valgor-500 to-emerald-500"
               initial={{ width: `${ctx.score}%` }}
               animate={{ width: `${target}%` }}
               transition={{ duration: 0.7, ease: "easeOut" }}
@@ -47,7 +47,7 @@ export function ScoreEvolution({ ctx }: Props) {
                     <p className="text-xs text-muted">{step.description}</p>
                   )}
                 </div>
-                <span className="font-[family-name:var(--font-poppins)] text-2xl font-bold text-fox-600 dark:text-fox-400">
+                <span className="font-[family-name:var(--font-poppins)] text-2xl font-bold text-valgor-600 dark:text-valgor-400">
                   {step.score}
                 </span>
               </div>

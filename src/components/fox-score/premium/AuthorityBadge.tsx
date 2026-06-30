@@ -13,7 +13,7 @@ export function AuthorityBadge({ diagnosedAt }: Props) {
   return (
     <div className="flex flex-wrap items-center justify-center gap-6 rounded-2xl border border-border bg-surface-elevated/60 px-6 py-4 text-center text-xs text-muted sm:gap-10">
       <div className="flex items-center gap-2">
-        <Shield className="h-4 w-4 text-fox-500" />
+        <Shield className="h-4 w-4 text-valgor-500" />
         <span>
           Diagnóstico realizado <strong className="text-foreground">{date}</strong>
         </span>

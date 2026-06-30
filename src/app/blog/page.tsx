@@ -18,7 +18,7 @@ export default async function BlogPage() {
   return (
     <>
       <PageBanner
-        accent="fox"
+        accent="valgor"
         title="Blog VALGOR"
         lead="Conteúdo estratégico para atrair tráfego orgânico e educar empresas sobre crescimento digital."
       />
@@ -28,13 +28,13 @@ export default async function BlogPage() {
             {articles.map((article) => (
               <article
                 key={article.slug}
-                className="rounded-2xl border border-border bg-surface-card p-6 shadow-sm transition hover:border-fox-500/30 dark:shadow-none"
+                className="rounded-2xl border border-border bg-surface-card p-6 shadow-sm transition hover:border-valgor-500/30 dark:shadow-none"
               >
-                <p className="text-xs font-semibold uppercase tracking-widest text-fox-500">
+                <p className="text-xs font-semibold uppercase tracking-widest text-valgor-500">
                   {article.category}
                 </p>
                 <h2 className="mt-2 font-[family-name:var(--font-poppins)] text-xl font-bold text-foreground">
-                  <Link href={`/blog/${article.slug}`} className="hover:text-fox-500">
+                  <Link href={`/blog/${article.slug}`} className="hover:text-valgor-500">
                     {article.title}
                   </Link>
                 </h2>

@@ -60,7 +60,7 @@ export function TestimonialsCarousel() {
 
           <div className="shadow-card rounded-3xl border border-border bg-surface-card p-8 text-center sm:p-10">
 
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-fox-500">
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-valgor-500">
 
               <Quote className="h-6 w-6 text-white" />
 
@@ -70,7 +70,7 @@ export function TestimonialsCarousel() {
 
               {Array.from({ length: current.rating }).map((_, i) => (
 
-                <Star key={i} className="h-4 w-4 fill-fox-500 text-fox-500" />
+                <Star key={i} className="h-4 w-4 fill-valgor-500 text-valgor-500" />
 
               ))}
 
@@ -132,7 +132,7 @@ export function TestimonialsCarousel() {
 
                     "h-2 rounded-full transition-all",
 
-                    i === index ? "w-6 bg-fox-500" : "w-2 bg-border",
+                    i === index ? "w-6 bg-valgor-500" : "w-2 bg-border",
 
                   )}
 

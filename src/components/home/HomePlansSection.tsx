@@ -60,7 +60,7 @@ export function HomePlansSection() {
 
                   plan.featured
 
-                    ? "border-fox-500/50 ring-2 ring-fox-500/20 lg:scale-[1.02]"
+                    ? "border-valgor-500/50 ring-2 ring-valgor-500/20 lg:scale-[1.02]"
 
                     : "border-border",
 
@@ -70,7 +70,7 @@ export function HomePlansSection() {
 
                 {plan.featured && (
 
-                  <span className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-fox-500 px-3 py-1 text-xs font-semibold text-white">
+                  <span className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-valgor-500 px-3 py-1 text-xs font-semibold text-white">
 
                     <Star className="h-3 w-3 fill-white" />
 
@@ -84,7 +84,7 @@ export function HomePlansSection() {
 
                 <header>
 
-                  <p className="text-sm font-bold uppercase tracking-widest text-fox-500">
+                  <p className="text-sm font-bold uppercase tracking-widest text-valgor-500">
 
                     Plano {displayName}
 
@@ -120,7 +120,7 @@ export function HomePlansSection() {
 
                     <li key={feature} className="flex gap-2.5 text-sm text-muted">
 
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-fox-500" strokeWidth={2.5} />
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-valgor-500" strokeWidth={2.5} />
 
                       <span>{feature}</span>
 
@@ -166,7 +166,7 @@ export function HomePlansSection() {
 
           Prefere proposta detalhada?{" "}
 
-          <a href={QUOTE_PATH} className="text-fox-500 hover:underline">
+          <a href={QUOTE_PATH} className="text-valgor-500 hover:underline">
 
             Solicitar orçamento personalizado
 

@@ -35,7 +35,7 @@ export default function EmpresaPage() {
 
             <div className="space-y-6 leading-relaxed text-muted">
               <p>
-                A <strong className="text-fox-500 dark:text-fox-400">{site.brand}</strong> é uma
+                A <strong className="text-valgor-500 dark:text-valgor-400">{site.brand}</strong> é uma
                 empresa de tecnologia com sede em{" "}
                 <strong className="text-foreground">{site.city}</strong>, especializada em sites,
                 lojas virtuais, portais e marketing digital.

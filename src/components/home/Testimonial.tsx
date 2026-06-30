@@ -7,15 +7,15 @@ export function Testimonial() {
       <Container>
         <div className="shadow-card relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-border bg-surface-card p-8 text-center sm:p-12">
           <div
-            className="pointer-events-none absolute -left-10 -top-10 h-32 w-32 rounded-full bg-fox-500/10 blur-2xl"
+            className="pointer-events-none absolute -left-10 -top-10 h-32 w-32 rounded-full bg-valgor-500/10 blur-2xl"
             aria-hidden
           />
           <div
-            className="pointer-events-none absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-fox-500/8 blur-2xl"
+            className="pointer-events-none absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-valgor-500/8 blur-2xl"
             aria-hidden
           />
           <div className="relative">
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-fox-500 shadow-md">
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-valgor-500 shadow-md">
               <Quote className="h-6 w-6 text-white" />
             </div>
             <blockquote className="mt-6 text-xl font-medium leading-relaxed text-foreground sm:text-2xl">

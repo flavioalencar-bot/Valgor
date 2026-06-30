@@ -40,19 +40,19 @@ export function PlansSection({
               className={cn(
                 "relative flex flex-col rounded-3xl border bg-surface-card p-6 shadow-sm sm:p-8",
                 plan.featured
-                  ? "border-fox-500/50 ring-2 ring-fox-500/20 lg:scale-[1.02]"
+                  ? "border-valgor-500/50 ring-2 ring-valgor-500/20 lg:scale-[1.02]"
                   : "border-border",
               )}
             >
               {plan.featured && (
-                <span className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-fox-500 px-3 py-1 text-xs font-semibold text-white">
+                <span className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-valgor-500 px-3 py-1 text-xs font-semibold text-white">
                   <Star className="h-3 w-3 fill-white" />
                   Mais popular
                 </span>
               )}
 
               <header>
-                <p className="text-sm font-bold uppercase tracking-widest text-fox-500">
+                <p className="text-sm font-bold uppercase tracking-widest text-valgor-500">
                   {plan.name}
                 </p>
                 <div className="mt-4 flex flex-wrap items-baseline gap-1">
@@ -79,7 +79,7 @@ export function PlansSection({
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex gap-2.5 text-sm text-muted">
                     <Check
-                      className="mt-0.5 h-4 w-4 shrink-0 text-fox-500"
+                      className="mt-0.5 h-4 w-4 shrink-0 text-valgor-500"
                       strokeWidth={2.5}
                     />
                     <span>{feature}</span>
@@ -105,7 +105,7 @@ export function PlansSection({
           <ul className="mt-5 space-y-3">
             {notes.map((note) => (
               <li key={note} className="flex gap-2.5 text-sm leading-relaxed text-muted">
-                <Check className="mt-0.5 h-4 w-4 shrink-0 text-fox-500" strokeWidth={2.5} />
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-valgor-500" strokeWidth={2.5} />
                 <span>{note}</span>
               </li>
             ))}
@@ -115,7 +115,7 @@ export function PlansSection({
           )}
           <p className={cn("text-xs text-subtle", footnote ? "mt-3" : "mt-6")}>
             Dúvidas?{" "}
-            <a href={site.whatsapp} className="font-medium text-fox-500 hover:underline">
+            <a href={site.whatsapp} className="font-medium text-valgor-500 hover:underline">
               Fale conosco no WhatsApp
             </a>
             .

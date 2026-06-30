@@ -56,9 +56,9 @@ export function BenefitsSection() {
 
               <StaggerItem key={item.title}>
 
-                <div className="h-full rounded-2xl border border-border bg-surface-card p-5 shadow-sm transition hover:border-fox-500/30 dark:shadow-none">
+                <div className="h-full rounded-2xl border border-border bg-surface-card p-5 shadow-sm transition hover:border-valgor-500/30 dark:shadow-none">
 
-                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-accent-soft text-fox-500">
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-accent-soft text-valgor-500">
 
                     <Icon className="h-5 w-5" strokeWidth={1.75} />
 

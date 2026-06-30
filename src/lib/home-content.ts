@@ -9,7 +9,7 @@ export const homeHero = {
   secondaryCta: "Solicitar orçamento",
 } as const;
 
-export const homeFoxScoreLead = {
+export const homeValgorScoreLead = {
   title: "Descubra a nota digital da sua empresa",
   subtitle:
     "Em poucos segundos, receba uma análise gratuita com nota, oportunidades de melhoria e estimativa de potencial comercial.",

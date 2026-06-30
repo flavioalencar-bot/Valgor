@@ -19,9 +19,9 @@ export function Footer() {
     >
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 sm:py-16 lg:px-8">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16">
-          <div className="min-w-0 shrink-0 lg:max-w-[17rem] xl:max-w-xs">
-            <Link href="/" className="inline-block">
-              <Logo className="mb-5" />
+          <div className="min-w-0 shrink-0 lg:max-w-sm xl:max-w-md">
+            <Link href="/" className="inline-flex items-center">
+              <Logo placement="footer" className="mb-5" />
             </Link>
             <p className="text-sm leading-relaxed text-muted">
               {site.tagline}. Soluções digitais em{" "}
@@ -30,7 +30,7 @@ export function Footer() {
               Paulista.
             </p>
             <div className="mt-5 flex items-start gap-2 text-sm text-muted">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-fox-500 dark:text-fox-400" />
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-valgor-500 dark:text-valgor-400" />
               <span>
                 {site.city}, {site.state}
                 <br />
@@ -41,7 +41,7 @@ export function Footer() {
 
           <div className="grid min-w-0 flex-1 grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 xl:gap-12">
             <div className="min-w-0">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-fox-500 dark:text-fox-400">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-valgor-500 dark:text-valgor-400">
                 Navegação
               </p>
               <ul className="space-y-2">
@@ -59,7 +59,7 @@ export function Footer() {
             </div>
 
             <div className="min-w-0">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-fox-500 dark:text-fox-400">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-valgor-500 dark:text-valgor-400">
                 Contato
               </p>
               <ul className="space-y-2 text-sm text-muted">
@@ -78,7 +78,7 @@ export function Footer() {
             </div>
 
             <div className="min-w-0 sm:col-span-2 lg:col-span-1">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-fox-500 dark:text-fox-400">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-valgor-500 dark:text-valgor-400">
                 Vamos conversar?
               </p>
               <p className="mb-4 text-sm leading-relaxed text-muted">

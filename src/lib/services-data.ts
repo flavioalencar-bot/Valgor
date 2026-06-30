@@ -37,7 +37,7 @@ export const servicePages: Record<string, ServicePageData> = {
     description:
       "Empresa de criação de sites: site profissional, institucional, responsivo e landing page. Agência web em SJRP com SEO, CMS e integração WhatsApp.",
     lead: "Site empresarial, moderno e otimizado para Google — desenvolvido por agência web em São José do Rio Preto.",
-    accent: "fox",
+    accent: "valgor",
     seoExtras: ["segments", "plans", "tech", "faq"],
     plansKey: "site",
     schemaService: {
@@ -73,7 +73,7 @@ export const servicePages: Record<string, ServicePageData> = {
     description:
       "Criação de loja virtual e e-commerce completo: checkout, painel administrativo, integração API e site para comércio em SJRP.",
     lead: "E-commerce profissional para vender online com site rápido, seguro e integração WhatsApp.",
-    accent: "fox",
+    accent: "valgor",
     seoExtras: ["plans"],
     plansKey: "ecommerce",
     features: [
@@ -176,7 +176,7 @@ export const servicePages: Record<string, ServicePageData> = {
     description:
       "Sistema web e portal web de classificados com painel administrativo para monetizar anúncios na sua região.",
     lead: "Seu portal de anúncios com aplicação web completa.",
-    accent: "fox",
+    accent: "valgor",
     features: [
       "Portal web de classificados",
       "Painel administrativo",
@@ -216,7 +216,7 @@ export const servicePages: Record<string, ServicePageData> = {
     description:
       "Web design, UX, UI e identidade visual para site moderno, site empresarial e landing page de alta conversão.",
     lead: "Design que comunica marca e converte visitantes em clientes.",
-    accent: "fox",
+    accent: "valgor",
     features: [
       "Web design e identidade visual",
       "UX/UI e prototipação",
@@ -256,7 +256,7 @@ export const servicePages: Record<string, ServicePageData> = {
     description:
       "Landing pages focadas em conversão para campanhas, Google Ads e Meta Ads. Capture leads qualificados com páginas rápidas e persuasivas.",
     lead: "Páginas enxutas, rápidas e feitas para transformar cliques em clientes.",
-    accent: "fox",
+    accent: "valgor",
     seoExtras: ["faq"],
     schemaService: {
       name: "Landing Pages de Alta Conversão",

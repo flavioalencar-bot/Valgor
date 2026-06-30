@@ -1,11 +1,11 @@
 type Variant = "site" | "ecommerce" | "portal" | "design" | "marketing" | "imoveis";
 
 const styles: Record<Variant, { from: string; to: string; bars: number }> = {
-  site: { from: "from-slate-500/20", to: "to-fox-500/25", bars: 4 },
-  ecommerce: { from: "from-violet-500/20", to: "to-fox-500/20", bars: 3 },
+  site: { from: "from-slate-500/20", to: "to-valgor-500/25", bars: 4 },
+  ecommerce: { from: "from-violet-500/20", to: "to-valgor-500/20", bars: 3 },
   portal: { from: "from-cyan-500/15", to: "to-blue-500/20", bars: 5 },
   design: { from: "from-rose-500/20", to: "to-amber-500/15", bars: 2 },
-  marketing: { from: "from-emerald-500/15", to: "to-fox-500/20", bars: 4 },
+  marketing: { from: "from-emerald-500/15", to: "to-valgor-500/20", bars: 4 },
   imoveis: { from: "from-amber-500/20", to: "to-orange-500/15", bars: 3 },
 };
 
@@ -36,7 +36,7 @@ export function PortfolioMock({ variant }: Props) {
             />
           ))}
         </div>
-        <div className="mt-4 h-8 w-24 rounded-lg bg-fox-500/90" />
+        <div className="mt-4 h-8 w-24 rounded-lg bg-valgor-500/90" />
       </div>
     </div>
   );

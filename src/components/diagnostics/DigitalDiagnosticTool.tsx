@@ -94,7 +94,7 @@ function ScoreRing({ score }: { score: number }) {
         <circle cx="60" cy="60" r={radius} fill="none" stroke="currentColor" strokeWidth="10" className="text-muted-bg" />
         <motion.circle
           cx="60" cy="60" r={radius} fill="none" stroke="currentColor" strokeWidth="10" strokeLinecap="round"
-          className="text-fox-500" strokeDasharray={circumference}
+          className="text-valgor-500" strokeDasharray={circumference}
           initial={{ strokeDashoffset: circumference }} animate={{ strokeDashoffset: offset }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         />
@@ -208,11 +208,11 @@ export function DigitalDiagnosticTool() {
   }
 
   return (
-    <div className="relative min-h-[80vh] overflow-hidden bg-gradient-to-b from-fox-500/5 via-surface to-surface-elevated py-16 sm:py-24">
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-fox-500/10 via-transparent to-transparent" />
+    <div className="relative min-h-[80vh] overflow-hidden bg-gradient-to-b from-valgor-500/5 via-surface to-surface-elevated py-16 sm:py-24">
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-valgor-500/10 via-transparent to-transparent" />
       <div className="relative mx-auto max-w-3xl px-5">
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-fox-500/20 bg-fox-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-fox-600 dark:text-fox-400">
+          <div className="inline-flex items-center gap-2 rounded-full border border-valgor-500/20 bg-valgor-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-valgor-600 dark:text-valgor-400">
             <Sparkles className="h-3.5 w-3.5" />
             Análise real · Fase 2
           </div>
@@ -227,7 +227,7 @@ export function DigitalDiagnosticTool() {
         <AnimatePresence mode="wait">
           {phase === "form" && (
             <motion.div key="form" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="mt-10">
-              <Card className="border-fox-500/10 shadow-lg">
+              <Card className="border-valgor-500/10 shadow-lg">
                 <CardHeader>
                   <CardTitle className="font-[family-name:var(--font-poppins)] text-xl">Dados da empresa</CardTitle>
                 </CardHeader>
@@ -299,11 +299,11 @@ export function DigitalDiagnosticTool() {
 
           {phase === "loading" && (
             <motion.div key="loading" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-16 space-y-6 text-center">
-              <Loader2 className="mx-auto h-10 w-10 animate-spin text-fox-500" />
+              <Loader2 className="mx-auto h-10 w-10 animate-spin text-valgor-500" />
               <p className="font-[family-name:var(--font-poppins)] text-lg font-semibold">Analisando sua presença digital...</p>
               <p className="text-sm text-muted">Performance · SEO · Segurança · Conversão</p>
               <div className="mx-auto h-2 max-w-md overflow-hidden rounded-full bg-muted-bg">
-                <motion.div className="h-full bg-fox-500" animate={{ width: `${Math.max(progress, 8)}%` }} transition={{ duration: 0.4 }} />
+                <motion.div className="h-full bg-valgor-500" animate={{ width: `${Math.max(progress, 8)}%` }} transition={{ duration: 0.4 }} />
               </div>
               <p className="text-xs text-subtle">{progress}% concluído</p>
             </motion.div>
@@ -311,17 +311,17 @@ export function DigitalDiagnosticTool() {
 
           {phase === "result" && result && (
             <motion.div key="result" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="mt-10 space-y-6">
-              <Card className="overflow-hidden border-fox-500/20 shadow-xl">
-                <CardHeader className="border-b border-border-subtle bg-gradient-to-r from-fox-500/10 to-transparent text-center">
+              <Card className="overflow-hidden border-valgor-500/20 shadow-xl">
+                <CardHeader className="border-b border-border-subtle bg-gradient-to-r from-valgor-500/10 to-transparent text-center">
                   <CardTitle className="font-[family-name:var(--font-poppins)] text-xl">Resultado do Diagnóstico Digital</CardTitle>
                   <p className="mt-4 text-lg text-muted">Sua empresa recebeu nota <strong className="text-foreground">{result.score}/100</strong></p>
-                  <p className="mt-2 text-sm font-semibold text-fox-600 dark:text-fox-400">Classificação: {result.classification}</p>
+                  <p className="mt-2 text-sm font-semibold text-valgor-600 dark:text-valgor-400">Classificação: {result.classification}</p>
                 </CardHeader>
                 <CardContent className="space-y-8 pt-8">
                   <ScoreRing score={result.score} />
                   <p className="text-center text-sm leading-relaxed text-muted">{result.classificationMessage}</p>
                   <p className="rounded-xl border border-border bg-muted-bg/50 px-4 py-3 text-center text-sm text-muted">
-                    <BarChart3 className="mb-1 inline h-4 w-4 text-fox-500" /> {result.comparativeNote}
+                    <BarChart3 className="mb-1 inline h-4 w-4 text-valgor-500" /> {result.comparativeNote}
                   </p>
                 </CardContent>
               </Card>
@@ -386,11 +386,11 @@ export function DigitalDiagnosticTool() {
                 </Card>
               )}
 
-              <Card className="border-fox-500/20 bg-fox-500/5">
+              <Card className="border-valgor-500/20 bg-valgor-500/5">
                 <CardContent className="space-y-4 pt-6">
                   <p className="text-sm leading-relaxed text-muted">{result.commercialMessage}</p>
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-                    className="inline-flex rounded-xl bg-fox-500 px-6 py-3 text-sm font-semibold text-white hover:bg-fox-600">
+                    className="inline-flex rounded-xl bg-valgor-500 px-6 py-3 text-sm font-semibold text-white hover:bg-valgor-600">
                     {result.ctaLabel}
                   </a>
                 </CardContent>

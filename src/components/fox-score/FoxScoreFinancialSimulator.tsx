@@ -150,7 +150,7 @@ export function FoxScoreFinancialSimulator({
           {[
             { label: "Faturamento atual", value: brl(calc.currentRevenue), accent: false },
             { label: "Faturamento potencial", value: brl(calc.potentialRevenue), accent: "emerald" },
-            { label: "Retorno estimado", value: `+${brl(calc.gain)}/mês`, accent: "fox" },
+            { label: "Retorno estimado", value: `+${brl(calc.gain)}/mês`, accent: "valgor" },
           ].map((item, i) => (
             <motion.div
               key={item.label}
@@ -159,7 +159,7 @@ export function FoxScoreFinancialSimulator({
               transition={{ delay: i * 0.05, duration: 0.25 }}
               className={cn(
                 "rounded-xl border p-4",
-                item.accent === "fox" && "border-fox-500/30 bg-fox-500/10",
+                item.accent === "valgor" && "border-valgor-500/30 bg-valgor-500/10",
                 item.accent === "emerald" && "border-emerald-500/30 bg-emerald-500/10",
                 !item.accent && "border-border bg-surface-elevated",
               )}
@@ -169,7 +169,7 @@ export function FoxScoreFinancialSimulator({
                 className={cn(
                   "mt-2 font-[family-name:var(--font-poppins)] text-xl font-bold sm:text-2xl",
                   item.accent === "emerald" && "text-emerald-600 dark:text-emerald-400",
-                  item.accent === "fox" && "text-fox-600 dark:text-fox-400",
+                  item.accent === "valgor" && "text-valgor-600 dark:text-valgor-400",
                 )}
               >
                 {item.value}

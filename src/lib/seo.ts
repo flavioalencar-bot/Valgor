@@ -68,7 +68,7 @@ export function localBusinessJsonLd() {
     description:
       "Empresa de criação de sites, desenvolvimento web, loja virtual, SEO e marketing digital em São José do Rio Preto.",
     url: site.url,
-    logo: `${site.url}/img/logo.png`,
+    logo: `${site.url}/img/valgor-logo.png`,
     image: `${site.url}/img/visuals/hero-visual.png`,
     telephone: `+${site.phone}`,
     email: site.email,

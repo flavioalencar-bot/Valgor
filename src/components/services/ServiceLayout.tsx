@@ -49,8 +49,8 @@ export function ServiceLayout({
                   {highlights.map((item, i) => {
                     const Icon = highlightIcons[i % highlightIcons.length];
                     const Card = (
-                      <div className="rounded-2xl border border-border bg-surface-card p-5 shadow-sm transition hover:border-fox-500/25 dark:shadow-none">
-                        <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-accent-soft text-fox-500">
+                      <div className="rounded-2xl border border-border bg-surface-card p-5 shadow-sm transition hover:border-valgor-500/25 dark:shadow-none">
+                        <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-accent-soft text-valgor-500">
                           <Icon className="h-5 w-5" strokeWidth={1.75} />
                         </div>
                         <h3 className="font-semibold text-foreground">{item.title}</h3>
@@ -77,7 +77,7 @@ export function ServiceLayout({
               <ul className="mt-5 space-y-3">
                 {features.map((f) => (
                   <li key={f} className="flex gap-2 text-sm text-muted">
-                    <span className="text-fox-500 dark:text-fox-400">→</span>
+                    <span className="text-valgor-500 dark:text-valgor-400">→</span>
                     {f}
                   </li>
                 ))}

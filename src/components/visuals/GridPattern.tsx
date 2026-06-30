@@ -9,7 +9,7 @@ export function GridPattern({ className = "" }: Props) {
       aria-hidden
     >
       <defs>
-        <pattern id="fox-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+        <pattern id="valgor-grid" width="32" height="32" patternUnits="userSpaceOnUse">
           <path
             d="M32 0H0V32"
             fill="none"
@@ -19,7 +19,7 @@ export function GridPattern({ className = "" }: Props) {
           />
         </pattern>
       </defs>
-      <rect width="100%" height="100%" fill="url(#fox-grid)" />
+      <rect width="100%" height="100%" fill="url(#valgor-grid)" />
     </svg>
   );
 }

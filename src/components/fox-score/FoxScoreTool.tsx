@@ -205,14 +205,14 @@ export function FoxScoreTool() {
   const activeStepIdx = FOX_SCORE_STEPS.findIndex((s) => s.id === processingStep);
 
   return (
-    <div className="relative min-h-[80vh] overflow-hidden bg-gradient-to-b from-fox-500/5 via-surface to-surface-elevated py-16 sm:py-24">
+    <div className="relative min-h-[80vh] overflow-hidden bg-gradient-to-b from-valgor-500/5 via-surface to-surface-elevated py-16 sm:py-24">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-fox-500/10 via-transparent to-transparent"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-valgor-500/10 via-transparent to-transparent"
       />
       <div className="relative mx-auto max-w-4xl px-5">
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-fox-500/20 bg-fox-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-fox-600 dark:text-fox-400">
+          <div className="inline-flex items-center gap-2 rounded-full border border-valgor-500/20 bg-valgor-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-valgor-600 dark:text-valgor-400">
             <Sparkles className="h-3.5 w-3.5" />
             Valgor Score · v1.0
           </div>
@@ -239,7 +239,7 @@ export function FoxScoreTool() {
               exit={{ opacity: 0 }}
               className="mt-10"
             >
-              <Card className="border-fox-500/10 shadow-lg">
+              <Card className="border-valgor-500/10 shadow-lg">
                 <CardHeader>
                   <CardTitle className="font-[family-name:var(--font-poppins)] text-xl">
                     Dados da empresa
@@ -370,10 +370,10 @@ export function FoxScoreTool() {
 
           {phase === "loading" && (
             <motion.div key="loading" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-12">
-              <Card className="mx-auto max-w-lg border-fox-500/20 shadow-xl">
+              <Card className="mx-auto max-w-lg border-valgor-500/20 shadow-xl">
                 <CardContent className="space-y-6 pt-8">
                   <div className="text-center">
-                    <Loader2 className="mx-auto h-10 w-10 animate-spin text-fox-500" />
+                    <Loader2 className="mx-auto h-10 w-10 animate-spin text-valgor-500" />
                     <p className="mt-4 font-[family-name:var(--font-poppins)] text-lg font-semibold">
                       Estamos analisando mais de 150 critérios da sua presença digital...
                     </p>
@@ -398,14 +398,14 @@ export function FoxScoreTool() {
                           className={cn(
                             "flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors",
                             done && "text-emerald-600 dark:text-emerald-400",
-                            active && !done && "bg-fox-500/10 font-medium",
+                            active && !done && "bg-valgor-500/10 font-medium",
                             !done && !active && "text-muted",
                           )}
                         >
                           {done ? (
                             <Check className="h-4 w-4 shrink-0" />
                           ) : active ? (
-                            <Loader2 className="h-4 w-4 shrink-0 animate-spin text-fox-500" />
+                            <Loader2 className="h-4 w-4 shrink-0 animate-spin text-valgor-500" />
                           ) : (
                             <span className="h-4 w-4 shrink-0 rounded-full border border-border" />
                           )}
@@ -417,7 +417,7 @@ export function FoxScoreTool() {
 
                   <div className="h-2 overflow-hidden rounded-full bg-muted-bg">
                     <motion.div
-                      className="h-full bg-fox-500"
+                      className="h-full bg-valgor-500"
                       animate={{ width: `${Math.max(progress, 5)}%` }}
                       transition={{ duration: 0.4 }}
                     />

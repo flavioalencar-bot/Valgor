@@ -39,7 +39,7 @@ export function AdminLoginForm() {
       {error && <p className="text-sm text-red-600">{error}</p>}
       <button
         type="submit"
-        className="w-full rounded-lg bg-fox-500 py-2 text-sm font-semibold text-white hover:bg-fox-600"
+        className="w-full rounded-lg bg-valgor-500 py-2 text-sm font-semibold text-white hover:bg-valgor-600"
       >
         Entrar
       </button>

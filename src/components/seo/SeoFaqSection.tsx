@@ -45,11 +45,11 @@ export function SeoFaqSection({
         <dl className="mx-auto max-w-3xl space-y-4">
           {faqs.map((faq, i) => {
             const borders = [
-              "border-l-fox-500",
-              "border-l-fox-400",
+              "border-l-valgor-500",
+              "border-l-valgor-400",
               "border-l-brand-grey",
-              "border-l-fox-600",
-              "border-l-fox-500",
+              "border-l-valgor-600",
+              "border-l-valgor-500",
             ];
             return (
               <div

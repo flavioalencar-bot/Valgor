@@ -3,15 +3,15 @@ services:
     image: postgres:16-alpine
     restart: unless-stopped
     environment:
-      POSTGRES_USER: fox
-      POSTGRES_PASSWORD: foxsecret
-      POSTGRES_DB: foxsolution
+      POSTGRES_USER: valgor
+      POSTGRES_PASSWORD: valgorsecret
+      POSTGRES_DB: valgor
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U fox -d foxsolution"]
+      test: ["CMD-SHELL", "pg_isready -U valgor -d valgor"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -32,7 +32,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      DATABASE_URL: postgresql://fox:foxsecret@db:5432/foxsolution
+      DATABASE_URL: postgresql://valgor:valgorsecret@db:5432/valgor
       REDIS_URL: redis://redis:6379
       NEXT_PUBLIC_SITE_URL: http://localhost:3000
     volumes:
@@ -52,7 +52,7 @@ services:
     restart: unless-stopped
     command: npm run diagnostics:worker
     environment:
-      DATABASE_URL: postgresql://fox:foxsecret@db:5432/foxsolution
+      DATABASE_URL: postgresql://valgor:valgorsecret@db:5432/valgor
       REDIS_URL: redis://redis:6379
     volumes:
       - .:/app

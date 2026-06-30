@@ -22,7 +22,7 @@ export default async function AdminDiagnosticDetailPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-surface-elevated pt-24 pb-16">
       <div className="mx-auto max-w-2xl px-5">
-        <Link href="/admin/diagnosticos" className="text-sm text-fox-500 hover:underline">← Diagnósticos</Link>
+        <Link href="/admin/diagnosticos" className="text-sm text-valgor-500 hover:underline">← Diagnósticos</Link>
         <h1 className="mt-4 font-[family-name:var(--font-poppins)] text-2xl font-bold">{row.companyName}</h1>
         <p className="mt-1 text-sm text-muted">
           {new Date(row.createdAt).toLocaleString("pt-BR")} · Status: {row.status}

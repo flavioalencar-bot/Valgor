@@ -9,7 +9,7 @@ export function CriteriaSummary() {
 
   return (
     <div className="border-b border-border-subtle bg-surface-elevated/80 px-4 py-4 sm:px-6">
-      <p className="text-center text-xs font-semibold uppercase tracking-widest text-fox-600 dark:text-fox-400">
+      <p className="text-center text-xs font-semibold uppercase tracking-widest text-valgor-600 dark:text-valgor-400">
         {FOX_SCORE_CRITERIA_COUNT} critérios analisados
       </p>
       <ul className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-2">

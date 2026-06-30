@@ -30,7 +30,7 @@ export function ServicesBento() {
               <Link
                 key={service.href}
                 href={service.href}
-                className={`group relative overflow-hidden rounded-3xl border border-border bg-surface-card p-6 shadow-sm transition duration-300 hover:border-fox-500/30 hover:bg-surface-card-hover hover:shadow-md dark:shadow-none dark:hover:shadow-none ${
+                className={`group relative overflow-hidden rounded-3xl border border-border bg-surface-card p-6 shadow-sm transition duration-300 hover:border-valgor-500/30 hover:bg-surface-card-hover hover:shadow-md dark:shadow-none dark:hover:shadow-none ${
                   large ? "lg:col-span-2 lg:row-span-1 lg:p-8" : ""
                 }`}
               >
@@ -38,17 +38,17 @@ export function ServicesBento() {
                   className={`pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br ${service.accent} opacity-15 blur-2xl transition group-hover:opacity-30 dark:opacity-20 dark:group-hover:opacity-40`}
                 />
                 <div className="relative">
-                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-muted-bg text-fox-500 ring-1 ring-border dark:text-fox-400">
+                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-muted-bg text-valgor-500 ring-1 ring-border dark:text-valgor-400">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-fox-500 dark:text-fox-400">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-valgor-500 dark:text-valgor-400">
                     {service.title}
                   </p>
                   <h3 className="mt-1 text-xl font-bold text-foreground">{service.subtitle}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted">
                     {service.description}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-fox-600 opacity-0 transition group-hover:opacity-100 dark:text-fox-400">
+                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-valgor-600 opacity-0 transition group-hover:opacity-100 dark:text-valgor-400">
                     Saiba mais <ArrowUpRight className="h-4 w-4" />
                   </span>
                 </div>

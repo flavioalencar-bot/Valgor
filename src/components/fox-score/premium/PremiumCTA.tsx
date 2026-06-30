@@ -30,7 +30,7 @@ export function PremiumCTA({ companyName, score, targetScore, city, whatsapp, on
         rel="noopener noreferrer"
         animate={{ scale: [1, 1.02, 1] }}
         transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-        className="inline-flex w-full max-w-lg items-center justify-center rounded-2xl bg-fox-500 px-8 py-4 text-base font-bold text-white shadow-lg shadow-fox-500/30 transition hover:bg-fox-600 sm:w-auto sm:min-w-[340px]"
+        className="inline-flex w-full max-w-lg items-center justify-center rounded-2xl bg-valgor-500 px-8 py-4 text-base font-bold text-white shadow-lg shadow-valgor-500/30 transition hover:bg-valgor-600 sm:w-auto sm:min-w-[340px]"
       >
         {FOX_SCORE_CTA_LABEL}
       </motion.a>

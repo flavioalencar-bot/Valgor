@@ -53,7 +53,7 @@ export default async function AdminDiagnosticsPage({ searchParams }: Props) {
   return (
     <div className="min-h-screen bg-surface-elevated pt-24 pb-16">
       <div className="mx-auto max-w-6xl px-5">
-        <Link href="/admin" className="text-sm text-fox-500 hover:underline">← Dashboard</Link>
+        <Link href="/admin" className="text-sm text-valgor-500 hover:underline">← Dashboard</Link>
         <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
           <h1 className="font-[family-name:var(--font-poppins)] text-2xl font-bold">Diagnósticos digitais</h1>
           <ExportCsvButton />

@@ -16,7 +16,7 @@ export function ScoreImpactCard({ ctx }: Props) {
 
   return (
     <div className="border-t border-border-subtle bg-gradient-to-b from-amber-500/8 to-red-500/5 px-6 py-8 text-center sm:px-10">
-      <div className="mx-auto mb-4 h-px max-w-xs bg-gradient-to-r from-transparent via-fox-500/40 to-transparent" />
+      <div className="mx-auto mb-4 h-px max-w-xs bg-gradient-to-r from-transparent via-valgor-500/40 to-transparent" />
       <p className="text-sm font-medium text-muted">{impact.tierHeadline}</p>
       <p className="mt-4 font-[family-name:var(--font-poppins)] text-lg font-semibold capitalize text-foreground sm:text-xl">
         {ctx.classification}
@@ -28,7 +28,7 @@ export function ScoreImpactCard({ ctx }: Props) {
           Sua empresa pode estar deixando de gerar aproximadamente{" "}
           <strong className="text-foreground">{impact.lostContacts} novos contatos por mês</strong>, o que
           representa um potencial de até{" "}
-          <strong className="text-fox-600 dark:text-fox-400">{brl(impact.monthlyOpportunity)}/mês</strong> em
+          <strong className="text-valgor-600 dark:text-valgor-400">{brl(impact.monthlyOpportunity)}/mês</strong> em
           novas oportunidades.
         </p>
       </div>

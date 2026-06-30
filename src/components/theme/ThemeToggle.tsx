@@ -46,7 +46,7 @@ export function ThemeToggle({ className }: { className?: string }) {
         className={cn(
           "flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-all",
           isDark
-            ? "bg-fox-500/20 text-fox-400 ring-1 ring-fox-500/40"
+            ? "bg-valgor-500/20 text-valgor-400 ring-1 ring-valgor-500/40"
             : "text-muted hover:bg-muted-bg hover:text-foreground",
         )}
         aria-pressed={isDark}

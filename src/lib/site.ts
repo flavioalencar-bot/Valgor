@@ -16,9 +16,9 @@ export const site = {
   whatsapp:
     "https://api.whatsapp.com/send?phone=5517991093195&text=Olá! Quero falar com a VALGOR.",
   social: {
-    facebook: "https://www.facebook.com/empresafoxsolution",
+    facebook: "https://www.facebook.com/valgor",
     linkedin: "https://www.linkedin.com/company/3221342",
-    twitter: "https://twitter.com/fox_solution",
+    twitter: "https://twitter.com/valgor",
   },
 } as const;
 

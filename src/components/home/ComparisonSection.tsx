@@ -27,14 +27,14 @@ export function ComparisonSection() {
             </div>
           </Reveal>
           <Reveal delay={0.08}>
-            <div className="h-full rounded-2xl border-2 border-fox-500/40 bg-surface-card p-6 shadow-sm sm:p-8 dark:shadow-none">
+            <div className="h-full rounded-2xl border-2 border-valgor-500/40 bg-surface-card p-6 shadow-sm sm:p-8 dark:shadow-none">
               <h3 className="font-[family-name:var(--font-poppins)] text-xl font-bold text-foreground">
                 {homeComparison.with.title}
               </h3>
               <ul className="mt-6 space-y-3">
                 {homeComparison.with.items.map((item) => (
                   <li key={item} className="flex items-center gap-3 text-sm text-foreground">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-fox-500/10 text-fox-500">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-valgor-500/10 text-valgor-500">
                       <Check className="h-3.5 w-3.5" strokeWidth={2.5} />
                     </span>
                     {item}

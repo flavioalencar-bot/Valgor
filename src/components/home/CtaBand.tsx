@@ -16,7 +16,7 @@ export function CtaBand({ compact = false }: Props) {
     >
       <Container>
         <div className="shadow-card overflow-hidden rounded-2xl border border-border bg-surface-card lg:grid lg:grid-cols-5">
-          <div className="relative overflow-hidden bg-gradient-to-br from-fox-500 via-fox-600 to-graphite px-8 py-10 text-white lg:col-span-2 lg:px-10 lg:py-12">
+          <div className="relative overflow-hidden bg-gradient-to-br from-valgor-500 via-valgor-600 to-graphite px-8 py-10 text-white lg:col-span-2 lg:px-10 lg:py-12">
             <div
               className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-white/10 blur-2xl"
               aria-hidden

@@ -24,7 +24,7 @@ export function ClientsStrip() {
               key={label}
               className="flex items-center gap-3 rounded-xl border border-border-subtle bg-surface-card px-4 py-3.5 shadow-sm dark:shadow-none"
             >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-fox-500">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-valgor-500">
                 <Icon className="h-4 w-4" strokeWidth={1.75} />
               </span>
               <p className="text-sm font-medium leading-snug text-muted">{label}</p>

@@ -18,7 +18,7 @@ export function TrustStrip() {
               key={label}
               className="flex items-center justify-center gap-2.5 text-center sm:justify-start lg:justify-center"
             >
-              <Icon className="h-4 w-4 shrink-0 text-fox-500" strokeWidth={1.75} />
+              <Icon className="h-4 w-4 shrink-0 text-valgor-500" strokeWidth={1.75} />
               <span className="text-sm font-medium text-muted">{label}</span>
             </div>
           ))}

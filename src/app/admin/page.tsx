@@ -36,7 +36,7 @@ export default async function AdminDashboard() {
               className="hidden"
             />
           </form>
-          <Link href="/" className="text-sm text-fox-500 hover:underline">
+          <Link href="/" className="text-sm text-valgor-500 hover:underline">
             Ver site
           </Link>
         </div>
@@ -52,7 +52,7 @@ export default async function AdminDashboard() {
             <Link
               key={item.label}
               href={item.href}
-              className="rounded-2xl border border-border bg-surface-card p-6 shadow-sm hover:border-fox-500/30"
+              className="rounded-2xl border border-border bg-surface-card p-6 shadow-sm hover:border-valgor-500/30"
             >
               <p className="text-sm text-muted">{item.label}</p>
               <p className="mt-1 text-3xl font-bold text-foreground">{item.value}</p>

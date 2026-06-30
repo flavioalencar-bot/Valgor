@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296 52" fill="none" role="img" aria-label="VALGOR">
+  <path d="M0 6 13.5 50 19.5 50 33 6 27 6 16.5 42.5 6 6H0Z" fill="#1a1a1a"/>
+  <path d="M40 50 51 6 62 50H56.5L53.25 38H48.75L45.5 50H40ZM51.5 14.5 54 29.5H48L51.5 14.5Z" fill="#1a1a1a"/>
+  <path d="M72 6H78V44.5C78 47.5 80 49.5 83 49.5H104V50H72V6Z" fill="#1a1a1a"/>
+  <path d="M116 30C116 17.85 125.85 8 138 8 150.15 8 160 17.85 160 30 160 42.15 150.15 52 138 52 127.5 52 119.5 46.5 116 39V30ZM138 14C129.15 14 122 21.15 122 30 122 38.85 129.15 46 138 46 146.85 46 154 38.85 154 30 154 21.15 146.85 14 138 14Z" fill="#1a1a1a"/>
+  <path d="M138 27H154V33H138V27Z" fill="#1a1a1a"/>
+  <path d="M192 3 A23 23 0 0 1 215 26" fill="none" stroke="#ff6600" stroke-width="5" stroke-linecap="butt"/>
+  <path d="M215 26 A23 23 0 0 1 192 49" fill="none" stroke="#1a1a1a" stroke-width="5" stroke-linecap="butt"/>
+  <path d="M192 49 A23 23 0 0 1 169 26" fill="none" stroke="#1a1a1a" stroke-width="5" stroke-linecap="butt"/>
+  <path d="M169 26 A23 23 0 0 1 192 3" fill="none" stroke="#1a1a1a" stroke-width="5" stroke-linecap="butt"/>
+  <circle cx="192" cy="26" r="16" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+  <circle cx="192" cy="26" r="10" fill="none" stroke="#1a1a1a" stroke-width="1.75"/>
+  <rect x="191" y="4" width="2" height="44" fill="#ffffff"/>
+  <rect x="170" y="25" width="44" height="2" fill="#ffffff"/>
+  <circle cx="192" cy="26" r="5.5" fill="#ff6600"/>
+  <path d="M228 6H234V50H228V6ZM228 6H246C254.5 6 261 12.5 261 21 261 29.5 254.5 36 246 36H234V30H246C251 30 255 26 255 21 255 16 251 12 246 12H234V6ZM244 36L260 50H252L238 36H244Z" fill="#1a1a1a"/>
+</svg>

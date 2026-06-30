@@ -16,7 +16,7 @@ export function CookieConsent() {
 
   function accept() {
     localStorage.setItem(CONSENT_KEY, "accepted");
-    window.dispatchEvent(new Event("fox-cookies-accepted"));
+    window.dispatchEvent(new Event("valgor-cookies-accepted"));
     setVisible(false);
   }
 
@@ -36,7 +36,7 @@ export function CookieConsent() {
       <p className="text-sm leading-relaxed text-muted">
         Utilizamos cookies para analytics, melhorar sua experiência e medir campanhas. Ao
         continuar, você concorda com nossa{" "}
-        <Link href="/empresa-de-criacao-de-site" className="text-fox-500 hover:underline">
+        <Link href="/empresa-de-criacao-de-site" className="text-valgor-500 hover:underline">
           política de privacidade
         </Link>
         . Conforme LGPD, você pode recusar cookies não essenciais.
@@ -45,7 +45,7 @@ export function CookieConsent() {
         <button
           type="button"
           onClick={accept}
-          className="rounded-lg bg-fox-500 px-4 py-2 text-sm font-semibold text-white hover:bg-fox-600"
+          className="rounded-lg bg-valgor-500 px-4 py-2 text-sm font-semibold text-white hover:bg-valgor-600"
         >
           Aceitar
         </button>

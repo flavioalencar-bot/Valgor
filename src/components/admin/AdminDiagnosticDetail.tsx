@@ -37,7 +37,7 @@ export function AdminNotesForm({
         className="mt-2 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm"
         placeholder="Anotações do time comercial..."
       />
-      <button type="button" onClick={save} className="mt-3 rounded-lg bg-fox-500 px-4 py-2 text-sm font-semibold text-white">
+      <button type="button" onClick={save} className="mt-3 rounded-lg bg-valgor-500 px-4 py-2 text-sm font-semibold text-white">
         {saved ? "Salvo!" : "Salvar observações"}
       </button>
     </div>

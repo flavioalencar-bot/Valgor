@@ -12,7 +12,7 @@ export function DifferentialsSection() {
           {homeDifferentials.items.map((item) => (
             <StaggerItem key={item}>
               <div className="flex h-full items-start gap-3 rounded-2xl border border-border bg-surface-card p-5 shadow-sm dark:shadow-none">
-                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-fox-500/15 text-fox-500">
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-valgor-500/15 text-valgor-500">
                   <Check className="h-3.5 w-3.5" strokeWidth={2.5} />
                 </span>
                 <p className="text-sm font-medium leading-relaxed text-foreground">{item}</p>

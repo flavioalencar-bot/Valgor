@@ -35,7 +35,7 @@ export function PortfolioView({ projects }: Props) {
   return (
     <>
       <PageBanner
-        accent="fox"
+        accent="valgor"
         title="Portfólio"
         lead="Sites, lojas virtuais e plataformas desenvolvidos para gerar resultados reais."
       />
@@ -50,7 +50,7 @@ export function PortfolioView({ projects }: Props) {
                 className={cn(
                   "rounded-full px-4 py-1.5 text-sm font-medium transition",
                   filter === cat
-                    ? "bg-fox-500 text-white"
+                    ? "bg-valgor-500 text-white"
                     : "border border-border bg-surface-card text-muted hover:text-foreground",
                 )}
               >
@@ -65,13 +65,13 @@ export function PortfolioView({ projects }: Props) {
               return (
                 <article
                   key={item.id}
-                  className="flex flex-col overflow-hidden rounded-3xl border border-border bg-surface-card shadow-sm transition hover:border-fox-500/30 dark:shadow-none"
+                  className="flex flex-col overflow-hidden rounded-3xl border border-border bg-surface-card shadow-sm transition hover:border-valgor-500/30 dark:shadow-none"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden border-b border-border-subtle">
                     <PortfolioMock variant={variant} />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <p className="text-xs font-semibold uppercase tracking-widest text-fox-500">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-valgor-500">
                       {item.category}
                     </p>
                     <h2 className="mt-2 font-[family-name:var(--font-poppins)] text-lg font-bold text-foreground">
@@ -87,7 +87,7 @@ export function PortfolioView({ projects }: Props) {
                       </p>
                     )}
                     {item.result && (
-                      <p className="mt-1 text-sm font-semibold text-fox-600 dark:text-fox-400">
+                      <p className="mt-1 text-sm font-semibold text-valgor-600 dark:text-valgor-400">
                         {item.result}
                       </p>
                     )}
@@ -108,7 +108,7 @@ export function PortfolioView({ projects }: Props) {
                         href={item.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-fox-500 hover:underline"
+                        className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-valgor-500 hover:underline"
                       >
                         Ver projeto <ExternalLink className="h-3.5 w-3.5" />
                       </a>

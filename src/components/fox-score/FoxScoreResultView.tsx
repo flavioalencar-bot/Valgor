@@ -66,16 +66,16 @@ export function FoxScoreResultView({
   return (
     <div className="mt-10 space-y-6 pb-8">
       <motion.div {...fadeUp(0)}>
-        <Card className="overflow-hidden border-fox-500/25 shadow-xl">
-          <CardHeader className="border-b border-border-subtle bg-gradient-to-br from-fox-500/15 via-fox-500/5 to-transparent pb-0 text-center">
-            <p className="text-xs font-semibold uppercase tracking-widest text-fox-600 dark:text-fox-400">
+        <Card className="overflow-hidden border-valgor-500/25 shadow-xl">
+          <CardHeader className="border-b border-border-subtle bg-gradient-to-br from-valgor-500/15 via-valgor-500/5 to-transparent pb-0 text-center">
+            <p className="text-xs font-semibold uppercase tracking-widest text-valgor-600 dark:text-valgor-400">
               Valgor Score · Consultoria digital automatizada
             </p>
             <CardTitle className="mt-2 font-[family-name:var(--font-poppins)] text-2xl sm:text-3xl">
               {vm.companyName}
             </CardTitle>
             <div className="mt-8 flex flex-col items-center gap-3 pb-6">
-              <div className="w-full max-w-[280px] border-y border-fox-500/20 py-6">
+              <div className="w-full max-w-[280px] border-y border-valgor-500/20 py-6">
                 <AnimatedScoreRing score={vm.score} duration={1100} />
               </div>
               <Stars count={fs.starRating} />
@@ -137,7 +137,7 @@ export function FoxScoreResultView({
               </div>
               <div className="h-3 overflow-hidden rounded-full bg-muted-bg">
                 <motion.div
-                  className="h-full rounded-full bg-fox-500"
+                  className="h-full rounded-full bg-valgor-500"
                   initial={{ width: `${vm.score}%` }}
                   animate={{ width: `${targetScore}%` }}
                   transition={{ duration: 0.65 }}
@@ -152,7 +152,7 @@ export function FoxScoreResultView({
                 className="flex flex-col gap-1 rounded-xl border border-border bg-surface-elevated p-4 sm:flex-row sm:items-center sm:justify-between"
               >
                 <div>
-                  <p className="text-xs font-semibold uppercase text-fox-600 dark:text-fox-400">
+                  <p className="text-xs font-semibold uppercase text-valgor-600 dark:text-valgor-400">
                     Fase {phase.phase}
                   </p>
                   <p className="font-medium">{phase.title}</p>
@@ -226,7 +226,7 @@ export function FoxScoreResultView({
       </motion.div>
 
       <motion.div {...fadeUp(0.46)}>
-        <Card className="border-fox-500/20 bg-gradient-to-br from-fox-500/10 to-transparent">
+        <Card className="border-valgor-500/20 bg-gradient-to-br from-valgor-500/10 to-transparent">
           <CardHeader>
             <CardTitle className="text-lg">Proposta comercial sugerida</CardTitle>
           </CardHeader>
@@ -234,7 +234,7 @@ export function FoxScoreResultView({
             <ul className="space-y-2">
               {vm.suggestedActions.slice(0, 4).map((title) => (
                 <li key={title} className="flex items-center gap-2 text-sm font-medium">
-                  <ArrowRight className="h-4 w-4 text-fox-500" />
+                  <ArrowRight className="h-4 w-4 text-valgor-500" />
                   {title}
                 </li>
               ))}

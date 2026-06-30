@@ -11,14 +11,14 @@ const techColors: Record<string, string> = {
   PostgreSQL: "from-blue-500 to-sky-600",
   Cloud: "from-violet-500 to-purple-600",
   SSL: "from-teal-500 to-emerald-600",
-  LGPD: "from-fox-500 to-rose-500",
+  LGPD: "from-valgor-500 to-rose-500",
 };
 
 export function TechStackSection() {
   return (
     <Section className="relative overflow-hidden bg-gradient-to-b from-surface-elevated to-surface">
       <div
-        className="pointer-events-none absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-fox-500/40 to-transparent"
+        className="pointer-events-none absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-valgor-500/40 to-transparent"
         aria-hidden
       />
       <Container>

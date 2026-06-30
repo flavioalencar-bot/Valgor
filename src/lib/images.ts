@@ -1,7 +1,8 @@
 /** Assets de marca e visuais novos (sem imagens legadas). */
 export const images = {
-  logo: "/img/logo.png",
-  logoDark: "/img/logo-dark.png",
+  logo: "/img/valgor-logo.png",
+  logoDark: "/img/valgor-logo.png",
+  mark: "/img/valgor-mark.png",
   whatsapp: "/img/icon_whats.png",
   visuals: {
     hero: "/img/visuals/hero-visual.png",
@@ -32,4 +33,4 @@ export const portfolioItems: {
   { variant: "marketing", cat: "Marketing", name: "Campanha digital" },
 ];
 
-export type BannerAccent = "fox" | "violet" | "cyan" | "amber" | "emerald";
+export type BannerAccent = "valgor" | "violet" | "cyan" | "amber" | "emerald";

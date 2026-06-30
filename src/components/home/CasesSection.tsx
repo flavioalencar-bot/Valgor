@@ -56,7 +56,7 @@ export function CasesSection() {
 
                 <div className="flex flex-1 flex-col p-6">
 
-                  <p className="text-xs font-semibold uppercase tracking-widest text-fox-500">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-valgor-500">
 
                     {item.segment}
 
@@ -110,7 +110,7 @@ export function CasesSection() {
 
                     href={item.href}
 
-                    className="mt-5 text-sm font-semibold text-fox-500 hover:underline"
+                    className="mt-5 text-sm font-semibold text-valgor-500 hover:underline"
 
                   >
 

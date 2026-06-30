@@ -4,7 +4,7 @@ import { Container, Section } from "@/components/ui/Section";
 
 import { Reveal } from "@/components/motion/Reveal";
 
-import { FOX_SCORE_PATH } from "@/lib/conversion";
+import { VALGOR_SCORE_PATH } from "@/lib/conversion";
 
 import { homeFinalCta } from "@/lib/home-content";
 
@@ -24,7 +24,7 @@ export function FinalCtaSection() {
 
         <Reveal>
 
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-fox-500 via-fox-600 to-graphite px-8 py-12 text-center text-white sm:px-12 sm:py-16">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-valgor-500 via-valgor-600 to-graphite px-8 py-12 text-center text-white sm:px-12 sm:py-16">
 
             <div
 
@@ -58,9 +58,9 @@ export function FinalCtaSection() {
 
               <Button
 
-                href={FOX_SCORE_PATH}
+                href={VALGOR_SCORE_PATH}
 
-                className="w-full !rounded-xl !bg-white !px-8 !py-3.5 !text-base !font-bold !text-fox-600 hover:!bg-white/95 sm:w-auto"
+                className="w-full !rounded-xl !bg-white !px-8 !py-3.5 !text-base !font-bold !text-valgor-600 hover:!bg-white/95 sm:w-auto"
 
               >
 

@@ -129,8 +129,11 @@ export const pageKeywords: Record<string, string[]> = {
   "/criacao-de-sites": [
     ...keywordClusters.core,
     ...keywordClusters.verticals,
+    ...keywordClusters.business,
     "landing page de alta conversão",
     "site otimizado para google",
+    "contratar desenvolvedor",
+    "integração WhatsApp",
     ...keywordClusters.local,
   ],
   "/criacao-de-loja-virtual": [
@@ -196,12 +199,6 @@ export const pageKeywords: Record<string, string[]> = {
     "agência web",
     "melhor empresa de sites",
     "consultoria em tecnologia",
-    ...keywordClusters.local,
-  ],
-  "/criacao-de-sites-fox-solution": [
-    ...keywordClusters.business,
-    "contratar desenvolvedor",
-    "integração WhatsApp",
     ...keywordClusters.local,
   ],
 };

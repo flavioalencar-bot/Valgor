@@ -63,10 +63,18 @@
   --color-graphite: #1a1a1a;
   --color-brand-orange: #ff6600;
   --color-brand-grey: #6b6b6b;
+  /* Paleta VALGOR — laranja #ff6600 */
+  --color-valgor-300: #ffb380;
+  --color-valgor-400: #ff8533;
+  --color-valgor-500: #ff6600;
+  --color-valgor-600: #cc5200;
+  --color-valgor-700: #a84300;
+  /* Alias fox-* (mesmos valores) — evita quebra se o cache CSS estiver desatualizado */
   --color-fox-300: #ffb380;
   --color-fox-400: #ff8533;
   --color-fox-500: #ff6600;
   --color-fox-600: #cc5200;
+  --color-fox-700: #a84300;
   --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }

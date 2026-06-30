@@ -1,50 +1,45 @@
-# Valgor — Site institucional
+# VALGOR — Site institucional
 
 **TypeScript · Next.js 16 · Tailwind CSS 4 · Prisma · PostgreSQL · Docker**
 
-Layout totalmente novo — dark mode, tipografia Plus Jakarta Sans, identidade Fox (magenta).
+Site da VALGOR (Alencar & Filho) — São José do Rio Preto.
 
-## Rodar com Docker (recomendado)
-
-```bash
-cd foxsolution-app
-docker compose up --build
-```
-
-- Site: http://localhost:3000  
-- Postgres: `localhost:5432`
-
-Na primeira subida, as migrations rodam automaticamente.
-
-## Rodar sem Docker
+## Desenvolvimento local
 
 ```bash
 cp .env.example .env
-npm install
-# Suba um Postgres local ou use docker compose up db -d
-npm run db:push
-npm run dev
+docker compose up --build
+# ou: npm install && npm run db:push && npm run dev
 ```
+
+Site: http://localhost:3000
+
+## Deploy no VPS (KingHost + Docker)
+
+Requisitos: Ubuntu com Docker, portas 80/443 abertas.
+
+```bash
+git clone https://github.com/flavioalencar-bot/Valgor.git valgor
+cd valgor
+cp .env.production.example .env
+nano .env   # senhas e NEXT_PUBLIC_SITE_URL
+chmod +x scripts/deploy-vps.sh
+./scripts/deploy-vps.sh
+```
+
+DNS (`valgor.com.br` e `www`) → IP do VPS. HTTPS via Caddy (automático).
 
 ## Estrutura
 
 ```
-src/
-  app/              # Rotas (mesmas URLs do site PHP)
-  components/       # UI e seções
-  lib/              # SEO, Prisma, dados
-  data/             # Navegação
-prisma/             # Schema (contato, portfólio)
-docker-compose.yml
+src/app/          # Rotas Next.js
+src/components/   # UI
+src/lib/          # Dados, SEO, Prisma
+prisma/           # Banco de dados
+docker-compose.prod.yml
+Caddyfile
 ```
 
-## Deploy produção
+## Redirects
 
-```bash
-docker build -t foxsolution-web .
-# + Postgres gerenciado + variáveis DATABASE_URL e NEXT_PUBLIC_SITE_URL
-```
-
-## Legado PHP
-
-O site antigo na raiz do repositório permanece até o cutover com redirects 301.
+URLs antigas (`/fox-score`, `/diagnostico-digital`, etc.) redirecionam para as rotas atuais.

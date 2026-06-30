@@ -10,14 +10,14 @@ export function LocalSeoSection() {
       />
       <Container className="relative">
         <div className="shadow-card mx-auto max-w-3xl rounded-3xl border border-border bg-surface-card p-8 text-center sm:p-12">
-          <p className="inline-flex rounded-full bg-fox-500 px-4 py-1 text-xs font-bold uppercase tracking-widest text-white">
+          <p className="inline-flex rounded-full bg-valgor-500 px-4 py-1 text-xs font-bold uppercase tracking-widest text-white">
             Agência web em {site.city}
           </p>
           <h2 className="mt-5 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Empresa de criação de sites no Noroeste Paulista
           </h2>
           <p className="mt-5 leading-relaxed text-muted">
-            Somos <strong className="text-fox-500">agência web</strong> e{" "}
+            Somos <strong className="text-valgor-500">agência web</strong> e{" "}
             <strong className="text-foreground">empresa de criação de sites</strong> em{" "}
             {site.city}. Fazemos desenvolvimento de sites, loja virtual, SEO, Google Ads e
             hospedagem — com integração WhatsApp, CMS e Google Meu Negócio.

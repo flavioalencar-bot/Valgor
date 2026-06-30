@@ -71,10 +71,10 @@ export function CommercialOpportunity({
           initial={{ scale: 0.96, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.28 }}
-          className="rounded-2xl border border-fox-500/30 bg-fox-500/10 py-4 text-center"
+          className="rounded-2xl border border-valgor-500/30 bg-valgor-500/10 py-4 text-center"
         >
           <p className="text-xs font-semibold uppercase tracking-wide text-subtle">Potencial</p>
-          <p className="font-[family-name:var(--font-poppins)] text-3xl font-bold text-fox-600 dark:text-fox-400">
+          <p className="font-[family-name:var(--font-poppins)] text-3xl font-bold text-valgor-600 dark:text-valgor-400">
             +{brl(diff)}
           </p>
         </motion.div>

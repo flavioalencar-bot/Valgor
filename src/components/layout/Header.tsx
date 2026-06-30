@@ -42,8 +42,8 @@ export function Header() {
       style={{ backgroundColor: "var(--header-bg)" }}
     >
       <div className="mx-auto grid h-16 max-w-7xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 px-4 sm:gap-3 sm:px-6 lg:px-8">
-        <Link href="/" className="relative z-10 shrink-0">
-          <Logo priority />
+        <Link href="/" className="relative z-10 flex shrink-0 items-center">
+          <Logo placement="header" />
         </Link>
 
         <nav
@@ -100,7 +100,7 @@ export function Header() {
           <Button
             href={VALGOR_SCORE_PATH}
             variant="secondary"
-            className="!rounded-lg !border-fox-500/40 !bg-fox-500/10 !px-2.5 !py-2 !text-xs !font-semibold !text-fox-600 hover:!bg-fox-500/20 xl:!px-3 xl:!text-[13px] dark:!text-fox-400"
+            className="!rounded-lg !border-valgor-500/40 !bg-valgor-500/10 !px-2.5 !py-2 !text-xs !font-semibold !text-valgor-600 hover:!bg-valgor-500/20 xl:!px-3 xl:!text-[13px] dark:!text-valgor-400"
           >
             <Sparkles className="h-3.5 w-3.5 shrink-0 xl:mr-1" />
             <span className="hidden xl:inline">{VALGOR_SCORE_HEADER_LABEL}</span>
@@ -163,7 +163,7 @@ export function Header() {
               <Button
                 href={VALGOR_SCORE_PATH}
                 variant="secondary"
-                className="w-full !rounded-lg !border-fox-500/30 !bg-fox-500/10"
+                className="w-full !rounded-lg !border-valgor-500/30 !bg-valgor-500/10"
               >
                 <Sparkles className="h-4 w-4" />
                 {VALGOR_SCORE_HEADER_LABEL}

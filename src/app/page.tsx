@@ -3,7 +3,7 @@ import { CasesSection } from "@/components/home/CasesSection";
 import { ComparisonSection } from "@/components/home/ComparisonSection";
 import { DifferentialsSection } from "@/components/home/DifferentialsSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
-import { FoxScoreLeadSection } from "@/components/home/FoxScoreLeadSection";
+import { ValgorScoreLeadSection } from "@/components/home/ValgorScoreLeadSection";
 import { Hero } from "@/components/home/Hero";
 import { HomeFaqSection } from "@/components/home/HomeFaqSection";
 import { HomePlansSection } from "@/components/home/HomePlansSection";
@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <FoxScoreLeadSection />
+      <ValgorScoreLeadSection />
       <TrustSection />
       <ProblemSection />
       <BenefitsSection />

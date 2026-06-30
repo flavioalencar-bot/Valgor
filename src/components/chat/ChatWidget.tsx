@@ -18,7 +18,7 @@ export function ChatWidget() {
     <>
       {open && (
         <div className="fixed bottom-24 right-5 z-50 w-[min(100vw-2.5rem,22rem)] overflow-hidden rounded-2xl border border-border bg-surface-card shadow-xl">
-          <div className="flex items-center justify-between bg-gradient-to-r from-fox-500 to-fox-600 px-4 py-3 text-white">
+          <div className="flex items-center justify-between bg-gradient-to-r from-valgor-500 to-valgor-600 px-4 py-3 text-white">
             <div>
               <p className="text-sm font-semibold">Assistente {site.brand}</p>
               <p className="text-xs text-white/80">Respostas rápidas · Orçamento</p>
@@ -44,7 +44,7 @@ export function ChatWidget() {
           <div className="border-t border-border-subtle p-3 space-y-2">
             <Link
               href="/solicitar-orcamento"
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-fox-500 py-2 text-sm font-semibold text-white hover:bg-fox-600"
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-valgor-500 py-2 text-sm font-semibold text-white hover:bg-valgor-600"
             >
               <Send className="h-4 w-4" />
               Solicitar orçamento
@@ -64,7 +64,7 @@ export function ChatWidget() {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="fixed bottom-5 right-20 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-fox-500 text-white shadow-lg transition hover:bg-fox-600 sm:right-24"
+        className="fixed bottom-5 right-20 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-valgor-500 text-white shadow-lg transition hover:bg-valgor-600 sm:right-24"
         aria-label="Abrir assistente virtual"
       >
         <MessageCircle className="h-7 w-7" />

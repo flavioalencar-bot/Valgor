@@ -14,8 +14,8 @@ export function Analytics() {
   useEffect(() => {
     setEnabled(localStorage.getItem(CONSENT_KEY) === "accepted");
     const onAccept = () => setEnabled(true);
-    window.addEventListener("fox-cookies-accepted", onAccept);
-    return () => window.removeEventListener("fox-cookies-accepted", onAccept);
+    window.addEventListener("valgor-cookies-accepted", onAccept);
+    return () => window.removeEventListener("valgor-cookies-accepted", onAccept);
   }, []);
 
   if (!enabled) return null;

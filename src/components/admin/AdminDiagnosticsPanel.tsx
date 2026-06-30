@@ -76,7 +76,7 @@ export function AdminDiagnosticsPanel({ rows }: { rows: AdminDiagnosticRow[] }) 
         <input name="city" defaultValue={city} placeholder="Cidade" className="rounded-lg border border-border bg-surface px-3 py-2 text-sm" />
         <input name="segment" defaultValue={segment} placeholder="Segmento" className="rounded-lg border border-border bg-surface px-3 py-2 text-sm" />
         <input name="minScore" type="number" min={0} max={100} placeholder="Nota mín." className="w-24 rounded-lg border border-border bg-surface px-3 py-2 text-sm" />
-        <button type="submit" className="rounded-lg bg-fox-500 px-4 py-2 text-sm font-semibold text-white">Filtrar</button>
+        <button type="submit" className="rounded-lg bg-valgor-500 px-4 py-2 text-sm font-semibold text-white">Filtrar</button>
       </form>
 
       <div className="mt-6 overflow-x-auto rounded-xl border border-border">
@@ -104,7 +104,7 @@ export function AdminDiagnosticsPanel({ rows }: { rows: AdminDiagnosticRow[] }) 
                 <td className="px-4 py-3 text-muted">{r.city}</td>
                 <td className="px-4 py-3">
                   <div className="flex flex-wrap gap-2">
-                    <Link href={`/admin/diagnosticos/${r.id}`} className="rounded-lg border border-border px-2.5 py-1 text-xs font-medium hover:border-fox-500/40">Detalhe</Link>
+                    <Link href={`/admin/diagnosticos/${r.id}`} className="rounded-lg border border-border px-2.5 py-1 text-xs font-medium hover:border-valgor-500/40">Detalhe</Link>
                     <a href={buildLeadWhatsAppUrl(r.whatsapp, r.companyName)} target="_blank" rel="noopener noreferrer" className="rounded-lg bg-emerald-600 px-2.5 py-1 text-xs font-medium text-white">WhatsApp</a>
                     <button type="button" onClick={() => copyEmail(r.email, r.id)} className="rounded-lg border border-border px-2.5 py-1 text-xs">{copied === r.id ? "Copiado!" : "E-mail"}</button>
                     <button type="button" onClick={() => reprocess(r.id)} className="rounded-lg border border-border px-2.5 py-1 text-xs">Reprocessar</button>
@@ -125,7 +125,7 @@ export function AdminDiagnosticsPanel({ rows }: { rows: AdminDiagnosticRow[] }) 
 
 export function ExportCsvButton() {
   return (
-    <a href="/api/diagnostics/export" className="inline-flex rounded-xl border border-border bg-surface-card px-4 py-2 text-sm font-semibold hover:border-fox-500/30">
+    <a href="/api/diagnostics/export" className="inline-flex rounded-xl border border-border bg-surface-card px-4 py-2 text-sm font-semibold hover:border-valgor-500/30">
       Exportar CSV
     </a>
   );

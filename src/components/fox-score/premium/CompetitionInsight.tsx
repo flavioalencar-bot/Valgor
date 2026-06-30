@@ -24,13 +24,13 @@ function Bar({
     <div className="space-y-1.5">
       <div className="flex justify-between gap-2 text-sm">
         <span className={cn(highlight && "font-semibold")}>{label}</span>
-        <span className={cn("font-bold tabular-nums", highlight && "text-fox-600 dark:text-fox-400")}>
+        <span className={cn("font-bold tabular-nums", highlight && "text-valgor-600 dark:text-valgor-400")}>
           {value}
         </span>
       </div>
       <div className="h-2.5 overflow-hidden rounded-full bg-muted-bg">
         <motion.div
-          className={cn("h-full rounded-full", highlight ? "bg-fox-500" : "bg-muted/60")}
+          className={cn("h-full rounded-full", highlight ? "bg-valgor-500" : "bg-muted/60")}
           initial={{ width: 0 }}
           animate={{ width: `${value}%` }}
           transition={{ duration: 0.6, delay, ease: "easeOut" }}
@@ -80,7 +80,7 @@ export function CompetitionInsight({ ctx }: Props) {
             )}
           </p>
           {p?.comparisonActionHint && (
-            <p className="rounded-lg bg-fox-500/10 px-3 py-2 text-sm font-medium text-fox-700 dark:text-fox-300">
+            <p className="rounded-lg bg-valgor-500/10 px-3 py-2 text-sm font-medium text-valgor-700 dark:text-valgor-300">
               {p.comparisonActionHint}
             </p>
           )}

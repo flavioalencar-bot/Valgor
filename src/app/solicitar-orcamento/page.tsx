@@ -15,7 +15,7 @@ export default function SolicitarOrcamentoPage() {
   return (
     <>
       <PageBanner
-        accent="fox"
+        accent="valgor"
         title="Solicitar Orçamento"
         lead={`${positioning} Conte sobre seu negócio e receba proposta personalizada — site, loja virtual ou landing page.`}
       />
@@ -39,7 +39,7 @@ export default function SolicitarOrcamentoPage() {
                 <h2 className="font-semibold text-foreground">Atendimento direto</h2>
                 <ul className="mt-4 space-y-3 text-sm text-muted">
                   <li>
-                    <a href={site.whatsapp} className="text-fox-500 hover:underline dark:text-fox-400">
+                    <a href={site.whatsapp} className="text-valgor-500 hover:underline dark:text-valgor-400">
                       WhatsApp {site.phoneDisplay}
                     </a>
                   </li>

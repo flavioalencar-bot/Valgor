@@ -16,7 +16,7 @@ type Props = {
   compact?: boolean;
 };
 
-export function WhyFox({ compact = false }: Props) {
+export function WhyValgor({ compact = false }: Props) {
   return (
     <Section
       compact={compact}
@@ -33,12 +33,12 @@ export function WhyFox({ compact = false }: Props) {
           )}
         >
           <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-fox-500">
+            <p className="text-sm font-semibold uppercase tracking-widest text-valgor-500">
               Por que a {site.brand}
             </p>
             <h2 className="mt-3 font-[family-name:var(--font-poppins)] text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Parceiro digital em{" "}
-              <span className="text-fox-500">{site.city}</span>, não só um fornecedor
+              <span className="text-valgor-500">{site.city}</span>, não só um fornecedor
             </h2>
             <p className="mt-5 leading-relaxed text-muted">
               Conhecemos o mercado regional e entregamos projetos com padrão nacional —
@@ -68,7 +68,7 @@ export function WhyFox({ compact = false }: Props) {
             >
               {points.map((point) => (
                 <li key={point} className="flex gap-3">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-fox-500/10 text-fox-500">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-valgor-500/10 text-valgor-500">
                     <Check className="h-3 w-3" strokeWidth={2.5} />
                   </span>
                   <span className="text-sm leading-relaxed text-muted">{point}</span>

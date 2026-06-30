@@ -17,14 +17,14 @@ export function LocalSection() {
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="relative">
-            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-fox-500/15 to-violet-500/10 blur-2xl dark:from-fox-600/20" />
+            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-valgor-500/15 to-violet-500/10 blur-2xl dark:from-valgor-600/20" />
             <div className="relative rounded-3xl border border-border bg-surface-card p-8 shadow-sm sm:p-10 dark:shadow-none">
-              <p className="text-sm font-semibold uppercase tracking-widest text-fox-500 dark:text-fox-400">
+              <p className="text-sm font-semibold uppercase tracking-widest text-valgor-500 dark:text-valgor-400">
                 Presença local
               </p>
               <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl">
                 Sua agência em{" "}
-                <span className="text-fox-500 dark:text-fox-400">{site.city}</span>
+                <span className="text-valgor-500 dark:text-valgor-400">{site.city}</span>
               </h2>
               <p className="mt-4 leading-relaxed text-muted">
                 Não somos uma fábrica genérica de templates. Conhecemos o mercado
@@ -60,7 +60,7 @@ export function LocalSection() {
                 <Button href={site.whatsapp} variant="whatsapp">
                   WhatsApp
                 </Button>
-                <Button href="/criacao-de-sites-fox-solution" variant="secondary">
+                <Button href="/criacao-de-sites" variant="secondary">
                   E-mail
                 </Button>
               </div>

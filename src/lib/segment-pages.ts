@@ -117,7 +117,7 @@ function createSegmentPage(config: NicheConfig): SegmentPageData {
     metaTitle: config.metaTitle,
     description: config.description,
     lead: config.lead,
-    accent: config.accent ?? "fox",
+    accent: config.accent ?? "valgor",
     niche: config.niche,
     audience: config.audience,
     features: config.features,

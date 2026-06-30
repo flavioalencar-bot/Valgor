@@ -13,14 +13,14 @@ export function BrowserMockup() {
           <div className="flex gap-1">
             <div className="h-2 w-8 rounded-full bg-muted-bg" />
             <div className="h-2 w-8 rounded-full bg-muted-bg" />
-            <div className="h-5 w-12 rounded-md bg-fox-500/80" />
+            <div className="h-5 w-12 rounded-md bg-valgor-500/80" />
           </div>
         </div>
-        <div className="rounded-lg bg-gradient-to-br from-fox-500/15 via-surface-card to-violet-500/10 p-4">
+        <div className="rounded-lg bg-gradient-to-br from-valgor-500/15 via-surface-card to-violet-500/10 p-4">
           <div className="h-2.5 w-3/4 max-w-[200px] rounded-full bg-foreground/10" />
           <div className="mt-2 h-2 w-1/2 max-w-[140px] rounded-full bg-foreground/5" />
           <div className="mt-4 flex gap-2">
-            <div className="h-7 w-20 rounded-lg bg-fox-500" />
+            <div className="h-7 w-20 rounded-lg bg-valgor-500" />
             <div className="h-7 w-20 rounded-lg border border-border bg-surface-card" />
           </div>
         </div>

@@ -22,6 +22,11 @@ const nextConfig: NextConfig = {
         destination: "/valgor-score",
         permanent: true,
       },
+      {
+        source: "/criacao-de-sites-fox-solution",
+        destination: "/criacao-de-sites",
+        permanent: true,
+      },
     ];
   },
 };

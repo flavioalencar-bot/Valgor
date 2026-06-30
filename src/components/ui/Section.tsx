@@ -69,7 +69,7 @@ export function SectionHeader({
       {eyebrow && (
         <p
           className={cn(
-            "mb-3 inline-flex rounded-full bg-accent-soft px-4 py-1.5 text-sm font-semibold uppercase tracking-widest text-fox-600 dark:text-fox-400",
+            "mb-3 inline-flex rounded-full bg-accent-soft px-4 py-1.5 text-sm font-semibold uppercase tracking-widest text-valgor-600 dark:text-valgor-400",
             align === "center" && "mx-auto",
           )}
         >

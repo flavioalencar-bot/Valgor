@@ -30,7 +30,7 @@ export default async function BlogArticlePage({ params }: Props) {
 
   return (
     <>
-      <PageBanner accent="fox" title={article.title} lead={article.excerpt} />
+      <PageBanner accent="valgor" title={article.title} lead={article.excerpt} />
       <Section className="bg-surface">
         <Container>
           <article className="prose prose-neutral mx-auto max-w-3xl dark:prose-invert">

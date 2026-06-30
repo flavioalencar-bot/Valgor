@@ -8,7 +8,7 @@ import { Container } from "@/components/ui/Section";
 
 import { Reveal } from "@/components/motion/Reveal";
 
-import { FOX_SCORE_PATH } from "@/lib/conversion";
+import { VALGOR_SCORE_PATH } from "@/lib/conversion";
 
 import { homeHero } from "@/lib/home-content";
 
@@ -56,7 +56,7 @@ export function Hero() {
 
           <Reveal>
 
-            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-fox-500">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-valgor-500">
 
               {homeHero.eyebrow}
 
@@ -78,7 +78,7 @@ export function Hero() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
 
-              <Button href={FOX_SCORE_PATH} className="!rounded-xl">
+              <Button href={VALGOR_SCORE_PATH} className="!rounded-xl">
 
                 {homeHero.primaryCta}
 
@@ -118,7 +118,7 @@ export function Hero() {
 
             <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
 
-              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-fox-500/10 to-transparent blur-2xl" />
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-valgor-500/10 to-transparent blur-2xl" />
 
               <div className="shadow-card relative overflow-hidden rounded-2xl border border-border bg-surface-card">
 
@@ -174,7 +174,7 @@ export function Hero() {
 
                 <div className="mt-4 flex items-center gap-2 text-sm text-muted">
 
-                  <Users className="h-4 w-4 text-fox-500" />
+                  <Users className="h-4 w-4 text-valgor-500" />
 
                   Visitantes convertidos em oportunidades reais
 
@@ -184,7 +184,7 @@ export function Hero() {
 
                   <motion.div
 
-                    className="h-full rounded-full bg-gradient-to-r from-fox-500 to-fox-400"
+                    className="h-full rounded-full bg-gradient-to-r from-valgor-500 to-valgor-400"
 
                     initial={{ width: 0 }}
 

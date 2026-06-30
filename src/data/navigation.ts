@@ -65,7 +65,7 @@ export const services = [
 
     href: "/criacao-de-sites",
 
-    accent: "from-fox-500 to-rose-600",
+    accent: "from-valgor-500 to-rose-600",
 
     icon: "layout",
 
@@ -97,7 +97,7 @@ export const services = [
 
     href: "/criacao-de-loja-virtual",
 
-    accent: "from-violet-500 to-fox-600",
+    accent: "from-violet-500 to-valgor-600",
 
     icon: "cart",
 

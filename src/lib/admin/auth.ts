@@ -11,7 +11,7 @@ export function isValidAdminPassword(password: string) {
 }
 
 export function createAdminToken() {
-  return Buffer.from(`fox-it:${getAdminPassword()}`).toString("base64url");
+  return Buffer.from(`valgor:${getAdminPassword()}`).toString("base64url");
 }
 
 export function verifyAdminToken(token: string | undefined) {

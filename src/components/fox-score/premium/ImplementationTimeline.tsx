@@ -16,7 +16,7 @@ export function ImplementationTimeline({ ctx }: Props) {
     <Card className="border-border">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-lg">
-          <Clock className="h-5 w-5 text-fox-500" />
+          <Clock className="h-5 w-5 text-valgor-500" />
           Quanto tempo leva?
         </CardTitle>
         <p className="text-sm text-muted">Implementação prevista — reduz objeções e acelera decisão.</p>
@@ -29,9 +29,9 @@ export function ImplementationTimeline({ ctx }: Props) {
               <span className="tabular-nums text-muted">{item.days} dias</span>
             </li>
           ))}
-          <li className="flex items-center justify-between bg-fox-500/10 px-4 py-3 font-semibold">
+          <li className="flex items-center justify-between bg-valgor-500/10 px-4 py-3 font-semibold">
             <span>Tempo total estimado</span>
-            <span className="text-fox-600 dark:text-fox-400">{total} dias</span>
+            <span className="text-valgor-600 dark:text-valgor-400">{total} dias</span>
           </li>
         </ul>
       </CardContent>

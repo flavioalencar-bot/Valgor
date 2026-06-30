@@ -43,7 +43,7 @@ export function ServicesPro() {
               <Link
                 key={service.href}
                 href={service.href}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-surface-card p-6 transition hover:-translate-y-1 hover:border-fox-500/30 sm:p-8"
+                className="group relative overflow-hidden rounded-2xl border border-border bg-surface-card p-6 transition hover:-translate-y-1 hover:border-valgor-500/30 sm:p-8"
               >
                 <div
                   className={`absolute inset-y-0 left-0 w-1 ${cardBar[service.icon]}`}
@@ -60,7 +60,7 @@ export function ServicesPro() {
                       >
                         0{index + 1}
                       </span>
-                      <ArrowRight className="h-4 w-4 text-subtle transition group-hover:translate-x-0.5 group-hover:text-fox-500" />
+                      <ArrowRight className="h-4 w-4 text-subtle transition group-hover:translate-x-0.5 group-hover:text-valgor-500" />
                     </div>
                     <h3 className="mt-2 text-lg font-semibold text-foreground">
                       {service.subtitle}

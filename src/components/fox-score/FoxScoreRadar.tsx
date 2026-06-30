@@ -90,7 +90,7 @@ export function FoxScoreRadar({ radar, className }: Props) {
 
         <motion.polygon
           points={polygon}
-          className="fill-fox-500/25 stroke-fox-500"
+          className="fill-valgor-500/25 stroke-valgor-500"
           strokeWidth={2}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -98,7 +98,7 @@ export function FoxScoreRadar({ radar, className }: Props) {
         />
 
         {dataPoints.map((p, i) => (
-          <circle key={AXES[i]} cx={p.x} cy={p.y} r={3.5} className="fill-fox-500" />
+          <circle key={AXES[i]} cx={p.x} cy={p.y} r={3.5} className="fill-valgor-500" />
         ))}
       </svg>
     </div>

@@ -55,9 +55,9 @@ export function CostOfInactionCard({
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center rounded-2xl border border-fox-500/30 bg-fox-500/10 p-5 text-center">
+        <div className="flex flex-col items-center justify-center rounded-2xl border border-valgor-500/30 bg-valgor-500/10 p-5 text-center">
           <p className="text-xs font-semibold uppercase tracking-wide text-subtle">Potencial</p>
-          <p className="mt-3 font-[family-name:var(--font-poppins)] text-3xl font-bold text-fox-600 dark:text-fox-400">
+          <p className="mt-3 font-[family-name:var(--font-poppins)] text-3xl font-bold text-valgor-600 dark:text-valgor-400">
             +{brl(potRev - rev)}
           </p>
           <p className="mt-1 text-xs text-muted">por mês</p>

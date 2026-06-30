@@ -22,7 +22,7 @@ export async function AdminPlaceholder({
   return (
     <div className="min-h-screen bg-surface-elevated pt-24 pb-16">
       <div className="mx-auto max-w-4xl px-5">
-        <Link href="/admin" className="text-sm text-fox-500 hover:underline">
+        <Link href="/admin" className="text-sm text-valgor-500 hover:underline">
           ← Dashboard
         </Link>
         <h1 className="mt-4 font-[family-name:var(--font-poppins)] text-2xl font-bold">

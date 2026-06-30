@@ -33,7 +33,7 @@ export function ContactForm() {
   }
 
   const inputClass =
-    "w-full rounded-2xl border border-border bg-surface-card px-4 py-3 text-sm text-foreground placeholder:text-subtle focus:border-fox-500/50 focus:outline-none focus:ring-2 focus:ring-fox-500/20";
+    "w-full rounded-2xl border border-border bg-surface-card px-4 py-3 text-sm text-foreground placeholder:text-subtle focus:border-valgor-500/50 focus:outline-none focus:ring-2 focus:ring-valgor-500/20";
 
   return (
     <form onSubmit={onSubmit} className="space-y-5">
@@ -52,7 +52,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="inline-flex rounded-full bg-fox-500 px-8 py-3 text-sm font-semibold text-white transition hover:bg-fox-400 disabled:opacity-60"
+        className="inline-flex rounded-full bg-valgor-500 px-8 py-3 text-sm font-semibold text-white transition hover:bg-valgor-400 disabled:opacity-60"
       >
         {status === "loading" ? "Enviando…" : "Enviar mensagem"}
       </button>

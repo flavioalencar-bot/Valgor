@@ -42,7 +42,7 @@ export function AnimatedProgressBar({ percent, className }: BarProps) {
   return (
     <div ref={ref} className={className}>
       <motion.div
-        className="h-full rounded-full bg-gradient-to-r from-fox-500 to-fox-400"
+        className="h-full rounded-full bg-gradient-to-r from-valgor-500 to-valgor-400"
         initial={{ width: 0 }}
         animate={inView ? { width: `${percent}%` } : { width: 0 }}
         transition={{ ...defaultTransition, duration: 1.2, delay: 0.3 }}

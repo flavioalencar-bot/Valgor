@@ -20,7 +20,7 @@ export function TrustSection() {
 
       <div
 
-        className="pointer-events-none absolute -left-32 top-0 h-64 w-64 rounded-full bg-fox-500/10 blur-3xl"
+        className="pointer-events-none absolute -left-32 top-0 h-64 w-64 rounded-full bg-valgor-500/10 blur-3xl"
 
         aria-hidden
 
@@ -38,7 +38,7 @@ export function TrustSection() {
 
       <Container className="relative">
 
-        <p className="text-center text-xs font-semibold uppercase tracking-widest text-fox-500">
+        <p className="text-center text-xs font-semibold uppercase tracking-widest text-valgor-500">
 
           Confiança construída em projetos reais
 
@@ -52,11 +52,11 @@ export function TrustSection() {
 
               key={label}
 
-              className="shadow-card flex flex-col items-center rounded-2xl border border-border bg-surface-card p-6 text-center transition hover:border-fox-500/25"
+              className="shadow-card flex flex-col items-center rounded-2xl border border-border bg-surface-card p-6 text-center transition hover:border-valgor-500/25"
 
             >
 
-              <p className="font-[family-name:var(--font-poppins)] text-3xl font-bold tracking-tight text-fox-600 dark:text-fox-400 sm:text-4xl">
+              <p className="font-[family-name:var(--font-poppins)] text-3xl font-bold tracking-tight text-valgor-600 dark:text-valgor-400 sm:text-4xl">
 
                 {value}
 

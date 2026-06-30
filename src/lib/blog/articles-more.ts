@@ -288,7 +288,7 @@ export const additionalArticles: BlogArticle[] = [
       {
         heading: "Design e UX",
         paragraphs: [
-          "Contraste CTA: cor fox/laranja ou verde sobre fundo neutro.",
+          "Contraste CTA: cor laranja Valgor ou verde sobre fundo neutro.",
           "Mobile-first: 70%+ tráfego pago vem celular.",
           "Imagens reais equipe/produto — stock genérico reduz confiança.",
           "Espaço branco — densidade visual cansa.",

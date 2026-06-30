@@ -28,8 +28,8 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   icons: {
-    icon: "/img/logo-icon.png",
-    apple: "/img/logo-icon.png",
+    icon: "/img/valgor-mark.png",
+    apple: "/img/valgor-mark.png",
   },
   ...buildMetadata({
     title: `Criação de Sites Profissionais em ${site.city} | ${site.brand}`,
