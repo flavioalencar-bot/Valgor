@@ -1,4 +1,4 @@
-# Fox Solution — Site institucional
+# Valgor — Site institucional
 
 **TypeScript · Next.js 16 · Tailwind CSS 4 · Prisma · PostgreSQL · Docker**
 
