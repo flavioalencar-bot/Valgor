@@ -1,22 +1,37 @@
 "use client";
 
+import type { ValgorAnalyticsConfig } from "@/components/analytics/RuntimeAnalyticsConfig";
 import Script from "next/script";
 import { useEffect, useState } from "react";
 
 const CONSENT_KEY = "fox_cookie_consent";
 
+function readAnalyticsConfig(): ValgorAnalyticsConfig {
+  if (typeof window === "undefined") {
+    return { gaId: "", metaPixelId: "", googleAdsId: "" };
+  }
+  return (
+    window.__VALGOR_ANALYTICS__ ?? {
+      gaId: "",
+      metaPixelId: "",
+      googleAdsId: "",
+    }
+  );
+}
+
 export function Analytics() {
   const [enabled, setEnabled] = useState(false);
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
-  const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
-  const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+  const [config, setConfig] = useState<ValgorAnalyticsConfig>(() => readAnalyticsConfig());
 
   useEffect(() => {
+    setConfig(readAnalyticsConfig());
     setEnabled(localStorage.getItem(CONSENT_KEY) === "accepted");
     const onAccept = () => setEnabled(true);
     window.addEventListener("valgor-cookies-accepted", onAccept);
     return () => window.removeEventListener("valgor-cookies-accepted", onAccept);
   }, []);
+
+  const { gaId, metaPixelId, googleAdsId } = config;
 
   if (!enabled) return null;
 

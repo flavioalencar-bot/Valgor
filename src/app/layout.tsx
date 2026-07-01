@@ -1,11 +1,13 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Analytics } from "@/components/analytics/Analytics";
+import { RuntimeAnalyticsConfig } from "@/components/analytics/RuntimeAnalyticsConfig";
+import { GoogleSiteVerification } from "@/components/seo/GoogleSiteVerification";
 import { ChatWidget } from "@/components/chat/ChatWidget";
 import { WhatsAppFloat } from "@/components/conversion/WhatsAppFloat";
 import { CookieConsent } from "@/components/legal/CookieConsent";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
-import { buildMetadata, localBusinessJsonLd } from "@/lib/seo";
+import { buildMetadata, localBusinessJsonLd, webSiteJsonLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { Montserrat, Poppins } from "next/font/google";
 import type { Metadata } from "next";
@@ -51,10 +53,18 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <GoogleSiteVerification />
+        <RuntimeAnalyticsConfig />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(localBusinessJsonLd()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(webSiteJsonLd()),
           }}
         />
       </head>

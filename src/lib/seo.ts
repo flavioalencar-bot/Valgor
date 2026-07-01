@@ -60,6 +60,23 @@ export function buildMetadata({
   };
 }
 
+export function webSiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.brand,
+    alternateName: site.legalName,
+    url: site.url,
+    inLanguage: "pt-BR",
+    publisher: {
+      "@type": "Organization",
+      name: site.legalName,
+      url: site.url,
+      logo: `${site.url}/img/valgor-logo.png`,
+    },
+  };
+}
+
 export function localBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
