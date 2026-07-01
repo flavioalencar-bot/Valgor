@@ -30,11 +30,11 @@ services:
       dockerfile: Dockerfile.dev
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3005:3000"
     environment:
       DATABASE_URL: postgresql://valgor:valgorsecret@db:5432/valgor
       REDIS_URL: redis://redis:6379
-      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+      NEXT_PUBLIC_SITE_URL: http://localhost:3005
     volumes:
       - .:/app
       - /app/node_modules

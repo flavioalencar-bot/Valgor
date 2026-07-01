@@ -21,7 +21,7 @@ export function Footer() {
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16">
           <div className="min-w-0 shrink-0 lg:max-w-sm xl:max-w-md">
             <Link href="/" className="inline-flex items-center">
-              <Logo placement="footer" className="mb-5" />
+              <Logo placement="footer" className="mb-4" />
             </Link>
             <p className="text-sm leading-relaxed text-muted">
               {site.tagline}. Soluções digitais em{" "}

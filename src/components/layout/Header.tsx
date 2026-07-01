@@ -42,7 +42,7 @@ export function Header() {
       style={{ backgroundColor: "var(--header-bg)" }}
     >
       <div className="mx-auto grid h-16 max-w-7xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 px-4 sm:gap-3 sm:px-6 lg:px-8">
-        <Link href="/" className="relative z-10 flex shrink-0 items-center">
+        <Link href="/" className="relative z-10 flex shrink-0 items-center py-1">
           <Logo placement="header" />
         </Link>
 

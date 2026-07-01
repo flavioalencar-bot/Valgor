@@ -12,7 +12,7 @@ docker compose up --build
 # ou: npm install && npm run db:push && npm run dev
 ```
 
-Site: http://localhost:3000
+Site: http://localhost:3005 (porta 3000 reservada ao Salesflow)
 
 ## Deploy no VPS (KingHost + Docker)
 
