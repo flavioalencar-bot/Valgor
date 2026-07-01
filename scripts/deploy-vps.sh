@@ -1,5 +1,5 @@
 #!/bin/sh
-# Deploy no VPS KingHost — rode dentro da pasta foxsolution-app
+# Deploy no VPS KingHost — rode dentro da pasta valgor
 set -e
 
 if [ ! -f .env ]; then
@@ -7,8 +7,14 @@ if [ ! -f .env ]; then
   exit 1
 fi
 
+echo ">> Subindo banco e redis..."
+docker compose -f docker-compose.prod.yml up -d db redis
+
+echo ">> Aplicando schema Prisma..."
+docker compose -f docker-compose.prod.yml run --rm migrate
+
 echo ">> Build e subida dos containers..."
-docker compose -f docker-compose.prod.yml up -d --build
+docker compose -f docker-compose.prod.yml up -d --build app caddy
 
 echo ">> Status:"
 docker compose -f docker-compose.prod.yml ps
