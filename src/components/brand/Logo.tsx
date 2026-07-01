@@ -2,9 +2,11 @@
 
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 /** PNG recortado — valgor-logo.png (1422×283 após trim) */
-const LOGO_VERSION = "7";
+const LOGO_VERSION = "8";
 
 /** Proporção largura/altura do wordmark (~5:1) */
 const LOGO_ASPECT = 1422 / 283;
@@ -29,7 +31,19 @@ export function Logo({
   compact = false,
   placement = "default",
 }: LogoProps) {
-  const file = iconOnly ? "valgor-mark.png" : "valgor-logo.png";
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  const isDark = mounted && resolvedTheme === "dark";
+  const file = iconOnly
+    ? isDark
+      ? "valgor-mark-dark.png"
+      : "valgor-mark.png"
+    : isDark
+      ? "valgor-logo-dark.png"
+      : "valgor-logo.png";
   const src = `/img/${file}?v=${LOGO_VERSION}`;
   const { h, maxW } = wordmarkSize(placement, compact);
 

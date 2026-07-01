@@ -1,7 +1,7 @@
 /** Assets de marca e visuais novos (sem imagens legadas). */
 export const images = {
   logo: "/img/valgor-logo.png",
-  logoDark: "/img/valgor-logo.png",
+  logoDark: "/img/valgor-logo-dark.png",
   mark: "/img/valgor-mark.png",
   whatsapp: "/img/icon_whats.png",
   visuals: {
