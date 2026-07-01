@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 /** PNG recortado — valgor-logo.png (1422×283 após trim) */
-const LOGO_VERSION = "8";
+const LOGO_VERSION = "9";
 
 /** Proporção largura/altura do wordmark (~5:1) */
 const LOGO_ASPECT = 1422 / 283;
