@@ -83,9 +83,11 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     depends_on:
-      - app
+      app:
+        condition: service_healthy
     networks:
       - web
+      - internal
 
 networks:
   web:

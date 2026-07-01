@@ -2,14 +2,12 @@
 	email contato@valgor.com.br
 }
 
-# Domínio principal (ajuste quando valgor.com.br apontar para o VPS)
 www.valgor.com.br, valgor.com.br {
 	encode gzip
-	reverse_proxy app:3000
+	reverse_proxy http://app:3000
 }
 
-# Hostname KingHost (funciona antes do DNS do domínio)
 valgor.vps-uni5.net {
 	encode gzip
-	reverse_proxy app:3000
+	reverse_proxy http://app:3000
 }
