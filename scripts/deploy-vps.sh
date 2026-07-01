@@ -7,17 +7,30 @@ if [ ! -f .env ]; then
   exit 1
 fi
 
+echo ">> Parando containers antigos..."
+docker compose -f docker-compose.prod.yml down --remove-orphans
+
+echo ">> Build completo (sem cache)..."
+docker compose -f docker-compose.prod.yml build --no-cache migrate app
+
 echo ">> Subindo banco e redis..."
 docker compose -f docker-compose.prod.yml up -d db redis
+
+echo ">> Aguardando banco..."
+sleep 5
 
 echo ">> Aplicando schema Prisma..."
 docker compose -f docker-compose.prod.yml run --rm migrate
 
-echo ">> Build e subida dos containers..."
-docker compose -f docker-compose.prod.yml up -d --build app caddy
+echo ">> Subindo app e caddy..."
+docker compose -f docker-compose.prod.yml up -d app caddy
 
 echo ">> Status:"
 docker compose -f docker-compose.prod.yml ps
+
+echo ""
+echo ">> Logs do app (últimas 5 linhas):"
+docker compose -f docker-compose.prod.yml logs --tail 5 app
 
 echo ""
 echo "Pronto. Teste:"
