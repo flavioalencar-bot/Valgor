@@ -21,10 +21,10 @@ export function CasesSection() {
         />
         <Stagger className="mt-10 grid gap-6 lg:grid-cols-3">
           {homeCases.map((item, i) => (
-            <StaggerItem key={item.name}>
+            <StaggerItem key={item.name} className="h-full">
               <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface-card shadow-sm dark:shadow-none">
-                <div className="aspect-[16/11] border-b border-border-subtle p-3">
-                  <SiteCasePreview type={previewTypes[i]} />
+                <div className="aspect-[16/11] overflow-hidden border-b border-border-subtle p-3">
+                  <SiteCasePreview type={previewTypes[i]} className="h-full w-full" />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <p className="text-xs font-semibold uppercase tracking-widest text-valgor-500">
@@ -54,7 +54,7 @@ export function CasesSection() {
                   </div>
                   <Link
                     href={item.href}
-                    className="mt-5 text-sm font-semibold text-valgor-500 hover:underline"
+                    className="mt-auto pt-5 text-sm font-semibold text-valgor-500 hover:underline"
                   >
                     Ver portfólio →
                   </Link>
