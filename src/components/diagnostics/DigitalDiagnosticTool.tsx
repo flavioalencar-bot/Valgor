@@ -114,6 +114,8 @@ export function DigitalDiagnosticTool() {
   const [diagnosticId, setDiagnosticId] = useState<string | null>(null);
   const [progress, setProgress] = useState(0);
   const [result, setResult] = useState<ApiResult | null>(null);
+  const [emailSending, setEmailSending] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
 
   const whatsappUrl = useMemo(
     () => (result ? buildDiagnosticWhatsAppUrl(result.score) : ""),
@@ -205,6 +207,24 @@ export function DigitalDiagnosticTool() {
     setPhase("form");
     setError(null);
     setProgress(0);
+    setEmailSending(false);
+    setEmailSent(false);
+  }
+
+  async function handleSendReportEmail() {
+    if (!diagnosticId) return;
+    setEmailSending(true);
+    setError(null);
+    try {
+      const res = await fetch(`/api/diagnostics/${diagnosticId}/email-report`, { method: "POST" });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error ?? "Não foi possível enviar o e-mail.");
+      setEmailSent(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Erro ao enviar relatório por e-mail.");
+    } finally {
+      setEmailSending(false);
+    }
   }
 
   return (
@@ -406,8 +426,14 @@ export function DigitalDiagnosticTool() {
                       className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-700">
                       Falar com a VALGOR no WhatsApp
                     </a>
-                    <Button type="button" variant="secondary" onClick={() => alert("Relatório por e-mail — em breve na Fase 3.")}>
-                      <Mail className="h-4 w-4" /> Receber relatório por e-mail
+                    <Button
+                      type="button"
+                      variant="secondary"
+                      disabled={emailSending || emailSent}
+                      onClick={handleSendReportEmail}
+                    >
+                      <Mail className="h-4 w-4" />
+                      {emailSent ? "Relatório enviado" : emailSending ? "Enviando..." : "Receber relatório por e-mail"}
                     </Button>
                     <Button type="button" variant="ghost" onClick={reset}>Novo diagnóstico</Button>
                   </div>

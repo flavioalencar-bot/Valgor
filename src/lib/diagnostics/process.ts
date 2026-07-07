@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import type { Prisma } from "@prisma/client";
 import { buildFoxScorePayload } from "@/lib/fox-score/enrich";
 import type { FoxScorePayload } from "@/lib/fox-score/enrich";
+import { sendDiagnosticReportEmailAsync } from "@/lib/mail";
 import { fetchSiteHtml, fetchSitemapRobots } from "./analyzers/fetch-site";
 import { analyzePageSpeed } from "./analyzers/pagespeed";
 import { analyzeSecurity } from "./analyzers/security";
@@ -84,6 +85,20 @@ export async function processDigitalDiagnostic(id: string): Promise<void> {
         errorMessage: null,
         completedAt: new Date(),
       },
+    });
+
+    sendDiagnosticReportEmailAsync({
+      id: row.id,
+      companyName: row.companyName,
+      responsibleName: row.responsibleName,
+      email: row.email,
+      city: row.city,
+      score: result.score,
+      classification: result.classification,
+      strengths: result.strengths,
+      weaknesses: result.weaknesses,
+      recommendations: result.recommendations,
+      commercialMessage: result.commercialMessage,
     });
   } catch (err) {
     const msg = err instanceof Error ? err.message : "Erro desconhecido";
@@ -226,7 +241,7 @@ export function serializeDiagnosticResult(row: Awaited<
   };
 }
 
-function jsonArr(val: unknown): string[] {
+export function jsonArr(val: unknown): string[] {
   if (Array.isArray(val)) return val.filter((x): x is string => typeof x === "string");
   return [];
 }

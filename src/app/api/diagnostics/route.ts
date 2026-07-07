@@ -1,6 +1,7 @@
 import { isAdminAuthenticated } from "@/lib/admin/auth";
 import { enqueueDigitalDiagnostic } from "@/lib/diagnostics/queue";
 import { diagnosticFormSchema, normalizeDiagnosticPayload } from "@/lib/diagnostics/validators";
+import { notifyTeamNewDiagnosticAsync } from "@/lib/mail";
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 import { z } from "zod";
@@ -44,6 +45,17 @@ export async function POST(request: Request) {
         consentAcceptedAt: new Date(),
         ipAddress: clientIp(request),
       },
+    });
+
+    notifyTeamNewDiagnosticAsync({
+      id: row.id,
+      companyName: row.companyName,
+      responsibleName: row.responsibleName,
+      email: row.email,
+      whatsapp: row.whatsapp,
+      city: row.city,
+      segment: row.segment,
+      websiteUrl: row.websiteUrl,
     });
 
     try {

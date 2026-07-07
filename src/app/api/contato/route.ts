@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { notifyTeamContactMessageAsync, sendContactConfirmation } from "@/lib/mail";
 import { prisma } from "@/lib/prisma";
 
 const schema = z.object({
@@ -24,6 +25,9 @@ export async function POST(request: Request) {
         message: data.message,
       },
     });
+
+    notifyTeamContactMessageAsync(data);
+    sendContactConfirmation(data);
 
     return NextResponse.json({ ok: true });
   } catch {
