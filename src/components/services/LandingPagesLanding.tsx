@@ -60,7 +60,7 @@ const processSteps = [
 const showcases = [
   { title: "Captação local", type: "Google Ads", variant: "landing" as PortfolioMockVariant },
   { title: "Oferta por WhatsApp", type: "Lead page", variant: "landing" as PortfolioMockVariant },
-  { title: "Lançamento premium", type: "High ticket", variant: "site" as PortfolioMockVariant },
+  { title: "Lançamento premium", type: "High ticket", variant: "premium" as PortfolioMockVariant },
   { title: "Campanha segmentada", type: "Conversão mobile", variant: "ecommerce" as PortfolioMockVariant },
 ] as const;
 

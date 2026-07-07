@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils";
 import { MapPin, Search, ShoppingCart, Sparkles } from "lucide-react";
-import Image from "next/image";
 
 export type PortfolioMockVariant =
   | "landing"
+  | "premium"
   | "site"
   | "ecommerce"
   | "portal"
@@ -32,7 +32,7 @@ const mockImages = {
     "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&h=200&fit=crop&q=80",
   ],
   portal: [
-    "https://images.unsplash.com/photo-1494976388531-d1058498cdd8?w=120&h=80&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=120&h=80&fit=crop&q=80",
     "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=120&h=80&fit=crop&q=80",
     "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=120&h=80&fit=crop&q=80",
   ],
@@ -55,13 +55,12 @@ function MockPhoto({
 }) {
   return (
     <div className={cn("relative overflow-hidden", className)}>
-      <Image
+      <img
         src={src}
         alt={alt}
-        fill
-        sizes="(max-width: 768px) 33vw, 200px"
-        className="object-cover"
-        priority={priority}
+        loading="eager"
+        decoding="async"
+        className="absolute inset-0 h-full w-full object-cover"
       />
     </div>
   );
@@ -143,6 +142,52 @@ function LandingPreview() {
   );
 }
 
+function PremiumLaunchPreview() {
+  return (
+    <BrowserChrome url="lancamento.valgor.com.br">
+      <div className="grid h-full min-h-0 grid-cols-[1.05fr_0.95fr]">
+        <div className="relative min-h-0">
+          <MockPhoto
+            src={mockImages.landingHero}
+            alt="Apresentação premium do lançamento"
+            className="absolute inset-0"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#120b08]/95 via-[#2a1810]/88 to-[#120b08]/55" />
+          <div className="relative flex h-full flex-col justify-center px-3 py-2 text-white">
+            <span className="inline-flex w-fit items-center gap-1 rounded-full bg-[#c9a227]/20 px-2 py-0.5 text-[7px] font-semibold text-[#f5d98a]">
+              <Sparkles className="h-2 w-2" />
+              Vagas limitadas
+            </span>
+            <div className="mt-1.5 h-1.5 w-[84%] rounded-full bg-white/90" />
+            <div className="mt-1 h-1 w-[62%] rounded-full bg-white/35" />
+            <div className="mt-2 flex gap-1">
+              <span className="rounded bg-[#c9a227] px-1.5 py-0.5 text-[7px] font-bold text-[#1a1208]">
+                Garantir vaga
+              </span>
+              <span className="rounded border border-white/25 px-1.5 py-0.5 text-[7px]">Ver detalhes</span>
+            </div>
+            <div className="mt-2 flex gap-2 text-[6px] text-white/60">
+              <span>High ticket</span>
+              <span>Prova social</span>
+            </div>
+          </div>
+        </div>
+        <div className="flex min-h-0 flex-col justify-center bg-[#17120f] p-2.5 text-white">
+          <p className="text-[8px] font-bold">Lista VIP do lançamento</p>
+          <div className="mt-1.5 space-y-1">
+            <div className="h-4 rounded border border-white/10 bg-white/5" />
+            <div className="h-4 rounded border border-white/10 bg-white/5" />
+          </div>
+          <div className="mt-1.5 flex h-5 items-center justify-center rounded-md bg-[#c9a227] text-[7px] font-bold text-[#1a1208]">
+            Entrar na lista
+          </div>
+        </div>
+      </div>
+    </BrowserChrome>
+  );
+}
+
 function InstitutionalPreview() {
   return (
     <BrowserChrome url="clinicaexemplo.com.br">
@@ -164,7 +209,7 @@ function InstitutionalPreview() {
         </div>
 
         <div className="relative h-[38%] min-h-[52px] shrink-0">
-          <MockPhoto src={mockImages.clinicHero} alt="Recepção da clínica" className="h-full w-full" />
+          <MockPhoto src={mockImages.clinicHero} alt="Recepção da clínica" className="absolute inset-0" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent" />
           <div className="absolute bottom-1.5 left-2 right-2">
             <div className="h-1.5 w-[70%] rounded-full bg-white/90" />
@@ -182,7 +227,9 @@ function InstitutionalPreview() {
               Agendar consulta
             </span>
           </div>
-          <MockPhoto src={mockImages.clinicTeam} alt="Equipe médica" className="h-full min-h-[36px] rounded-md" />
+          <div className="relative min-h-[36px]">
+            <MockPhoto src={mockImages.clinicTeam} alt="Equipe médica" className="absolute inset-0 rounded-md" />
+          </div>
         </div>
 
         <div className="grid shrink-0 grid-cols-3 gap-1 border-t border-border/40 px-2 py-1.5">
@@ -218,7 +265,7 @@ function EcommercePreview() {
         </div>
 
         <div className="relative h-[22%] min-h-[28px] shrink-0">
-          <MockPhoto src={mockImages.shopBanner} alt="Promoção da loja" className="h-full w-full" />
+          <MockPhoto src={mockImages.shopBanner} alt="Promoção da loja" className="absolute inset-0" />
           <div className="absolute inset-0 bg-gradient-to-r from-valgor-600/90 to-orange-500/75" />
           <div className="absolute inset-0 flex flex-col justify-center px-2.5 text-white">
             <p className="text-[7px] font-bold leading-tight">Frete grátis acima de R$ 199</p>
@@ -233,7 +280,7 @@ function EcommercePreview() {
               className="flex min-h-0 flex-col overflow-hidden rounded border border-border/60 bg-white dark:bg-[#222]"
             >
               <div className="relative min-h-0 flex-1">
-                <MockPhoto src={item.image} alt={item.name} className="h-full w-full" />
+                <MockPhoto src={item.image} alt={item.name} className="absolute inset-0" />
                 {item.tag && (
                   <span className="absolute left-0.5 top-0.5 rounded bg-valgor-500 px-1 text-[5px] font-bold text-white">
                     {item.tag}
@@ -278,7 +325,9 @@ function PortalPreview() {
         <div className="mt-1.5 min-h-0 flex-1 space-y-1 overflow-hidden">
           {mockImages.portal.map((src, n) => (
             <div key={n} className="flex gap-1.5 rounded-lg border border-border/50 p-1">
-              <MockPhoto src={src} alt={`Anúncio ${n + 1}`} className="h-7 w-9 shrink-0 rounded" />
+              <div className="relative h-7 w-9 shrink-0 overflow-hidden rounded">
+                <MockPhoto src={src} alt={`Anúncio ${n + 1}`} className="absolute inset-0" />
+              </div>
               <div className="min-w-0 flex-1 py-0.5">
                 <div className="h-1.5 w-[70%] rounded-full bg-foreground/25" />
                 <div className="mt-1 h-1 w-[40%] rounded-full bg-muted/50" />
@@ -301,7 +350,9 @@ function ImoveisPreview() {
         <div className="grid min-h-0 flex-1 grid-cols-2 gap-1.5 p-1.5">
           {mockImages.imovel.map((src, n) => (
             <div key={n} className="flex min-h-0 flex-col overflow-hidden rounded-lg border border-border/60">
-              <MockPhoto src={src} alt={`Imóvel ${n + 1}`} className="min-h-0 flex-1" />
+              <div className="relative min-h-[48px] flex-1">
+                <MockPhoto src={src} alt={`Imóvel ${n + 1}`} className="absolute inset-0" />
+              </div>
               <div className="shrink-0 p-1">
                 <p className="text-[7px] font-bold text-valgor-600">R$ 450.000</p>
                 <div className="flex items-center gap-0.5 text-[6px] text-muted">
@@ -341,6 +392,7 @@ function DesignPreview() {
 
 const previews: Record<PortfolioMockVariant, () => React.ReactNode> = {
   landing: LandingPreview,
+  premium: PremiumLaunchPreview,
   marketing: MarketingPreview,
   site: InstitutionalPreview,
   ecommerce: EcommercePreview,
