@@ -69,10 +69,10 @@ export const servicePages: Record<string, ServicePageData> = {
   "criacao-de-loja-virtual": {
     slug: "/criacao-de-loja-virtual",
     title: `Loja virtual em ${site.city}`,
-    metaTitle: "Loja Virtual e E-commerce em São José do Rio Preto",
+    metaTitle: "Criação de Loja Virtual e E-commerce em São José do Rio Preto",
     description:
-      "Criação de loja virtual e e-commerce completo: checkout, painel administrativo, integração API e site para comércio em SJRP.",
-    lead: "E-commerce profissional para vender online com site rápido, seguro e integração WhatsApp.",
+      "Criação de loja virtual e e-commerce em São José do Rio Preto com checkout, PIX, cartão, painel administrativo, catálogo otimizado e SEO para vender online.",
+    lead: "Criação de loja virtual e e-commerce profissional para vender online com site rápido, seguro e integração WhatsApp.",
     accent: "valgor",
     seoExtras: ["plans"],
     plansKey: "ecommerce",
@@ -112,11 +112,16 @@ export const servicePages: Record<string, ServicePageData> = {
   "seo-otimizacao-de-site": {
     slug: "/seo-otimizacao-de-site",
     title: "SEO e Otimização",
-    metaTitle: "SEO para Sites e Google Meu Negócio em SJRP",
+    metaTitle: "SEO para Sites e Google Meu Negócio em São José do Rio Preto",
     description:
-      "SEO para sites, site otimizado para Google, Core Web Vitals e marketing digital local em São José do Rio Preto.",
-    lead: "Tráfego orgânico e visibilidade local — site rápido, performance e ranqueamento no Google.",
+      "SEO para sites em São José do Rio Preto com auditoria técnica, Google Meu Negócio, Core Web Vitals, conteúdo estratégico e foco em mais tráfego orgânico e contatos.",
+    lead: "SEO técnico, SEO local e performance para aumentar visibilidade no Google e gerar contatos recorrentes.",
     accent: "emerald",
+    faqHeader: {
+      eyebrow: "Dúvidas frequentes",
+      title: "Perguntas sobre SEO",
+      description: "Respostas sobre prazo, SEO local, performance e evolução orgânica.",
+    },
     features: [
       "SEO para sites e auditoria técnica",
       "Google Meu Negócio",
@@ -124,6 +129,11 @@ export const servicePages: Record<string, ServicePageData> = {
       "Palavras-chave e conteúdo local",
       "Relatórios mensais",
     ],
+    schemaService: {
+      name: "SEO para Sites e Google Meu Negócio",
+      description:
+        "SEO técnico, SEO local, Google Meu Negócio, Core Web Vitals e otimização de conteúdo para empresas que querem mais visibilidade orgânica e contatos recorrentes.",
+    },
     body: [
       "Especialistas em SEO para sites em São José do Rio Preto. Deixamos seu site otimizado para Google com foco em SEO local, Core Web Vitals, site rápido e estrutura técnica correta.",
       "Combinamos marketing digital orgânico com orientação de conteúdo para site institucional, loja virtual e landing page. Ideal para empresas que investiram em criação de sites e querem site para captar clientes de forma recorrente.",
@@ -232,11 +242,16 @@ export const servicePages: Record<string, ServicePageData> = {
   hospedagem: {
     slug: "/hospedagem",
     title: "Hospedagem de Sites",
-    metaTitle: "Hospedagem de Sites, SSL e Cloud em SJRP",
+    metaTitle: "Hospedagem de Sites, SSL e Cloud em São José do Rio Preto",
     description:
-      "Hospedagem de sites, domínio, SSL, cloud, manutenção de sites e suporte de sites com performance e site seguro.",
-    lead: "Infraestrutura estável para site rápido e site seguro.",
+      "Hospedagem de sites em São José do Rio Preto com SSL, cloud, backups, domínio, suporte técnico e performance para manter seu site rápido e seguro.",
+    lead: "Infraestrutura estável, suporte técnico e segurança para manter seu site rápido e no ar.",
     accent: "cyan",
+    faqHeader: {
+      eyebrow: "Dúvidas frequentes",
+      title: "Perguntas sobre hospedagem",
+      description: "Respostas sobre migração, SSL, backups, monitoramento e suporte técnico.",
+    },
     features: [
       "Hospedagem de sites e cloud",
       "SSL e domínio",
@@ -244,6 +259,11 @@ export const servicePages: Record<string, ServicePageData> = {
       "Suporte de sites dedicado",
       "Performance e backups",
     ],
+    schemaService: {
+      name: "Hospedagem de Sites, SSL e Cloud",
+      description:
+        "Hospedagem de sites com cloud, SSL, domínio, backups, manutenção e suporte técnico para manter o site rápido, seguro e estável.",
+    },
     body: [
       `Hospedagem de sites pensada para projetos ${site.brand} e clientes em São José do Rio Preto. Oferecemos cloud, SSL, domínio, manutenção de sites e suporte de sites com foco em site rápido e site seguro.`,
       "Monitoramos performance e Core Web Vitals para manter seu site profissional, loja virtual ou aplicação web sempre disponível.",
@@ -252,16 +272,16 @@ export const servicePages: Record<string, ServicePageData> = {
   "landing-pages": {
     slug: "/landing-pages",
     title: "Landing Pages de Alta Conversão",
-    metaTitle: "Landing Pages Profissionais para Campanhas e Google Ads",
+    metaTitle: "Criação de Landing Pages para Google Ads e Meta Ads",
     description:
-      "Landing pages focadas em conversão para campanhas, Google Ads e Meta Ads. Capture leads qualificados com páginas rápidas e persuasivas.",
-    lead: "Páginas enxutas, rápidas e feitas para transformar cliques em clientes.",
+      "Criação de landing pages para Google Ads e Meta Ads com copy orientada à conversão, formulários, WhatsApp, pixels e páginas rápidas para gerar mais leads.",
+    lead: "Landing pages rápidas, persuasivas e feitas para transformar cliques em contatos.",
     accent: "valgor",
     seoExtras: ["faq"],
     schemaService: {
       name: "Landing Pages de Alta Conversão",
       description:
-        "Desenvolvimento de landing pages otimizadas para campanhas digitais, geração de leads e conversão em São José do Rio Preto e todo o Brasil.",
+        "Criação de landing pages para campanhas digitais, Google Ads, Meta Ads e geração de leads com foco em conversão, performance e rastreamento.",
     },
     faqHeader: {
       eyebrow: "Dúvidas frequentes",

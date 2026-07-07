@@ -1,0 +1,32 @@
+name: Deploy VPS
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.repository == 'flavioalencar-bot/Valgor'
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            set -e
+            cd /opt/valgor
+            if grep -q '^NEXT_PUBLIC_GA_ID=' .env 2>/dev/null; then
+              sed -i 's/^NEXT_PUBLIC_GA_ID=.*/NEXT_PUBLIC_GA_ID=G-PV7JMBT3EK/' .env
+            else
+              echo 'NEXT_PUBLIC_GA_ID=G-PV7JMBT3EK' >> .env
+            fi
+            git fetch origin
+            git reset --hard origin/main
+            docker compose -f docker-compose.prod.yml up -d --build app
+            docker compose -f docker-compose.prod.yml ps

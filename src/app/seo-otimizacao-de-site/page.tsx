@@ -1,4 +1,4 @@
-import { ServicePageView } from "@/components/services/ServicePageView";
+import { SeoLanding } from "@/components/services/SeoLanding";
 import { getEnrichedServicePage } from "@/lib/services-content";
 import { buildMetadata } from "@/lib/seo";
 
@@ -12,5 +12,5 @@ export const metadata = buildMetadata({
 });
 
 export default function Page() {
-  return <ServicePageView page={page} />;
+  return <SeoLanding page={page} />;
 }

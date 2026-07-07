@@ -39,7 +39,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid min-w-0 flex-1 grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 xl:gap-12">
+          <div className="grid min-w-0 flex-1 grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_minmax(12rem,0.9fr)_minmax(14rem,1fr)] lg:gap-8 xl:gap-12">
             <div className="min-w-0">
               <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-valgor-500 dark:text-valgor-400">
                 Navegação
@@ -58,7 +58,7 @@ export function Footer() {
               </ul>
             </div>
 
-            <div className="min-w-0">
+            <div className="min-w-0 lg:min-w-[12rem]">
               <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-valgor-500 dark:text-valgor-400">
                 Contato
               </p>
@@ -73,11 +73,14 @@ export function Footer() {
                     {site.email}
                   </a>
                 </li>
-                <li className="text-subtle">CNPJ {site.cnpj}</li>
+                <li className="text-subtle text-xs">
+                  <span className="block uppercase tracking-wide">CNPJ</span>
+                  <span className="whitespace-nowrap">{site.cnpj}</span>
+                </li>
               </ul>
             </div>
 
-            <div className="min-w-0 sm:col-span-2 lg:col-span-1">
+            <div className="min-w-0 sm:col-span-2 lg:col-span-1 lg:min-w-[14rem]">
               <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-valgor-500 dark:text-valgor-400">
                 Vamos conversar?
               </p>

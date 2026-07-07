@@ -278,6 +278,70 @@ export const pageFaqs: Record<
       question: "Quanto tempo leva para ficar pronta?",
       answer: "Landing pages costumam ser entregues entre 7 e 15 dias úteis, conforme complexidade e conteúdo.",
     },
+    {
+      question: "Vocês configuram pixel, UTM e rastreamento de conversão?",
+      answer:
+        "Sim. Podemos entregar a landing page com pixels, UTMs e eventos configurados para acompanhar leads, cliques e performance das campanhas.",
+    },
+    {
+      question: "A landing page pode captar leads por formulário e WhatsApp?",
+      answer:
+        "Sim. A estrutura pode combinar formulário, botão de WhatsApp e CTAs estratégicos para facilitar o contato e aumentar a conversão.",
+    },
+  ],
+  "/seo-otimizacao-de-site": [
+    {
+      question: "Quanto tempo o SEO leva para gerar resultado?",
+      answer:
+        "SEO é uma construção contínua. Melhorias técnicas podem refletir mais rápido, mas ganho consistente de posicionamento e tráfego costuma aparecer ao longo dos meses, conforme concorrência e histórico do site.",
+    },
+    {
+      question: "Vocês fazem SEO local e Google Meu Negócio?",
+      answer:
+        "Sim. A otimização pode incluir Google Meu Negócio, páginas locais, ajustes de informações da empresa e reforço de presença regional para buscas em São José do Rio Preto e entorno.",
+    },
+    {
+      question: "SEO inclui performance e Core Web Vitals?",
+      answer:
+        "Sim. Analisamos velocidade, estrutura técnica, experiência mobile e pontos que impactam Core Web Vitals, indexação e capacidade do site competir melhor no Google.",
+    },
+    {
+      question: "É possível otimizar um site que já está pronto?",
+      answer:
+        "Sim. O trabalho pode ser feito tanto em sites novos quanto em sites já publicados, com auditoria técnica, ajustes de conteúdo, páginas estratégicas e melhorias estruturais.",
+    },
+    {
+      question: "Vocês acompanham posições, tráfego e leads?",
+      answer:
+        "Sim. O acompanhamento pode incluir métricas de tráfego orgânico, palavras-chave, páginas com melhor desempenho e sinais de conversão para orientar as próximas ações.",
+    },
+  ],
+  "/hospedagem": [
+    {
+      question: "A hospedagem inclui SSL e suporte?",
+      answer:
+        "Sim. A estrutura pode incluir SSL, monitoramento, suporte técnico, backups e acompanhamento conforme o formato contratado.",
+    },
+    {
+      question: "Vocês migram sites de outra hospedagem?",
+      answer:
+        "Sim. Podemos fazer a migração de hospedagem, validar domínio, e-mail, SSL e estrutura técnica para reduzir risco de indisponibilidade.",
+    },
+    {
+      question: "Hospedagem influencia SEO e velocidade?",
+      answer:
+        "Sim. Uma infraestrutura lenta ou instável afeta carregamento, experiência do usuário, Core Web Vitals e a capacidade do site competir melhor no Google.",
+    },
+    {
+      question: "Vocês fazem backup e monitoramento?",
+      answer:
+        "Sim. O serviço pode incluir backups, monitoramento de disponibilidade, atualizações e resposta a incidentes conforme o plano contratado.",
+    },
+    {
+      question: "É só para sites novos ou também para sites já publicados?",
+      answer:
+        "Também atendemos sites já publicados. A hospedagem e o suporte podem ser ajustados para sites institucionais, landing pages, lojas virtuais e projetos já em produção.",
+    },
   ],
 };
 

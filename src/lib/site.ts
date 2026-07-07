@@ -11,7 +11,7 @@ export const site = {
   phone: "5517991093195",
   phoneDisplay: "(17) 99109-3195",
   email: "contato@valgor.com.br",
-  cnpj: "11.501.820/0001-83",
+  cnpj: "47.707.728/0001-11",
   hours: "Seg–Sex, 08h30–18h",
   whatsapp:
     "https://api.whatsapp.com/send?phone=5517991093195&text=Olá! Quero falar com a VALGOR.",

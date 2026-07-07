@@ -1,32 +1,24 @@
-import { BenefitsSection } from "@/components/home/BenefitsSection";
 import { CasesSection } from "@/components/home/CasesSection";
-import { ComparisonSection } from "@/components/home/ComparisonSection";
-import { DifferentialsSection } from "@/components/home/DifferentialsSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
-import { ValgorScoreLeadSection } from "@/components/home/ValgorScoreLeadSection";
 import { Hero } from "@/components/home/Hero";
-import { HomeFaqSection } from "@/components/home/HomeFaqSection";
+import { HomeFaqLiteSection } from "@/components/home/HomeFaqLiteSection";
 import { HomePlansSection } from "@/components/home/HomePlansSection";
-import { ProblemSection } from "@/components/home/ProblemSection";
-import { ProcessSection } from "@/components/home/ProcessSection";
-import { TestimonialsCarousel } from "@/components/home/TestimonialsCarousel";
+import { HomeProblemSolutionSection } from "@/components/home/HomeProblemSolutionSection";
+import { HomeScoreBandSection } from "@/components/home/HomeScoreBandSection";
+import { HomeServicesSection } from "@/components/home/HomeServicesSection";
 import { TrustSection } from "@/components/home/TrustSection";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <ValgorScoreLeadSection />
       <TrustSection />
-      <ProblemSection />
-      <BenefitsSection />
-      <DifferentialsSection />
-      <ProcessSection />
-      <ComparisonSection />
+      <HomeServicesSection />
+      <HomeProblemSolutionSection />
       <CasesSection />
-      <TestimonialsCarousel />
+      <HomeScoreBandSection />
       <HomePlansSection />
-      <HomeFaqSection />
+      <HomeFaqLiteSection />
       <FinalCtaSection />
     </>
   );
