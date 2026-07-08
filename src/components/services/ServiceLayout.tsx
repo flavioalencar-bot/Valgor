@@ -1,6 +1,7 @@
 import { PageBanner } from "@/components/ui/PageBanner";
 import { Button } from "@/components/ui/Button";
 import { QUOTE_PATH } from "@/lib/conversion";
+import { type BreadcrumbItem } from "@/lib/breadcrumbs";
 import { type ServiceHighlight } from "@/lib/services-data";
 import { cn } from "@/lib/utils";
 import { CreditCard, Package, ShoppingCart, TrendingUp } from "lucide-react";
@@ -20,6 +21,8 @@ type Props = {
   compact?: boolean;
   /** CTA da sidebar aponta para #planos */
   plansAnchor?: boolean;
+  breadcrumbs?: BreadcrumbItem[];
+  bannerExtra?: ReactNode;
 };
 
 export function ServiceLayout({
@@ -31,15 +34,18 @@ export function ServiceLayout({
   highlights,
   compact = false,
   plansAnchor = false,
+  breadcrumbs,
+  bannerExtra,
 }: Props) {
   return (
     <>
-      <PageBanner title={title} lead={lead} accent={accent} />
+      <PageBanner title={title} lead={lead} accent={accent} breadcrumbs={breadcrumbs} />
 
       <section className={cn("bg-surface", compact ? "pb-8 pt-12 sm:pt-14" : "py-16")}>
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="grid items-start gap-10 lg:grid-cols-3 lg:gap-12">
             <div className="space-y-8 lg:col-span-2">
+              {bannerExtra}
               <div className="space-y-5 leading-relaxed text-muted [&_strong]:text-foreground">
                 {children}
               </div>

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/Button";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { Container, Section } from "@/components/ui/Section";
 import { getPublishedArticles } from "@/lib/blog/repository";
-import { site } from "@/lib/site";
+import { breadcrumbsForBlog } from "@/lib/breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 
@@ -21,6 +21,7 @@ export default async function BlogPage() {
         accent="valgor"
         title="Blog VALGOR"
         lead="Conteúdo estratégico para atrair tráfego orgânico e educar empresas sobre crescimento digital."
+        breadcrumbs={breadcrumbsForBlog()}
       />
       <Section className="bg-surface">
         <Container>

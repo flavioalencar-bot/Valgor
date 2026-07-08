@@ -244,14 +244,19 @@ export const servicePages: Record<string, ServicePageData> = {
       "Desenvolvimento sob medida com integração API e automação comercial para empresas que precisam de sistema de gestão de recrutamento.",
     ],
   },
-  "criacao-de-sites-em-sao-paulo": {
-    slug: "/criacao-de-sites-em-sao-paulo",
+  "web-design-ux-ui": {
+    slug: "/web-design-ux-ui",
     title: "Web Design e UX/UI",
     metaTitle: "Web Design, UX e UI para Sites Profissionais",
     description:
       "Web design, UX, UI e identidade visual para site moderno, site empresarial e landing page de alta conversão.",
     lead: "Design que comunica marca e converte visitantes em clientes.",
     accent: "valgor",
+    schemaService: {
+      name: "Web Design, UX e UI",
+      description:
+        "Web design, UX, UI e identidade visual para sites profissionais, institucionais e landing pages de alta conversão.",
+    },
     features: [
       "Web design e identidade visual",
       "UX/UI e prototipação",

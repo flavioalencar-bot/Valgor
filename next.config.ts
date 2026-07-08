@@ -39,6 +39,11 @@ const nextConfig: NextConfig = {
         destination: "/criacao-de-sites",
         permanent: true,
       },
+      {
+        source: "/criacao-de-sites-em-sao-paulo",
+        destination: "/web-design-ux-ui",
+        permanent: true,
+      },
     ];
   },
 };

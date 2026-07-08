@@ -3,9 +3,12 @@ import { Logo } from "@/components/brand/Logo";
 import { Button } from "@/components/ui/Button";
 import { QUOTE_LABEL, QUOTE_PATH } from "@/lib/conversion";
 import { navigation } from "@/data/navigation";
+import { siteSegments } from "@/lib/keywords";
 import { site } from "@/lib/site";
 import { MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+
+const footerSegments = siteSegments.slice(0, 6);
 
 export function Footer() {
   const links = navigation.flatMap((item) =>
@@ -39,7 +42,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid min-w-0 flex-1 grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_minmax(12rem,0.9fr)_minmax(14rem,1fr)] lg:gap-8 xl:gap-12">
+          <div className="grid min-w-0 flex-1 grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 lg:gap-8 xl:gap-10">
             <div className="min-w-0">
               <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-valgor-500 dark:text-valgor-400">
                 Navegação
@@ -55,6 +58,32 @@ export function Footer() {
                     </Link>
                   </li>
                 ))}
+              </ul>
+            </div>
+
+            <div className="min-w-0">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-valgor-500 dark:text-valgor-400">
+                Segmentos
+              </p>
+              <ul className="space-y-2">
+                {footerSegments.map((seg) => (
+                  <li key={seg.href}>
+                    <Link
+                      href={seg.href}
+                      className="text-sm text-muted transition hover:text-foreground"
+                    >
+                      {seg.title}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link
+                    href="/segmentos"
+                    className="text-sm font-medium text-valgor-600 hover:underline dark:text-valgor-400"
+                  >
+                    Ver todos →
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -113,7 +142,10 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {site.brand} · {site.legalName}. Todos os direitos reservados.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
+            <Link href="/politica-de-privacidade" className="hover:text-foreground">
+              Privacidade
+            </Link>
             <a
               href={site.social.linkedin}
               target="_blank"

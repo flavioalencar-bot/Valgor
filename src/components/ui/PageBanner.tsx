@@ -1,4 +1,6 @@
 import { GridPattern } from "@/components/visuals/GridPattern";
+import { SeoBreadcrumbs } from "@/components/seo/SeoBreadcrumbs";
+import { type BreadcrumbItem } from "@/lib/breadcrumbs";
 import { type BannerAccent } from "@/lib/images";
 import { site } from "@/lib/site";
 import { type ReactNode } from "react";
@@ -15,9 +17,10 @@ type Props = {
   lead: string;
   accent?: BannerAccent;
   children?: ReactNode;
+  breadcrumbs?: BreadcrumbItem[];
 };
 
-export function PageBanner({ title, lead, accent = "valgor", children }: Props) {
+export function PageBanner({ title, lead, accent = "valgor", children, breadcrumbs }: Props) {
   return (
     <section className="relative overflow-hidden border-b border-border-subtle bg-surface pt-28 sm:pt-32">
       <GridPattern className="opacity-60" />
@@ -32,6 +35,7 @@ export function PageBanner({ title, lead, accent = "valgor", children }: Props) 
       />
 
       <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-4 sm:px-6 sm:pb-20 lg:px-8">
+        {breadcrumbs && <SeoBreadcrumbs items={breadcrumbs} className="mb-4" />}
         <p className="text-sm font-semibold uppercase tracking-widest text-valgor-500">{site.brand}</p>
         <h1 className="mt-3 max-w-3xl font-[family-name:var(--font-poppins)] text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           {title}

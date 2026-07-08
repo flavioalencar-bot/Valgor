@@ -36,6 +36,11 @@ export function SegmentsSection() {
           title="Site profissional para o seu nicho"
           description="Desenvolvimento de sites empresariais sob medida — site institucional, landing page e portal web para captar clientes."
         />
+        <p className="-mt-4 mb-6 text-center text-sm text-muted">
+          <Link href="/segmentos" className="font-medium text-valgor-600 hover:underline dark:text-valgor-400">
+            Ver todos os segmentos →
+          </Link>
+        </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {siteSegments.map((seg, i) => {
             const { icon: Icon, accent } = segmentVisuals[i];

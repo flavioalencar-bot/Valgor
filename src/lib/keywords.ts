@@ -178,7 +178,7 @@ export const pageKeywords: Record<string, string[]> = {
     "sistema de gestão",
     "painel administrativo",
   ],
-  "/criacao-de-sites-em-sao-paulo": [
+  "/web-design-ux-ui": [
     "web design",
     "UX",
     "UI",
@@ -234,6 +234,19 @@ export const pageKeywords: Record<string, string[]> = {
     "quanto custa criar um site",
     "solicitar orçamento site",
     ...keywordClusters.local.slice(0, 3),
+  ],
+  "/politica-de-privacidade": [
+    "política de privacidade",
+    "LGPD",
+    "proteção de dados",
+    "cookies",
+  ],
+  "/segmentos": [
+    "site para advogados",
+    "site para médicos",
+    "site por segmento",
+    "criação de sites por nicho",
+    ...keywordClusters.verticals.slice(0, 4),
   ],
 };
 

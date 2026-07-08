@@ -2,6 +2,7 @@ import { CtaBand } from "@/components/home/CtaBand";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { Container, Section } from "@/components/ui/Section";
 import { getArticleBySlug } from "@/lib/blog/repository";
+import { breadcrumbsForBlogArticle } from "@/lib/breadcrumbs";
 import { blogPostingJsonLd, buildMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { notFound } from "next/navigation";
@@ -46,7 +47,12 @@ export default async function BlogArticlePage({ params }: Props) {
           ),
         }}
       />
-      <PageBanner accent="valgor" title={article.title} lead={article.excerpt} />
+      <PageBanner
+        accent="valgor"
+        title={article.title}
+        lead={article.excerpt}
+        breadcrumbs={breadcrumbsForBlogArticle(article.title, slug)}
+      />
       <Section className="bg-surface">
         <Container>
           <article className="prose prose-neutral mx-auto max-w-3xl dark:prose-invert">

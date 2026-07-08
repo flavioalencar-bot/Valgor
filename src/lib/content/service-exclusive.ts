@@ -269,7 +269,7 @@ export const serviceExclusiveSections: Record<string, LongFormSection[]> = {
       ],
     },
   ],
-  "criacao-de-sites-em-sao-paulo": [
+  "web-design-ux-ui": [
     {
       heading: "Web design orientado a conversão",
       paragraphs: [

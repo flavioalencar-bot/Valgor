@@ -22,7 +22,9 @@ const staticPaths = [
   "/Portal-Imobiliario",
   "/Portal-de-Classificados",
   "/portal-de-empregos",
-  "/criacao-de-sites-em-sao-paulo",
+  "/politica-de-privacidade",
+  "/segmentos",
+  "/web-design-ux-ui",
 ];
 
 function sitemapPriority(path: string): number {

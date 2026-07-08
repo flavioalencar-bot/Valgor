@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { keywordsForPath } from "./keywords";
+import { ogImageForPath } from "./og-images";
 import { site } from "./site";
-
-const OG_IMAGE = "/img/visuals/hero-visual.png";
 
 type SeoInput = {
   title: string;
   description: string;
   path?: string;
   keywords?: string[];
+  ogImage?: string;
 };
 
 function resolveTitle(title: string, path: string): string {
@@ -25,9 +25,11 @@ export function buildMetadata({
   description,
   path = "",
   keywords = [],
+  ogImage,
 }: SeoInput): Metadata {
   const url = `${site.url}${path}`;
   const fullTitle = resolveTitle(title, path);
+  const image = ogImage ?? ogImageForPath(path);
 
   const allKeywords = [
     ...new Set([
@@ -52,13 +54,13 @@ export function buildMetadata({
       siteName: site.brand,
       title: fullTitle,
       description,
-      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: site.brand }],
+      images: [{ url: image, width: 1200, height: 630, alt: fullTitle }],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [OG_IMAGE],
+      images: [image],
     },
     other: {
       "geo.region": "BR-SP",

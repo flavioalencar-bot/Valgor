@@ -5,6 +5,7 @@ import { TechStackSection } from "@/components/seo/TechStackSection";
 import { PlansSection } from "@/components/services/PlansSection";
 import { ServiceLayout } from "@/components/services/ServiceLayout";
 import { faqsForPath } from "@/lib/keywords";
+import { breadcrumbsForService } from "@/lib/breadcrumbs";
 import { plansSets } from "@/lib/plans";
 import { type ServicePageData } from "@/lib/services-data";
 import { serviceJsonLd, webPageJsonLd } from "@/lib/seo";
@@ -58,6 +59,7 @@ export function ServicePageView({ page }: { page: ServicePageData }) {
         highlights={page.highlights}
         compact={plansFocused}
         plansAnchor={plansFocused}
+        breadcrumbs={breadcrumbsForService(page)}
       >
         {page.sections
           ? page.sections.map((section) => (

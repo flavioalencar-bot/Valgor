@@ -45,7 +45,7 @@ const longFormTopics: Record<string, { topic: string; focus: string }> = {
     focus:
       "Conectar empresas e candidatos em plataforma própria gera receita recorrente e autoridade em RH regional.",
   },
-  "criacao-de-sites-em-sao-paulo": {
+  "web-design-ux-ui": {
     topic: "Web Design e UX/UI",
     focus:
       "Design profissional diferencia sua marca e aumenta taxa de conversão do site — visitante permanece e confia.",
