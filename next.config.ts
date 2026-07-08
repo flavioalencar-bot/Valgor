@@ -44,6 +44,11 @@ const nextConfig: NextConfig = {
         destination: "/web-design-ux-ui",
         permanent: true,
       },
+      {
+        source: "/desenvolvimento-de-sites",
+        destination: "/criacao-de-sites",
+        permanent: true,
+      },
     ];
   },
 };

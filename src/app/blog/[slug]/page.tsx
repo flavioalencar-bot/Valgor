@@ -1,7 +1,7 @@
 import { CtaBand } from "@/components/home/CtaBand";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { Container, Section } from "@/components/ui/Section";
-import { getArticleBySlug } from "@/lib/blog/repository";
+import { getArticleBySlug, getPublishedArticles } from "@/lib/blog/repository";
 import { breadcrumbsForBlogArticle } from "@/lib/breadcrumbs";
 import { blogPostingJsonLd, buildMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -10,8 +10,8 @@ import { notFound } from "next/navigation";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  const { staticArticles } = await import("@/lib/blog/articles");
-  return staticArticles.map((a) => ({ slug: a.slug }));
+  const articles = await getPublishedArticles();
+  return articles.map((a) => ({ slug: a.slug }));
 }
 
 export async function generateMetadata({ params }: Props) {

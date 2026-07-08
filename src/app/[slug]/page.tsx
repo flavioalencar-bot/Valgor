@@ -1,12 +1,15 @@
 import { SegmentPageView } from "@/components/segments/SegmentPageView";
 import { getSegmentPage, segmentSlugs } from "@/lib/segment-pages";
+import { isRedirectedSegment, segmentRedirectTarget } from "@/lib/seo-redirects";
 import { buildMetadata } from "@/lib/seo";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  return segmentSlugs.map((slug) => ({ slug }));
+  return segmentSlugs
+    .filter((slug) => !isRedirectedSegment(slug))
+    .map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -22,6 +25,8 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function SegmentRoute({ params }: Props) {
   const { slug } = await params;
+  const target = segmentRedirectTarget(slug);
+  if (target) redirect(target);
   const page = getSegmentPage(slug);
   if (!page) notFound();
   return <SegmentPageView page={page} />;

@@ -4,6 +4,7 @@ import { Container, Section } from "@/components/ui/Section";
 import { SeoBreadcrumbs } from "@/components/seo/SeoBreadcrumbs";
 import { PILLAR_CREACAO_SITES } from "@/lib/breadcrumbs";
 import { segmentPages } from "@/lib/segment-pages";
+import { isRedirectedSegment } from "@/lib/seo-redirects";
 import { buildMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 import Link from "next/link";
@@ -14,7 +15,9 @@ export const metadata = buildMetadata({
   path: "/segmentos",
 });
 
-const pages = Object.values(segmentPages);
+const pages = Object.values(segmentPages).filter(
+  (page) => !isRedirectedSegment(page.slug.slice(1)),
+);
 
 export default function SegmentosPage() {
   return (
