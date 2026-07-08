@@ -30,7 +30,11 @@ export async function POST(request: Request) {
     sendContactConfirmation(data);
 
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (err) {
+    if (err instanceof z.ZodError) {
+      const msg = err.issues[0]?.message ?? "Verifique os campos do formulário.";
+      return NextResponse.json({ error: msg }, { status: 400 });
+    }
     return NextResponse.json({ error: "Dados inválidos" }, { status: 400 });
   }
 }

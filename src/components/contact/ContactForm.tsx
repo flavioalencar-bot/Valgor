@@ -5,12 +5,21 @@ import { site } from "@/lib/site";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
+    setErrorMessage(null);
     const form = e.currentTarget;
     const data = new FormData(form);
+    const message = String(data.get("message") ?? "");
+
+    if (message.trim().length < 10) {
+      setStatus("error");
+      setErrorMessage("A mensagem precisa ter pelo menos 10 caracteres.");
+      return;
+    }
 
     try {
       const res = await fetch("/api/contato", {
@@ -21,10 +30,14 @@ export function ContactForm() {
           email: data.get("email"),
           phone: data.get("phone"),
           subject: data.get("subject"),
-          message: data.get("message"),
+          message,
         }),
       });
-      if (!res.ok) throw new Error("fail");
+      const json = (await res.json().catch(() => null)) as { error?: string } | null;
+      if (!res.ok) {
+        setErrorMessage(json?.error ?? "Não foi possível enviar agora.");
+        throw new Error("fail");
+      }
       setStatus("ok");
       form.reset();
     } catch {
@@ -47,7 +60,15 @@ export function ContactForm() {
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-muted">
           Mensagem *
         </label>
-        <textarea id="message" name="message" required rows={5} className={inputClass} />
+        <textarea
+          id="message"
+          name="message"
+          required
+          minLength={10}
+          rows={5}
+          className={inputClass}
+          placeholder="Descreva seu projeto (mínimo 10 caracteres)"
+        />
       </div>
       <button
         type="submit"
@@ -63,7 +84,7 @@ export function ContactForm() {
       )}
       {status === "error" && (
         <p className="text-sm text-red-500">
-          Erro ao enviar. Tente o WhatsApp: {site.phoneDisplay}
+          {errorMessage ?? "Erro ao enviar."} Tente o WhatsApp: {site.phoneDisplay}
         </p>
       )}
     </form>
