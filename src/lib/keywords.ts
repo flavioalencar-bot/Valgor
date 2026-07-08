@@ -152,6 +152,9 @@ export const pageKeywords: Record<string, string[]> = {
   "/google-adwords": [
     "google ads",
     "marketing digital",
+    "gestão de tráfego pago",
+    "campanhas google",
+    "landing page google ads",
     "site para captar clientes",
     "landing page",
     ...keywordClusters.local,
@@ -200,6 +203,37 @@ export const pageKeywords: Record<string, string[]> = {
     "melhor empresa de sites",
     "consultoria em tecnologia",
     ...keywordClusters.local,
+  ],
+  "/landing-pages": [
+    "landing page",
+    "landing page de alta conversão",
+    "criação de landing pages",
+    "landing page google ads",
+    "página de captura",
+    ...keywordClusters.local.slice(0, 2),
+  ],
+  "/valgor-score": [
+    "diagnóstico digital",
+    "auditoria de site",
+    "análise de site",
+    "score digital",
+    "site otimizado para google",
+    ...keywordClusters.local.slice(0, 2),
+  ],
+  "/blog": [
+    "marketing digital",
+    "SEO",
+    "criação de sites",
+    "google ads",
+    "blog agência web",
+    ...keywordClusters.local.slice(0, 2),
+  ],
+  "/solicitar-orcamento": [
+    "orçamento de site",
+    "preço de site",
+    "quanto custa criar um site",
+    "solicitar orçamento site",
+    ...keywordClusters.local.slice(0, 3),
   ],
 };
 
@@ -343,6 +377,28 @@ export const pageFaqs: Record<
         "Também atendemos sites já publicados. A hospedagem e o suporte podem ser ajustados para sites institucionais, landing pages, lojas virtuais e projetos já em produção.",
     },
   ],
+  "/google-adwords": [
+    {
+      question: "Vocês criam campanhas Google Ads do zero?",
+      answer:
+        "Sim. Estruturamos conta, grupos de anúncios, palavras-chave, extensões e landing pages alinhadas à oferta para gerar leads com rastreamento de conversão.",
+    },
+    {
+      question: "Google Ads funciona para empresas locais em SJRP?",
+      answer:
+        "Sim. Segmentamos por região, intenção de busca e horários para empresas de São José do Rio Preto e interior que querem visibilidade imediata no Google.",
+    },
+    {
+      question: "Preciso de landing page para rodar anúncios?",
+      answer:
+        "Recomendamos landing page dedicada para cada campanha — maior conversão que enviar tráfego para a home. Desenvolvemos página + anúncios integrados.",
+    },
+    {
+      question: "Como acompanho o retorno dos anúncios?",
+      answer:
+        "Configuramos conversões, UTMs e relatórios mensais com métricas de clique, custo por lead e ROI para decisões baseadas em dados.",
+    },
+  ],
 };
 
 export function faqsForPath(path: string) {
@@ -350,14 +406,14 @@ export function faqsForPath(path: string) {
 }
 
 export const siteSegments = [
-  { title: "Site para Advogados", desc: "Site institucional com credibilidade e captura de clientes." },
-  { title: "Site para Médicos e Clínicas", desc: "Presença profissional, agendamento e SEO local." },
-  { title: "Site para Restaurantes", desc: "Cardápio digital, delivery e integração WhatsApp." },
-  { title: "Site para Contadores", desc: "Site empresarial com serviços e formulários seguros." },
-  { title: "Site para Imobiliárias", desc: "Site + portal imobiliário com busca de imóveis." },
-  { title: "Site para Escolas", desc: "Portal institucional e comunicação com famílias." },
-  { title: "Site para Academias", desc: "Landing page de alta conversão e planos online." },
-  { title: "Site para Comércio e Indústrias", desc: "Site empresarial e loja virtual integrada." },
+  { title: "Site para Advogados", desc: "Site institucional com credibilidade e captura de clientes.", href: "/site-para-advogados" },
+  { title: "Site para Médicos e Clínicas", desc: "Presença profissional, agendamento e SEO local.", href: "/site-para-medicos" },
+  { title: "Site para Restaurantes", desc: "Cardápio digital, delivery e integração WhatsApp.", href: "/site-para-restaurantes" },
+  { title: "Site para Contadores", desc: "Site empresarial com serviços e formulários seguros.", href: "/site-para-contadores" },
+  { title: "Site para Imobiliárias", desc: "Site + portal imobiliário com busca de imóveis.", href: "/site-para-imobiliarias" },
+  { title: "Site para Escolas", desc: "Portal institucional e comunicação com famílias.", href: "/site-para-empresas" },
+  { title: "Site para Academias", desc: "Landing page de alta conversão e planos online.", href: "/site-para-empresas" },
+  { title: "Site para Comércio e Indústrias", desc: "Site empresarial e loja virtual integrada.", href: "/site-para-empresas" },
 ] as const;
 
 export const techStack = [

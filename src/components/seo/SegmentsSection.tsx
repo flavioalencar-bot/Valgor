@@ -42,7 +42,7 @@ export function SegmentsSection() {
             return (
               <Link
                 key={seg.title}
-                href="/criacao-de-sites"
+                href={seg.href}
                 className="shadow-card group rounded-2xl border border-border bg-surface-card p-5 transition hover:-translate-y-0.5 hover:border-valgor-500/25 hover:shadow-lg dark:shadow-none"
               >
                 <div

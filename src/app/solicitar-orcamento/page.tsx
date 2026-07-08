@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: `Solicitar Orçamento de Site | ${site.brand}`,
+  title: "Solicitar Orçamento de Site",
   description: `${positioning} Solicite orçamento para site profissional, loja virtual ou landing page. Resposta em até 1 dia útil.`,
   path: "/solicitar-orcamento",
 });

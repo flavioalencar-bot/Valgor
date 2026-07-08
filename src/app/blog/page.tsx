@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata = buildMetadata({
-  title: `Blog — Marketing Digital, SEO e Sites | ${site.brand}`,
+  title: "Blog — Marketing Digital, SEO e Sites",
   description: `Artigos sobre marketing digital, SEO, Google, sites e tecnologia para empresas.`,
   path: "/blog",
 });

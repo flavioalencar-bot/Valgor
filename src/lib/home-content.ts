@@ -1,10 +1,11 @@
 import { PORTFOLIO_PATH } from "@/lib/conversion";
+import { site } from "@/lib/site";
 
 export const homeHero = {
   eyebrow: "VALGOR — Publicidade e comunicação digital",
-  title: "Seu próximo cliente está pesquisando sua empresa agora.",
+  title: `Criação de sites profissionais em ${site.city}`,
   subtitle:
-    "Criamos sites, landing pages e estratégias digitais para sua empresa aparecer melhor no Google, gerar mais contatos e transformar visitantes em clientes.",
+    "Seu próximo cliente está pesquisando agora. Criamos sites, landing pages e estratégias digitais para aparecer melhor no Google, gerar mais contatos e transformar visitantes em clientes.",
   primaryCta: "Fazer diagnóstico gratuito",
   secondaryCta: "Solicitar orçamento",
 } as const;

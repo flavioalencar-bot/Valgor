@@ -241,10 +241,8 @@ export function CreateSitesLanding({ page }: { page: ServicePageData }) {
 
               <div>
                 <h1 className="max-w-xl font-[family-name:var(--font-poppins)] text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-[3.45rem] lg:leading-[1.02]">
-                  Sites que atraem,
-                  <br />
-                  conectam e{" "}
-                  <span className="text-valgor-500">geram resultados.</span>
+                  Criação de sites profissionais que{" "}
+                  <span className="text-valgor-500">geram resultados</span> no Google.
                 </h1>
                 <p className="mt-4 max-w-lg text-sm leading-7 text-muted sm:text-base lg:text-[15px]">
                   {page.lead} Desenvolvemos sites premium, rápidos e orientados para conversão,

@@ -76,6 +76,11 @@ export const servicePages: Record<string, ServicePageData> = {
     accent: "valgor",
     seoExtras: ["plans"],
     plansKey: "ecommerce",
+    schemaService: {
+      name: "Criação de Loja Virtual e E-commerce",
+      description:
+        "Loja virtual e e-commerce com checkout, PIX, cartão, painel administrativo, catálogo otimizado e SEO para vender online em São José do Rio Preto.",
+    },
     features: [
       "Loja virtual e catálogo completo",
       "Gateways de pagamento",
@@ -147,6 +152,12 @@ export const servicePages: Record<string, ServicePageData> = {
       "Campanhas Google Ads, marketing digital e landing page de alta conversão para empresas de SJRP.",
     lead: "Visibilidade imediata no Google com gestão profissional de anúncios.",
     accent: "cyan",
+    seoExtras: ["faq"],
+    schemaService: {
+      name: "Google Ads e Marketing Digital",
+      description:
+        "Gestão de campanhas Google Ads, marketing digital e landing pages de alta conversão para empresas de São José do Rio Preto.",
+    },
     features: [
       "Google Ads certificado",
       "Marketing digital regional",
@@ -167,6 +178,11 @@ export const servicePages: Record<string, ServicePageData> = {
       "Portal web, sistema web e aplicação web para imobiliárias — site para imobiliárias com painel administrativo.",
     lead: "Plataforma completa para corretores e imobiliárias monetizarem online.",
     accent: "amber",
+    schemaService: {
+      name: "Portal Web para Imobiliárias",
+      description:
+        "Portal web e sistema web para imobiliárias com painel administrativo, busca de imóveis e captura de leads.",
+    },
     features: [
       "Portal web de imóveis",
       "Painel administrativo",
@@ -187,10 +203,14 @@ export const servicePages: Record<string, ServicePageData> = {
       "Sistema web e portal web de classificados com painel administrativo para monetizar anúncios na sua região.",
     lead: "Seu portal de anúncios com aplicação web completa.",
     accent: "valgor",
+    schemaService: {
+      name: "Portal Web de Classificados",
+      description:
+        "Sistema web e portal de classificados com painel administrativo, moderação e monetização de anúncios.",
+    },
     features: [
       "Portal web de classificados",
       "Painel administrativo",
-      "Moderação e categorias",
       "Monetização com banners",
       "Aplicação web responsiva",
     ],
@@ -207,6 +227,11 @@ export const servicePages: Record<string, ServicePageData> = {
       "Sistema web para vagas, currículos e portal web de empregos com painel administrativo.",
     lead: "Plataforma de RH e portal corporativo para sua região.",
     accent: "violet",
+    schemaService: {
+      name: "Portal Web de Empregos",
+      description:
+        "Sistema web para publicação de vagas, gestão de currículos e portal de empregos com painel administrativo.",
+    },
     features: [
       "Portal web de empregos",
       "Sistema de gestão de vagas",

@@ -2,7 +2,8 @@ import { CtaBand } from "@/components/home/CtaBand";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { Container, Section } from "@/components/ui/Section";
 import { getArticleBySlug } from "@/lib/blog/repository";
-import { buildMetadata } from "@/lib/seo";
+import { blogPostingJsonLd, buildMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
 import { notFound } from "next/navigation";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: Props) {
   const article = await getArticleBySlug(slug);
   if (!article) return {};
   return buildMetadata({
-    title: `${article.title} | Blog VALGOR`,
+    title: article.title,
     description: article.excerpt,
     path: `/blog/${slug}`,
   });
@@ -28,8 +29,23 @@ export default async function BlogArticlePage({ params }: Props) {
   const article = await getArticleBySlug(slug);
   if (!article) notFound();
 
+  const articleUrl = `${site.url}/blog/${slug}`;
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            blogPostingJsonLd({
+              title: article.title,
+              description: article.excerpt,
+              url: articleUrl,
+              datePublished: article.publishedAt,
+            }),
+          ),
+        }}
+      />
       <PageBanner accent="valgor" title={article.title} lead={article.excerpt} />
       <Section className="bg-surface">
         <Container>

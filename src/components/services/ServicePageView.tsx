@@ -82,9 +82,9 @@ export function ServicePageView({ page }: { page: ServicePageData }) {
         <SeoFaqSection
           faqs={faqs}
           eyebrow={page.faqHeader?.eyebrow}
-          title={page.faqHeader?.title}
+          title={page.faqHeader?.title ?? "Perguntas frequentes"}
           description={page.faqHeader?.description}
-          id="faq-criacao-de-sites"
+          id={`faq-${page.slug.replace(/\//g, "")}`}
           compact={plansFocused}
         />
       )}

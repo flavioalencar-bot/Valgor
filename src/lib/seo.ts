@@ -11,6 +11,15 @@ type SeoInput = {
   keywords?: string[];
 };
 
+function resolveTitle(title: string, path: string): string {
+  const stripped = title
+    .replace(new RegExp(`\\s*\\|\\s*${site.brand}\\s*$`, "i"), "")
+    .replace(/\s*\|\s*Blog\s+VALGOR\s*$/i, "")
+    .trim();
+  if (path === "" || path === "/") return stripped;
+  return `${stripped} | ${site.brand}`;
+}
+
 export function buildMetadata({
   title,
   description,
@@ -18,8 +27,7 @@ export function buildMetadata({
   keywords = [],
 }: SeoInput): Metadata {
   const url = `${site.url}${path}`;
-  const fullTitle =
-    path === "" || path === "/" ? title : `${title} | ${site.brand}`;
+  const fullTitle = resolveTitle(title, path);
 
   const allKeywords = [
     ...new Set([
@@ -194,5 +202,39 @@ export function webPageJsonLd(input: {
       name: input.name,
       provider: { "@type": "Organization", name: site.brand },
     },
+  };
+}
+
+export function blogPostingJsonLd(input: {
+  title: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: input.title,
+    description: input.description,
+    url: input.url,
+    datePublished: input.datePublished,
+    dateModified: input.dateModified ?? input.datePublished,
+    author: {
+      "@type": "Organization",
+      name: site.brand,
+      url: site.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: site.legalName,
+      url: site.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${site.url}/img/valgor-logo.png`,
+      },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": input.url },
+    inLanguage: "pt-BR",
   };
 }

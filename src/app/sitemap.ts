@@ -8,7 +8,6 @@ const staticPaths = [
   "/",
   "/solicitar-orcamento",
   "/valgor-score",
-  "/diagnostico-digital",
   "/criacao-de-sites",
   "/landing-pages",
   "/criacao-de-loja-virtual",
@@ -26,23 +25,27 @@ const staticPaths = [
   "/criacao-de-sites-em-sao-paulo",
 ];
 
+function sitemapPriority(path: string): number {
+  if (path === "/") return 1;
+  if (path === "/solicitar-orcamento") return 0.95;
+  if (path === "/valgor-score") return 0.9;
+  if (path === "/criacao-de-sites" || path === "/empresa-de-criacao-de-site") return 0.9;
+
+  const slug = path.slice(1);
+  if (path.startsWith("/blog/")) return 0.75;
+  if (path === "/blog") return 0.8;
+  if (slug in servicePages || segmentSlugs.includes(slug)) return 0.85;
+
+  return 0.7;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url.replace(/\/$/, "");
-  const now = new Date();
 
   return staticPaths.map((path) => ({
     url: path === "/" ? `${base}/` : `${base}${path}`,
-    lastModified: now,
+    lastModified: new Date("2026-07-08"),
     changeFrequency: path === "/" ? "weekly" : "monthly",
-    priority:
-      path === "/"
-        ? 1
-        : path === "/solicitar-orcamento"
-          ? 0.95
-          : path === "/valgor-score" || path === "/diagnostico-digital"
-            ? 0.9
-          : path.startsWith("/blog") || path in servicePages || segmentSlugs.includes(path.slice(1))
-            ? 0.85
-            : 0.7,
+    priority: sitemapPriority(path),
   }));
 }

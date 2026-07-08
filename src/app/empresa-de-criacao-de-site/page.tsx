@@ -17,7 +17,7 @@ export default function EmpresaPage() {
     <>
       <PageBanner
         accent="amber"
-        title="A empresa"
+        title={`Empresa de criação de sites em ${site.city}`}
         lead="Mais de uma década construindo presença digital para empresas do interior paulista."
       />
       <section className="bg-surface py-16">
