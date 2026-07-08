@@ -60,4 +60,16 @@ async function trimAndTransparent(inputName, outputName) {
 }
 
 await trimAndTransparent("valgor-logo-source.png", "valgor-logo.png");
-await trimAndTransparent("valgor-mark-source.png", "valgor-mark.png");
+
+const logoMeta = await sharp(path.join(imgDir, "valgor-logo.png")).metadata();
+const logoH = logoMeta.height ?? 253;
+const iconW = Math.round(logoH * 1.12);
+await sharp(path.join(imgDir, "valgor-logo.png"))
+  .extract({ left: 0, top: 0, width: Math.min(iconW, logoMeta.width ?? iconW), height: logoH })
+  .png()
+  .toFile(path.join(imgDir, "valgor-mark.png"));
+
+await sharp(path.join(imgDir, "valgor-mark.png"))
+  .resize(128, 128, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+  .png()
+  .toFile(path.join(imgDir, "favicon.png"));

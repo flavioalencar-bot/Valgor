@@ -5,11 +5,11 @@ import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-/** PNG recortado — valgor-logo.png (1422×283 após trim) */
-const LOGO_VERSION = "9";
+/** PNG recortado — valgor-logo.png (938×253 após trim) */
+const LOGO_VERSION = "10";
 
-/** Proporção largura/altura do wordmark (~5:1) */
-const LOGO_ASPECT = 1422 / 283;
+/** Proporção largura/altura do wordmark (~3.7:1) */
+const LOGO_ASPECT = 938 / 253;
 
 type LogoProps = {
   className?: string;
@@ -19,10 +19,10 @@ type LogoProps = {
 };
 
 function wordmarkSize(placement: "header" | "footer" | "default", compact: boolean) {
-  if (compact) return { h: 28, maxW: 130 };
-  if (placement === "header") return { h: 30, maxW: 148 };
-  if (placement === "footer") return { h: 36, maxW: 175 };
-  return { h: 30, maxW: 148 };
+  if (compact) return { h: 32, maxW: 150 };
+  if (placement === "header") return { h: 36, maxW: 168 };
+  if (placement === "footer") return { h: 42, maxW: 200 };
+  return { h: 36, maxW: 168 };
 }
 
 export function Logo({

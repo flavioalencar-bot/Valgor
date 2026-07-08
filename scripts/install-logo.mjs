@@ -4,7 +4,7 @@ import path from "node:path";
 
 const outDir = "public/img";
 const defaultSrc =
-  "C:/Users/flavio.alencar/.cursor/projects/c-foxsolution/assets/c__Users_flavio.alencar_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_ChatGPT_Image_25_de_jun._de_2026__17_48_17-105ca777-d1c4-40e0-b6ae-9d2ecfa380b1.png";
+  "C:/Users/flavio.alencar/.cursor/projects/c-foxsolution/assets/c__Users_flavio.alencar_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_ChatGPT_Image_7_de_jul._de_2026__19_41_32-7a816bfe-e2b5-46fb-b343-4ca3d4ffebce.png";
 
 const src = process.argv[2] ?? defaultSrc;
 const input = src.endsWith(".png") ? src : defaultSrc;
