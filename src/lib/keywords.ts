@@ -248,6 +248,14 @@ export const pageKeywords: Record<string, string[]> = {
     "criação de sites por nicho",
     ...keywordClusters.verticals.slice(0, 4),
   ],
+  "/criacao-de-sites-em-sao-jose-do-rio-preto": [
+    "criação de site em rio preto",
+    "criação de sites rio preto",
+    "criação de sites são josé do rio preto",
+    "empresa de criação de sites rio preto",
+    "agência web são josé do rio preto",
+    ...keywordClusters.local,
+  ],
 };
 
 export function keywordsForPath(path: string): string[] {
@@ -279,14 +287,19 @@ export const homeFaqs = [
 
 export const criacaoDeSitesFaqs = [
   {
+    question: "Vocês fazem criação de site em Rio Preto?",
+    answer:
+      `Sim. A ${site.brand} é agência de criação de sites em São José do Rio Preto. Atendemos presencialmente em SJRP e online para todo o Brasil, com proposta em até 1 dia útil.`,
+  },
+  {
     question: "Quanto custa a criação de um site em São José do Rio Preto?",
     answer:
-      "O valor depende do tipo de site (institucional, landing page ou portal), número de páginas, integrações e conteúdo. Enviamos proposta detalhada com preço e prazo após entender seu objetivo — sem compromisso.",
+      "O valor depende do tipo de site (institucional, landing page ou portal), número de páginas, integrações e conteúdo. Planos a partir de R$ 199,90/mês com desenvolvimento incluso. Enviamos proposta com preço e prazo — sem compromisso.",
   },
   {
     question: "Quanto tempo leva para desenvolver um site profissional?",
     answer:
-      "Sites institucionais costumam levar de 3 a 6 semanas; projetos maiores ou com funcionalidades extras podem exigir mais tempo. Definimos cronograma na proposta, com etapas de design, desenvolvimento e revisão.",
+      "Sites institucionais costumam levar de 15 a 30 dias úteis; landing pages, de 7 a 15. Definimos cronograma na proposta, com etapas de design, desenvolvimento e revisão.",
   },
   {
     question: "O site já vem otimizado para o Google?",
@@ -294,14 +307,9 @@ export const criacaoDeSitesFaqs = [
       `Sim. Entregamos site responsivo, rápido e com SEO técnico: URLs amigáveis, meta tags, Core Web Vitals, SSL, sitemap e estrutura preparada para Google Meu Negócio. A ${site.brand} também oferece planos de SEO contínuo.`,
   },
   {
-    question: "Posso atualizar o conteúdo do site sozinho?",
-    answer:
-      "Sim. Incluímos CMS e painel administrativo para editar textos, imagens, blog e páginas sem depender de programador — com treinamento na entrega do projeto.",
-  },
-  {
     question: "Vocês criam site para advogados, clínicas, restaurantes e outros segmentos?",
     answer:
-      "Sim. Desenvolvemos site personalizado para diversos nichos — advogados, médicos, contadores, imobiliárias, escolas, academias, comércio e indústria — com layout e conteúdo adaptados ao seu mercado.",
+      "Sim. Desenvolvemos site personalizado para diversos nichos — advogados, médicos, contadores, imobiliárias, escolas, academias, comércio e indústria — com layout e conteúdo adaptados ao seu mercado em Rio Preto e região.",
   },
 ] as const;
 

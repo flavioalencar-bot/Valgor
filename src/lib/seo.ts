@@ -11,12 +11,11 @@ type SeoInput = {
   ogImage?: string;
 };
 
-function resolveTitle(title: string, path: string): string {
+function resolveTitle(title: string): string {
   const stripped = title
-    .replace(new RegExp(`\\s*\\|\\s*${site.brand}\\s*$`, "i"), "")
+    .replace(new RegExp(`\\s*[|—–-]\\s*${site.brand}\\s*$`, "i"), "")
     .replace(/\s*\|\s*Blog\s+VALGOR\s*$/i, "")
     .trim();
-  if (path === "" || path === "/") return stripped;
   return `${stripped} | ${site.brand}`;
 }
 
@@ -28,7 +27,7 @@ export function buildMetadata({
   ogImage,
 }: SeoInput): Metadata {
   const url = `${site.url}${path}`;
-  const fullTitle = resolveTitle(title, path);
+  const fullTitle = resolveTitle(title);
   const image = ogImage ?? ogImageForPath(path);
 
   const allKeywords = [

@@ -29,6 +29,8 @@ type NicheConfig = {
   features: string[];
   painPoints: string[];
   solutions: string[];
+  faqs?: SegmentPageData["faqs"];
+  extraSections?: SegmentPageData["sections"];
 };
 
 function buildSections(config: NicheConfig): SegmentPageData["sections"] {
@@ -106,7 +108,11 @@ function buildFaqs(config: NicheConfig): SegmentPageData["faqs"] {
 }
 
 function createSegmentPage(config: NicheConfig): SegmentPageData {
-  const rawSections = [...buildSections(config), ...segmentExtraSections(config.niche)];
+  const rawSections = [
+    ...buildSections(config),
+    ...(config.extraSections ?? []),
+    ...segmentExtraSections(config.niche),
+  ];
   const leadWords = config.lead.split(/\s+/).filter(Boolean).length;
   const sectionMin = Math.max(800, 1500 - leadWords);
   const sections = padSectionsToMin(rawSections, config.niche, sectionMin, leadWords, 1500);
@@ -122,7 +128,7 @@ function createSegmentPage(config: NicheConfig): SegmentPageData {
     audience: config.audience,
     features: config.features,
     sections,
-    faqs: buildFaqs(config),
+    faqs: config.faqs ?? buildFaqs(config),
   };
 }
 
@@ -257,12 +263,79 @@ const nichePages: NicheConfig[] = [
     niche: "empresas de São José do Rio Preto",
     audience: "empresas de Rio Preto",
     title: "Criação de Sites em São José do Rio Preto",
-    metaTitle: "Criação de Sites em São José do Rio Preto — VALGOR",
-    description: "Empresa de criação de sites em SJRP. Sites profissionais, SEO local e suporte próximo.",
-    lead: `Agência web local em ${site.city} — mercado regional, padrão nacional.`,
-    features: ["Atendimento local", "SEO Noroeste", "Equipe SJRP", "Planos mensais", "Suporte"],
-    painPoints: ["Agências distantes", "Sites sem SEO regional", "Suporte terceirizado"],
-    solutions: [`Operação em ${site.city}`, "SEO regional", "Cases locais", "Reuniões presenciais"],
+    metaTitle: "Criação de Sites em São José do Rio Preto | Orçamento em 24h",
+    description:
+      "Criação de site em Rio Preto: empresa local de criação de sites profissionais, SEO e landing pages. Atendimento em SJRP, proposta rápida e suporte próximo.",
+    lead: `Procurando criação de site em Rio Preto? A ${site.brand} é agência web em ${site.city} com atendimento local, SEO regional e planos com desenvolvimento incluso.`,
+    features: [
+      "Atendimento presencial em SJRP",
+      "SEO para São José do Rio Preto",
+      "WhatsApp e formulário de leads",
+      "Planos a partir de R$ 199,90/mês",
+      "Suporte local e online",
+    ],
+    painPoints: [
+      "Agências de fora que somem depois da entrega",
+      "Sites sem SEO para buscas locais de Rio Preto",
+      "Orçamentos genéricos sem prazo nem escopo",
+    ],
+    solutions: [
+      `Equipe em ${site.city} com reuniões presenciais ou online`,
+      "SEO local (Google Meu Negócio + páginas regionais)",
+      "Proposta com preço, prazo e o que está incluso",
+    ],
+    extraSections: [
+      {
+        heading: "Criação de sites no Noroeste Paulista",
+        paragraphs: [
+          `Atendemos empresas em São José do Rio Preto e região — Redentora, Boa Vista, Jardim Walkiria, Vila Imperial, Cidade Jardim e bairros comerciais próximos ao Centro e à Av. Alberto Andaló.`,
+          "O mercado local tem polo de saúde (Hospital de Base / FAMERP), comércio forte (Plaza Avenida, Iguatemi) e muita concorrência digital. Um site genérico não basta: precisa aparecer em buscas como “criação de site em rio preto” e converter visitante em WhatsApp ou orçamento.",
+          `A ${site.brand} (${site.legalName}, CNPJ ${site.cnpj}) desenvolve sites institucionais, landing pages e lojas virtuais com foco em resultado comercial para o interior paulista. Contato: ${site.phoneDisplay} · ${site.email} · ${site.hours}.`,
+        ],
+      },
+      {
+        heading: "O que muda com um site feito para Rio Preto",
+        paragraphs: [
+          "SEO local: títulos, textos e schema alinhados à cidade e ao setor do seu negócio — inclusive clínicas, escritórios e comércio do Noroeste Paulista.",
+          "Prova e confiança: telefone, horário, CNPJ e atendimento local visíveis (sinais que o Google e o cliente valorizam).",
+          "Conversão: CTA para WhatsApp, formulário e páginas de serviço claras no celular.",
+          "Performance: site rápido no mobile — a maior parte das buscas locais em Rio Preto vem do smartphone.",
+        ],
+      },
+      {
+        heading: "Por que escolher uma agência de sites em SJRP",
+        paragraphs: [
+          "Agências de outras cidades costumam desaparecer depois da publicação. Em Rio Preto, proximidade importa: reunião presencial, ajuste rápido e suporte no mesmo fuso horário do seu negócio.",
+          `Com a ${site.brand} você combina criação de site profissional, SEO técnico e planos mensais com desenvolvimento incluso — sem depender só de Instagram ou indicação.`,
+          "Ideal para quem busca criação de sites em São José do Rio Preto com proposta clara, prazo definido e acompanhamento contínuo.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Vocês fazem criação de site em Rio Preto?",
+        answer: `Sim. A ${site.brand} é empresa de criação de sites em São José do Rio Preto (${site.city}, SP). Atendemos presencialmente na região e também online para todo o Brasil.`,
+      },
+      {
+        question: "Quanto custa criar um site em São José do Rio Preto?",
+        answer:
+          "Planos mensais a partir de R$ 199,90 com desenvolvimento incluso (conforme escopo). Enviamos proposta com preço, prazo e o que está incluído — sem compromisso.",
+      },
+      {
+        question: "Em quanto tempo o site fica pronto?",
+        answer:
+          "Sites institucionais costumam ficar prontos entre 15 e 30 dias úteis, dependendo do conteúdo e das aprovações. Landing pages podem ser mais rápidas (7 a 15 dias).",
+      },
+      {
+        question: "O site aparece no Google em Rio Preto?",
+        answer:
+          "Entregamos estrutura de SEO técnico, páginas locais e orientação para Google Meu Negócio. O ranking depende também de conteúdo contínuo, reviews e concorrência — acompanhamos isso nos planos de SEO.",
+      },
+      {
+        question: "Atendem presencialmente em SJRP?",
+        answer: `Sim. Realizamos reuniões presenciais em São José do Rio Preto e Noroeste Paulista. Horário: ${site.hours}. Contato: ${site.phoneDisplay} ou ${site.email}.`,
+      },
+    ],
   },
   {
     slug: "desenvolvimento-de-sites",

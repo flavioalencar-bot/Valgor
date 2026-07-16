@@ -33,10 +33,10 @@ export const servicePages: Record<string, ServicePageData> = {
   "criacao-de-sites": {
     slug: "/criacao-de-sites",
     title: `Criação de sites em ${site.city}`,
-    metaTitle: "Criação de Sites e Desenvolvimento Web em São José do Rio Preto",
+    metaTitle: "Criação de Sites em São José do Rio Preto | Orçamento em 24h",
     description:
-      "Empresa de criação de sites: site profissional, institucional, responsivo e landing page. Agência web em SJRP com SEO, CMS e integração WhatsApp.",
-    lead: "Site empresarial, moderno e otimizado para Google — desenvolvido por agência web em São José do Rio Preto.",
+      "Criação de sites em Rio Preto (SJRP): site profissional, institucional e landing page com SEO local, WhatsApp e CMS. Agência VALGOR — peça orçamento sem compromisso.",
+    lead: "Criação de sites em São José do Rio Preto com foco em Google, WhatsApp e geração de contatos — atendimento local e entrega profissional.",
     accent: "valgor",
     seoExtras: ["segments", "plans", "tech", "faq"],
     plansKey: "site",

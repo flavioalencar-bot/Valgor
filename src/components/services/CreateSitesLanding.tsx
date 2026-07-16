@@ -241,12 +241,20 @@ export function CreateSitesLanding({ page }: { page: ServicePageData }) {
 
               <div>
                 <h1 className="max-w-xl font-[family-name:var(--font-poppins)] text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-[3.45rem] lg:leading-[1.02]">
-                  Criação de sites profissionais que{" "}
-                  <span className="text-valgor-500">geram resultados</span> no Google.
+                  Criação de sites em{" "}
+                  <span className="text-valgor-500">São José do Rio Preto</span> que geram
+                  resultados no Google.
                 </h1>
                 <p className="mt-4 max-w-lg text-sm leading-7 text-muted sm:text-base lg:text-[15px]">
                   {page.lead} Desenvolvemos sites premium, rápidos e orientados para conversão,
-                  com SEO técnico e experiência mais profissional.
+                  com SEO técnico e experiência mais profissional.{" "}
+                  <Link
+                    href="/criacao-de-sites-em-sao-jose-do-rio-preto"
+                    className="font-medium text-valgor-600 underline-offset-2 hover:underline dark:text-valgor-400"
+                  >
+                    Ver página local de Rio Preto
+                  </Link>
+                  .
                 </p>
               </div>
 

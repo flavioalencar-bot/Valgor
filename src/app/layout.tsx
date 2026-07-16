@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     apple: "/img/valgor-mark.png",
   },
   ...buildMetadata({
-    title: `Criação de Sites Profissionais em ${site.city} | ${site.brand}`,
+    title: `Criação de Sites em ${site.city} | Orçamento em 24h`,
     description:
-      "Criação de sites, landing pages, SEO, hospedagem e automações para empresas que querem gerar mais clientes pela internet.",
+      "Criação de sites profissionais em São José do Rio Preto: site institucional, landing page e SEO local. Proposta sem compromisso e atendimento em SJRP.",
     path: "/",
   }),
 };

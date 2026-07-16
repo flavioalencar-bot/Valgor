@@ -32,7 +32,13 @@ function sitemapPriority(path: string): number {
   if (path === "/") return 1;
   if (path === "/solicitar-orcamento") return 0.95;
   if (path === "/valgor-score") return 0.9;
-  if (path === "/criacao-de-sites" || path === "/empresa-de-criacao-de-site") return 0.9;
+  if (
+    path === "/criacao-de-sites" ||
+    path === "/empresa-de-criacao-de-site" ||
+    path === "/criacao-de-sites-em-sao-jose-do-rio-preto"
+  ) {
+    return 0.9;
+  }
 
   const slug = path.slice(1);
   if (path.startsWith("/blog/")) return 0.75;

@@ -8,7 +8,13 @@ import { site } from "@/lib/site";
 import { MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
-const footerSegments = siteSegments.slice(0, 6);
+const footerSegments = [
+  {
+    title: "Criação de sites em SJRP",
+    href: "/criacao-de-sites-em-sao-jose-do-rio-preto",
+  },
+  ...siteSegments.slice(0, 5),
+];
 
 export function Footer() {
   const links = navigation.flatMap((item) =>
