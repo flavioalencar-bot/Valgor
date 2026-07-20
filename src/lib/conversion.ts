@@ -1,6 +1,7 @@
 /** URLs e copy de conversão — única ação principal do site */
 export const QUOTE_PATH = "/solicitar-orcamento";
 export const QUOTE_LABEL = "Solicitar Orçamento";
+export const THANK_YOU_PATH = "/obrigado";
 
 export const VALGOR_SCORE_PATH = "/valgor-score";
 export const VALGOR_SCORE_LABEL = "Fazer diagnóstico gratuito";

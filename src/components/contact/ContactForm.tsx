@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { THANK_YOU_PATH } from "@/lib/conversion";
 import { site } from "@/lib/site";
 
 export function ContactForm() {
+  const router = useRouter();
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -40,6 +43,7 @@ export function ContactForm() {
       }
       setStatus("ok");
       form.reset();
+      router.push(THANK_YOU_PATH);
     } catch {
       setStatus("error");
     }
