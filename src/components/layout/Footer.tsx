@@ -16,6 +16,14 @@ const footerSegments = [
   ...siteSegments.slice(0, 5),
 ];
 
+const footerExtraServices = [
+  { label: "Google Ads", href: "/google-adwords" },
+  { label: "Web Design e UX/UI", href: "/web-design-ux-ui" },
+  { label: "Portal Imobiliário", href: "/portal-imobiliario" },
+  { label: "Portal de Classificados", href: "/portal-de-classificados" },
+  { label: "Portal de Empregos", href: "/portal-de-empregos" },
+];
+
 export function Footer() {
   const links = navigation.flatMap((item) =>
     "items" in item ? item.items : [item],
@@ -54,7 +62,7 @@ export function Footer() {
                 Navegação
               </p>
               <ul className="space-y-2">
-                {links.slice(0, 6).map((link) => (
+                {[...links.slice(0, 6), ...footerExtraServices].map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}

@@ -6,9 +6,13 @@ import { breadcrumbsForBlog } from "@/lib/breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 
+/** ISR — artigos publicados no admin aparecem em até 1h sem rebuild */
+export const revalidate = 3600;
+
 export const metadata = buildMetadata({
   title: "Blog — Marketing Digital, SEO e Sites",
-  description: `Artigos sobre marketing digital, SEO, Google, sites e tecnologia para empresas.`,
+  description:
+    "Artigos sobre marketing digital, SEO, Google Ads, criação de sites e tecnologia para empresas que querem crescer online. Conteúdo prático do time VALGOR.",
   path: "/blog",
 });
 

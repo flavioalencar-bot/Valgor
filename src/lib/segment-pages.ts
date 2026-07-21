@@ -75,7 +75,7 @@ function buildSections(config: NicheConfig): SegmentPageData["sections"] {
     {
       heading: `Por que escolher a ${site.brand}`,
       paragraphs: [
-        `${site.brand} é parceira digital em ${site.city} com mais de 12 anos de mercado e milhares de projetos entregues. Equipe própria de design, desenvolvimento e suporte — sem terceirizar a entrega.`,
+        `${site.brand} é parceira digital em ${site.city} com mais de 12 anos de mercado e mais de 300 projetos entregues. Equipe própria de design, desenvolvimento e suporte — sem terceirizar a entrega.`,
         `${site.headline} Nossos planos incluem desenvolvimento, hospedagem, SSL, domínio no primeiro ano e suporte técnico em mensalidade acessível.`,
       ],
     },
@@ -152,7 +152,8 @@ const nichePages: NicheConfig[] = [
     audience: "médicos",
     title: "Site para Médicos",
     metaTitle: "Site para Médicos — Consultório Online Profissional",
-    description: "Criação de site para médicos: credibilidade, agendamento, SEO local e conformidade.",
+    description:
+      "Criação de site para médicos com credibilidade, agendamento online, SEO local e conformidade. Atraia pacientes que pesquisam no Google antes de marcar consulta.",
     lead: "Pacientes pesquisam antes de marcar. Seu site precisa aparecer e transmitir confiança.",
     features: ["Especialidades", "Agendamento", "SEO médico", "WhatsApp", "Mobile first"],
     painPoints: ["Pacientes não encontram o consultório", "Instagram não substitui site", "Falta canal para dúvidas"],
@@ -164,7 +165,8 @@ const nichePages: NicheConfig[] = [
     audience: "clínicas",
     title: "Site para Clínicas",
     metaTitle: "Site para Clínicas — Presença Digital Completa",
-    description: "Site para clínicas: múltiplos profissionais, serviços e captura de pacientes.",
+    description:
+      "Site para clínicas com múltiplos profissionais, especialidades, agendamento e captura de pacientes. Presença digital completa com SEO local em Rio Preto e região.",
     lead: "Centralize especialidades, equipe e agendamentos em uma plataforma profissional.",
     accent: "emerald",
     features: ["Multi-profissionais", "Agendamento", "SEO clínicas", "Galeria", "CMS"],
@@ -177,7 +179,8 @@ const nichePages: NicheConfig[] = [
     audience: "restaurantes",
     title: "Site para Restaurantes",
     metaTitle: "Site para Restaurantes — Cardápio e Delivery",
-    description: "Site para restaurantes com cardápio digital, delivery e SEO local.",
+    description:
+      "Site para restaurantes com cardápio digital, reservas, integração com delivery e WhatsApp. SEO local para aparecer quando o cliente busca onde comer na sua cidade.",
     lead: "Cardápio online, reservas e delivery — disponível 24 horas.",
     accent: "amber",
     features: ["Cardápio digital", "WhatsApp pedidos", "SEO gastronomia", "Galeria", "Mapa"],
@@ -190,7 +193,8 @@ const nichePages: NicheConfig[] = [
     audience: "imobiliárias",
     title: "Site para Imobiliárias",
     metaTitle: "Site para Imobiliárias — Portal e Leads",
-    description: "Site e portal imobiliário com busca de imóveis e captação de leads.",
+    description:
+      "Site e portal imobiliário com busca avançada de imóveis, páginas otimizadas para SEO e captação de leads. Fortaleça a marca da sua imobiliária no Google.",
     lead: "Exiba imóveis, capture leads e fortaleça sua marca.",
     features: ["Busca imóveis", "Formulários", "SEO imobiliário", "Portal", "CRM"],
     painPoints: ["Portais terceiros caros", "Leads diluídos", "Marca fraca online"],
@@ -202,7 +206,8 @@ const nichePages: NicheConfig[] = [
     audience: "escritórios",
     title: "Site para Escritórios",
     metaTitle: "Site para Escritórios — Institucional Profissional",
-    description: "Site institucional para escritórios com SEO e captura de clientes.",
+    description:
+      "Site institucional para escritórios com comunicação profissional, SEO local e captura de clientes. Transmita a seriedade do seu escritório desde o primeiro acesso.",
     lead: "Comunicação profissional que reflete a seriedade do seu escritório.",
     features: ["Institucional", "Serviços", "Blog", "Formulários", "SEO"],
     painPoints: ["Site antigo", "Serviços mal explicados", "Concorrentes no Google"],
@@ -214,7 +219,8 @@ const nichePages: NicheConfig[] = [
     audience: "contadores",
     title: "Site para Contadores",
     metaTitle: "Site para Contadores — Escritório Contábil Online",
-    description: "Site para contadores: credibilidade, serviços e captação de empresas.",
+    description:
+      "Site para contadores e escritórios contábeis: credibilidade, apresentação de serviços e captação de empresas que buscam contabilidade confiável na sua região.",
     lead: "Atraia empresas que buscam contabilidade confiável.",
     features: ["Serviços contábeis", "Área cliente", "SEO contabilidade", "Proposta", "Blog fiscal"],
     painPoints: ["Empresas não encontram online", "Falta conteúdo expert", "Site sem mobile"],
@@ -226,7 +232,8 @@ const nichePages: NicheConfig[] = [
     audience: "engenheiros",
     title: "Site para Engenheiros",
     metaTitle: "Site para Engenheiros — Portfólio e Projetos",
-    description: "Site para engenheiros com portfólio de obras e SEO.",
+    description:
+      "Site para engenheiros com portfólio de obras, projetos, credenciais e SEO local. Apresente seus serviços com profissionalismo e gere contatos qualificados.",
     lead: "Apresente projetos, serviços e credenciais com site profissional.",
     accent: "cyan",
     features: ["Portfólio obras", "Serviços", "SEO", "Orçamento", "CREA"],
@@ -239,7 +246,8 @@ const nichePages: NicheConfig[] = [
     audience: "arquitetos",
     title: "Site para Arquitetos",
     metaTitle: "Site para Arquitetos — Portfólio Visual Premium",
-    description: "Site para arquitetos com portfólio visual e captura de clientes.",
+    description:
+      "Site para arquitetos com portfólio visual premium, projetos em destaque e captura de clientes. Um site à altura dos seus projetos, com SEO e performance.",
     lead: "Seu portfólio merece um site à altura dos seus projetos.",
     accent: "violet",
     features: ["Portfólio premium", "Galeria", "SEO arquitetura", "Briefing", "Instagram"],
@@ -252,7 +260,8 @@ const nichePages: NicheConfig[] = [
     audience: "empresas",
     title: "Site para Empresas",
     metaTitle: "Site para Empresas — Institucional e Comercial",
-    description: "Site empresarial com SEO e geração de leads em São José do Rio Preto.",
+    description:
+      "Site empresarial com SEO e geração de leads em São José do Rio Preto. Estrutura comercial para comércio, indústria e serviços que querem vender mais.",
     lead: "Site empresarial que vende, não apenas apresenta.",
     features: ["Institucional", "SEO", "Integrações", "CMS", "Analytics"],
     painPoints: ["Site desatualizado", "Zero leads", "Concorrentes no Google"],
@@ -263,7 +272,7 @@ const nichePages: NicheConfig[] = [
     niche: "empresas de São José do Rio Preto",
     audience: "empresas de Rio Preto",
     title: "Criação de Sites em São José do Rio Preto",
-    metaTitle: "Criação de Sites em São José do Rio Preto | Orçamento em 24h",
+    metaTitle: "Criação de Sites em São José do Rio Preto",
     description:
       "Criação de site em Rio Preto: empresa local de criação de sites profissionais, SEO e landing pages. Atendimento em SJRP, proposta rápida e suporte próximo.",
     lead: `Procurando criação de site em Rio Preto? A ${site.brand} é agência web em ${site.city} com atendimento local, SEO regional e planos com desenvolvimento incluso.`,
@@ -356,7 +365,8 @@ const nichePages: NicheConfig[] = [
     audience: "empresas com site",
     title: "Manutenção de Sites",
     metaTitle: "Manutenção de Sites — Suporte e Segurança",
-    description: "Manutenção de sites: atualizações, backups, SSL e suporte técnico.",
+    description:
+      "Manutenção de sites com atualizações, backups diários, SSL, monitoramento e suporte técnico. Seu site sempre seguro, rápido e funcionando — sem dor de cabeça.",
     lead: "Site sempre atualizado, seguro e funcionando.",
     accent: "emerald",
     features: ["Alterações", "Backups", "Monitoramento", "SSL", "Suporte"],

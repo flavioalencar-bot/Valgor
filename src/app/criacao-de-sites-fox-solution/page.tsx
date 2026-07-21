@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-/** Mantém URL legada indexada — redireciona para a página de conversão PRD */
+/** Fallback do 301 em next.config — mesmo destino para consistência */
 export default function LegacyContatoPage() {
-  redirect("/solicitar-orcamento");
+  redirect("/criacao-de-sites");
 }

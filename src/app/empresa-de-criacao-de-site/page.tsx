@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export const metadata = buildMetadata({
   title: "Empresa de Criação de Sites e Agência Web",
-  description: `${site.brand}: empresa de criação de sites e soluções de TI em ${site.city}. Desenvolvimento web, consultoria em tecnologia e transformação digital há 12+ anos.`,
+  description: `${site.brand}: empresa de criação de sites em ${site.city}. Desenvolvimento web, lojas virtuais e portais há mais de 12 anos.`,
   path: "/empresa-de-criacao-de-site",
 });
 
@@ -48,7 +48,7 @@ export default function EmpresaPage() {
               <div className="grid gap-4 pt-2 sm:grid-cols-2">
                 {[
                   ["12+", "Anos de mercado"],
-                  ["10k+", "Projetos"],
+                  ["+300", "Projetos"],
                   [site.city, "Nossa base"],
                   [site.cnpj, "CNPJ"],
                 ].map(([a, b]) => (

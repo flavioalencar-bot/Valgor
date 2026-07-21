@@ -65,7 +65,7 @@ export function serviceLongFormBlocks(topic: string, focus: string): LongFormSec
     {
       heading: `Por que a ${site.brand}`,
       paragraphs: [
-        `Mais de 12 anos de mercado e milhares de projetos entregues no ${site.region}. Equipe própria — design, desenvolvimento e suporte no mesmo time.`,
+        `Mais de 12 anos de mercado e mais de 300 projetos entregues no ${site.region}. Equipe própria — design, desenvolvimento e suporte no mesmo time.`,
         "Planos mensais a partir de R$ 199,90 com desenvolvimento incluso, hospedagem, SSL, domínio no primeiro ano e suporte técnico.",
         "Atendimento em português, reuniões online ou presenciais em São José do Rio Preto, cobertura para todo o Brasil.",
         "Não somos apenas fornecedores: somos parceiros de crescimento digital. Seu sucesso com o site é nosso sucesso comercial.",

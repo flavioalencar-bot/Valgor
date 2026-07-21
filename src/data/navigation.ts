@@ -127,7 +127,7 @@ export const stats = [
 
   { value: "12+", label: "Anos de mercado" },
 
-  { value: "10k+", label: "Projetos entregues" },
+  { value: "+300", label: "Projetos entregues" },
 
   { value: "SJRP", label: "Base em Rio Preto" },
 

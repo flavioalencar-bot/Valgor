@@ -159,14 +159,14 @@ export const pageKeywords: Record<string, string[]> = {
     "landing page",
     ...keywordClusters.local,
   ],
-  "/Portal-Imobiliario": [
+  "/portal-imobiliario": [
     "portal web",
     "sistema web",
     "site para imobiliárias",
     "painel administrativo",
     "aplicação web",
   ],
-  "/Portal-de-Classificados": [
+  "/portal-de-classificados": [
     "portal web",
     "sistema web",
     "aplicação web",
@@ -432,9 +432,9 @@ export const siteSegments = [
   { title: "Site para Restaurantes", desc: "Cardápio digital, delivery e integração WhatsApp.", href: "/site-para-restaurantes" },
   { title: "Site para Contadores", desc: "Site empresarial com serviços e formulários seguros.", href: "/site-para-contadores" },
   { title: "Site para Imobiliárias", desc: "Site + portal imobiliário com busca de imóveis.", href: "/site-para-imobiliarias" },
-  { title: "Site para Escolas", desc: "Portal institucional e comunicação com famílias.", href: "/site-para-empresas" },
-  { title: "Site para Academias", desc: "Landing page de alta conversão e planos online.", href: "/site-para-empresas" },
-  { title: "Site para Comércio e Indústrias", desc: "Site empresarial e loja virtual integrada.", href: "/site-para-empresas" },
+  { title: "Site para Escritórios", desc: "Institucional profissional com captação de clientes.", href: "/site-para-escritorios" },
+  { title: "Site para Engenheiros e Arquitetos", desc: "Portfólio de projetos com SEO e credibilidade.", href: "/site-para-engenheiros" },
+  { title: "Site para Empresas", desc: "Site empresarial, comércio e indústria com loja integrada.", href: "/site-para-empresas" },
 ] as const;
 
 export const techStack = [

@@ -2,7 +2,7 @@ import { ServicePageView } from "@/components/services/ServicePageView";
 import { getEnrichedServicePage } from "@/lib/services-content";
 import { buildMetadata } from "@/lib/seo";
 
-const KEY = "Portal-de-Classificados";
+const KEY = "portal-imobiliario";
 const page = getEnrichedServicePage(KEY)!;
 
 export const metadata = buildMetadata({

@@ -47,3 +47,6 @@ public/img/*-trim.png
 next-env.d.ts
 
 /src/generated/prisma
+
+# Relatorios de canvas do Cursor
+*.canvas.tsx

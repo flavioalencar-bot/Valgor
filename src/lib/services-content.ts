@@ -30,12 +30,12 @@ const longFormTopics: Record<string, { topic: string; focus: string }> = {
     focus:
       "Campanhas bem gerenciadas trazem leads qualificados enquanto SEO organicamente amadurece — combinação ideal para crescimento.",
   },
-  "Portal-Imobiliario": {
+  "portal-imobiliario": {
     topic: "Portal Imobiliário",
     focus:
       "Imobiliárias que possuem portal próprio capturam leads sem pagar comissão a portais nacionais e fortalecem marca local.",
   },
-  "Portal-de-Classificados": {
+  "portal-de-classificados": {
     topic: "Portal de Classificados",
     focus:
       "Portais regionais de anúncios monetizam tráfego local com modelo comprovado em todo o Brasil.",

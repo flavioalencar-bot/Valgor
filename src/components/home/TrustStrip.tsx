@@ -3,7 +3,7 @@ import { Award, MapPin, Shield, Users } from "lucide-react";
 
 const items = [
   { icon: Award, label: "+12 anos de mercado" },
-  { icon: Users, label: "+10.000 projetos entregues" },
+  { icon: Users, label: "+300 projetos entregues" },
   { icon: MapPin, label: "Base em São José do Rio Preto" },
   { icon: Shield, label: "Suporte e hospedagem próprios" },
 ];

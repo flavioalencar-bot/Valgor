@@ -49,6 +49,16 @@ const nextConfig: NextConfig = {
         destination: "/criacao-de-sites",
         permanent: true,
       },
+      {
+        source: "/Portal-Imobiliario",
+        destination: "/portal-imobiliario",
+        permanent: true,
+      },
+      {
+        source: "/Portal-de-Classificados",
+        destination: "/portal-de-classificados",
+        permanent: true,
+      },
     ];
   },
 };

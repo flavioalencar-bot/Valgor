@@ -1,5 +1,3 @@
-import { connection } from "next/server";
-
 declare global {
   interface Window {
     __VALGOR_ANALYTICS__?: {
@@ -10,10 +8,8 @@ declare global {
   }
 }
 
-/** Expõe IDs de analytics no HTML (runtime .env — funciona no Docker sem rebuild). */
-export async function RuntimeAnalyticsConfig() {
-  await connection();
-
+/** Expõe IDs de analytics no HTML — valores lidos no build (ver args do Dockerfile). */
+export function RuntimeAnalyticsConfig() {
   const config = {
     gaId: process.env.NEXT_PUBLIC_GA_ID?.trim() ?? "",
     metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID?.trim() ?? "",

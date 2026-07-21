@@ -5,6 +5,9 @@ import { servicePages } from "@/lib/services-data";
 import { site } from "@/lib/site";
 import type { MetadataRoute } from "next";
 
+/** ISR — inclui artigos novos do blog em até 24h */
+export const revalidate = 86400;
+
 const BASE_STATIC_PATHS = [
   "/",
   "/solicitar-orcamento",
@@ -18,8 +21,8 @@ const BASE_STATIC_PATHS = [
   "/criacao-de-sites-e-loja-virtual",
   "/empresa-de-criacao-de-site",
   "/blog",
-  "/Portal-Imobiliario",
-  "/Portal-de-Classificados",
+  "/portal-imobiliario",
+  "/portal-de-classificados",
   "/portal-de-empregos",
   "/politica-de-privacidade",
   "/segmentos",
@@ -60,7 +63,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: path === "/" ? `${base}/` : `${base}${path}`,
     lastModified: articleDates.get(path)
       ? new Date(articleDates.get(path)!)
-      : new Date("2026-07-08"),
+      : new Date("2026-07-21"),
     changeFrequency: path === "/" ? "weekly" : "monthly",
     priority: sitemapPriority(path),
   }));

@@ -9,6 +9,9 @@ import { notFound } from "next/navigation";
 
 type Props = { params: Promise<{ slug: string }> };
 
+/** ISR — artigos publicados no admin aparecem em até 1h sem rebuild */
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
   const articles = await getPublishedArticles();
   return articles.map((a) => ({ slug: a.slug }));

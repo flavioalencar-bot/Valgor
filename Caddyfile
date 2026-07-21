@@ -2,9 +2,14 @@
 	email contato@valgor.com.br
 }
 
-www.valgor.com.br, valgor.com.br {
+www.valgor.com.br {
 	encode gzip
 	reverse_proxy http://app:3000
+}
+
+# Consolida sinais SEO no domínio canônico www
+valgor.com.br {
+	redir https://www.valgor.com.br{uri} permanent
 }
 
 valgor.vps-uni5.net {

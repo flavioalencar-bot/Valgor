@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     apple: "/img/valgor-mark.png",
   },
   ...buildMetadata({
-    title: `Criação de Sites em ${site.city} | Orçamento em 24h`,
+    title: `Agência Web em ${site.city} — Sites e SEO`,
     description:
-      "Criação de sites profissionais em São José do Rio Preto: site institucional, landing page e SEO local. Proposta sem compromisso e atendimento em SJRP.",
+      "Agência web em São José do Rio Preto: criação de sites, landing pages, lojas virtuais e SEO local. Diagnóstico gratuito e orçamento em até 24 horas.",
     path: "/",
   }),
 };

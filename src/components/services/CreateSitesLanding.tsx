@@ -35,7 +35,7 @@ import {
 } from "lucide-react";
 
 const stats = [
-  { value: "+150", label: "Projetos entregues", icon: BarChart3 },
+  { value: "+300", label: "Projetos entregues", icon: BarChart3 },
   { value: "99,9%", label: "Disponibilidade", icon: ShieldCheck },
   { value: "5 dias", label: "Prazo médio", icon: Clock3 },
   { value: "100%", label: "Responsivos", icon: MonitorSmartphone },
@@ -241,8 +241,8 @@ export function CreateSitesLanding({ page }: { page: ServicePageData }) {
 
               <div>
                 <h1 className="max-w-xl font-[family-name:var(--font-poppins)] text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-[3.45rem] lg:leading-[1.02]">
-                  Criação de sites em{" "}
-                  <span className="text-valgor-500">São José do Rio Preto</span> que geram
+                  Criação de sites{" "}
+                  <span className="text-valgor-500">profissionais</span> que geram
                   resultados no Google.
                 </h1>
                 <p className="mt-4 max-w-lg text-sm leading-7 text-muted sm:text-base lg:text-[15px]">

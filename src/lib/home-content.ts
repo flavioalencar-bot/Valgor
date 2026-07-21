@@ -2,10 +2,10 @@ import { PORTFOLIO_PATH } from "@/lib/conversion";
 import { site } from "@/lib/site";
 
 export const homeHero = {
-  eyebrow: "VALGOR — criação de sites em São José do Rio Preto",
-  title: `Criação de sites profissionais em ${site.city}`,
+  eyebrow: "VALGOR — agência web em São José do Rio Preto",
+  title: `Agência web em ${site.city}: sites que geram clientes`,
   subtitle:
-    "Agência local para site institucional, landing page e SEO. Orçamento em até 24h — sua empresa aparece melhor no Google e gera mais contatos.",
+    "Criação de sites, landing pages, lojas virtuais e SEO local. Orçamento em até 24h — sua empresa aparece melhor no Google e gera mais contatos.",
   primaryCta: "Fazer diagnóstico gratuito",
   secondaryCta: "Solicitar orçamento",
 } as const;

@@ -155,7 +155,7 @@ export const serviceExclusiveSections: Record<string, LongFormSection[]> = {
       ],
     },
   ],
-  "Portal-Imobiliario": [
+  "portal-imobiliario": [
     {
       heading: "Portal imobiliário completo",
       paragraphs: [
@@ -193,7 +193,7 @@ export const serviceExclusiveSections: Record<string, LongFormSection[]> = {
       ],
     },
   ],
-  "Portal-de-Classificados": [
+  "portal-de-classificados": [
     {
       heading: "Portal de classificados regional",
       paragraphs: [

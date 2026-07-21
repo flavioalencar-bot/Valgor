@@ -123,7 +123,7 @@ export function localBusinessJsonLd() {
         closes: "18:00",
       },
     ],
-    sameAs: [site.social.facebook, site.social.linkedin, site.social.twitter],
+    sameAs: [site.social.facebook, site.social.linkedin],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: `Serviços digitais ${site.brand}`,

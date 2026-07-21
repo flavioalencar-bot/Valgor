@@ -33,10 +33,10 @@ export const servicePages: Record<string, ServicePageData> = {
   "criacao-de-sites": {
     slug: "/criacao-de-sites",
     title: `Criação de sites em ${site.city}`,
-    metaTitle: "Criação de Sites em São José do Rio Preto | Orçamento em 24h",
+    metaTitle: "Criação de Sites Profissionais — Orçamento em 24h",
     description:
-      "Criação de sites em Rio Preto (SJRP): site profissional, institucional e landing page com SEO local, WhatsApp e CMS. Agência VALGOR — peça orçamento sem compromisso.",
-    lead: "Criação de sites em São José do Rio Preto com foco em Google, WhatsApp e geração de contatos — atendimento local e entrega profissional.",
+      "Criação de sites profissionais: site institucional, empresarial e landing page com SEO técnico, WhatsApp e CMS. Planos com desenvolvimento incluso.",
+    lead: "Criação de sites profissionais com foco em Google, WhatsApp e geração de contatos — atendimento próximo e entrega de qualidade.",
     accent: "valgor",
     seoExtras: ["segments", "plans", "tech", "faq"],
     plansKey: "site",
@@ -69,7 +69,7 @@ export const servicePages: Record<string, ServicePageData> = {
   "criacao-de-loja-virtual": {
     slug: "/criacao-de-loja-virtual",
     title: `Loja virtual em ${site.city}`,
-    metaTitle: "Criação de Loja Virtual e E-commerce em São José do Rio Preto",
+    metaTitle: "Criação de Loja Virtual em São José do Rio Preto",
     description:
       "Criação de loja virtual e e-commerce em São José do Rio Preto com checkout, PIX, cartão, painel administrativo, catálogo otimizado e SEO para vender online.",
     lead: "Criação de loja virtual e e-commerce profissional para vender online com site rápido, seguro e integração WhatsApp.",
@@ -117,9 +117,9 @@ export const servicePages: Record<string, ServicePageData> = {
   "seo-otimizacao-de-site": {
     slug: "/seo-otimizacao-de-site",
     title: "SEO e Otimização",
-    metaTitle: "SEO para Sites e Google Meu Negócio em São José do Rio Preto",
+    metaTitle: "SEO em São José do Rio Preto — Otimização de Sites",
     description:
-      "SEO para sites em São José do Rio Preto com auditoria técnica, Google Meu Negócio, Core Web Vitals, conteúdo estratégico e foco em mais tráfego orgânico e contatos.",
+      "SEO para sites em São José do Rio Preto: auditoria técnica, Google Meu Negócio, Core Web Vitals e conteúdo para gerar tráfego orgânico e contatos.",
     lead: "SEO técnico, SEO local e performance para aumentar visibilidade no Google e gerar contatos recorrentes.",
     accent: "emerald",
     faqHeader: {
@@ -149,7 +149,7 @@ export const servicePages: Record<string, ServicePageData> = {
     title: "Google Ads",
     metaTitle: "Google Ads e Marketing Digital em São José do Rio Preto",
     description:
-      "Campanhas Google Ads, marketing digital e landing page de alta conversão para empresas de SJRP.",
+      "Gestão de campanhas Google Ads em São José do Rio Preto: anúncios segmentados, landing pages de alta conversão e relatórios de ROI para gerar leads.",
     lead: "Visibilidade imediata no Google com gestão profissional de anúncios.",
     accent: "cyan",
     seoExtras: ["faq"],
@@ -170,12 +170,12 @@ export const servicePages: Record<string, ServicePageData> = {
       "Integramos anúncios com site otimizado para Google e formulários de captura — site para vender mais e site para captar clientes com investimento mensurável.",
     ],
   },
-  "Portal-Imobiliario": {
-    slug: "/Portal-Imobiliario",
+  "portal-imobiliario": {
+    slug: "/portal-imobiliario",
     title: "Portal Imobiliário",
     metaTitle: "Portal Web e Sistema Web para Imobiliárias",
     description:
-      "Portal web, sistema web e aplicação web para imobiliárias — site para imobiliárias com painel administrativo.",
+      "Portal imobiliário com busca avançada de imóveis, painel administrativo e captação de leads. Sistema web sob medida para imobiliárias e corretores.",
     lead: "Plataforma completa para corretores e imobiliárias monetizarem online.",
     accent: "amber",
     schemaService: {
@@ -195,12 +195,12 @@ export const servicePages: Record<string, ServicePageData> = {
       "Solução de desenvolvimento sob medida para imobiliárias de São José do Rio Preto e todo o Brasil — portal corporativo escalável com integração API.",
     ],
   },
-  "Portal-de-Classificados": {
-    slug: "/Portal-de-Classificados",
+  "portal-de-classificados": {
+    slug: "/portal-de-classificados",
     title: "Portal de Classificados",
     metaTitle: "Portal Web de Classificados e Anúncios",
     description:
-      "Sistema web e portal web de classificados com painel administrativo para monetizar anúncios na sua região.",
+      "Portal de classificados com cadastro de anunciantes, moderação, monetização por banners e planos. Sistema web completo para anúncios na sua região.",
     lead: "Seu portal de anúncios com aplicação web completa.",
     accent: "valgor",
     schemaService: {
@@ -224,7 +224,7 @@ export const servicePages: Record<string, ServicePageData> = {
     title: "Portal de Empregos",
     metaTitle: "Portal Web e Sistema de Gestão de Vagas",
     description:
-      "Sistema web para vagas, currículos e portal web de empregos com painel administrativo.",
+      "Portal de empregos com sistema de vagas, currículos, área do candidato e painel administrativo. Desenvolvimento sob medida para RH e mídia regional.",
     lead: "Plataforma de RH e portal corporativo para sua região.",
     accent: "violet",
     schemaService: {
@@ -272,7 +272,7 @@ export const servicePages: Record<string, ServicePageData> = {
   hospedagem: {
     slug: "/hospedagem",
     title: "Hospedagem de Sites",
-    metaTitle: "Hospedagem de Sites, SSL e Cloud em São José do Rio Preto",
+    metaTitle: "Hospedagem de Sites em São José do Rio Preto",
     description:
       "Hospedagem de sites em São José do Rio Preto com SSL, cloud, backups, domínio, suporte técnico e performance para manter seu site rápido e seguro.",
     lead: "Infraestrutura estável, suporte técnico e segurança para manter seu site rápido e no ar.",
