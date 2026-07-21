@@ -101,8 +101,10 @@ export function localBusinessJsonLd() {
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
+      streetAddress: `${site.streetAddress}, ${site.neighborhood}`,
       addressLocality: site.city,
       addressRegion: site.state,
+      postalCode: site.postalCode,
       addressCountry: "BR",
     },
     geo: {
@@ -173,8 +175,10 @@ export function serviceJsonLd(input: {
       telephone: `+${site.phone}`,
       address: {
         "@type": "PostalAddress",
+        streetAddress: `${site.streetAddress}, ${site.neighborhood}`,
         addressLocality: site.city,
         addressRegion: site.state,
+        postalCode: site.postalCode,
         addressCountry: "BR",
       },
     },

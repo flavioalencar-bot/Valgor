@@ -8,6 +8,11 @@ export const site = {
   city: "São José do Rio Preto",
   state: "SP",
   region: "Noroeste Paulista",
+  streetAddress: "Rua Cilo Rodrigues, 1657",
+  neighborhood: "Luz da Esperança",
+  postalCode: "15056-806",
+  addressDisplay:
+    "Rua Cilo Rodrigues, 1657 — Luz da Esperança, São José do Rio Preto - SP, CEP 15056-806",
   phone: "5517991093195",
   phoneDisplay: "(17) 99109-3195",
   email: "contato@valgor.com.br",

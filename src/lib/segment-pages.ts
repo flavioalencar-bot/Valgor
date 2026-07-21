@@ -299,7 +299,7 @@ const nichePages: NicheConfig[] = [
         paragraphs: [
           `Atendemos empresas em São José do Rio Preto e região — Redentora, Boa Vista, Jardim Walkiria, Vila Imperial, Cidade Jardim e bairros comerciais próximos ao Centro e à Av. Alberto Andaló.`,
           "O mercado local tem polo de saúde (Hospital de Base / FAMERP), comércio forte (Plaza Avenida, Iguatemi) e muita concorrência digital. Um site genérico não basta: precisa aparecer em buscas como “criação de site em rio preto” e converter visitante em WhatsApp ou orçamento.",
-          `A ${site.brand} (${site.legalName}, CNPJ ${site.cnpj}) desenvolve sites institucionais, landing pages e lojas virtuais com foco em resultado comercial para o interior paulista. Contato: ${site.phoneDisplay} · ${site.email} · ${site.hours}.`,
+          `A ${site.brand} (${site.legalName}, CNPJ ${site.cnpj}) desenvolve sites institucionais, landing pages e lojas virtuais com foco em resultado comercial para o interior paulista. Endereço: ${site.addressDisplay}. Contato: ${site.phoneDisplay} · ${site.email} · ${site.hours}.`,
         ],
       },
       {
@@ -342,7 +342,7 @@ const nichePages: NicheConfig[] = [
       },
       {
         question: "Atendem presencialmente em SJRP?",
-        answer: `Sim. Realizamos reuniões presenciais em São José do Rio Preto e Noroeste Paulista. Horário: ${site.hours}. Contato: ${site.phoneDisplay} ou ${site.email}.`,
+        answer: `Sim. Realizamos reuniões presenciais em São José do Rio Preto e Noroeste Paulista. Estamos na ${site.streetAddress}, ${site.neighborhood} (CEP ${site.postalCode}). Horário: ${site.hours}. Contato: ${site.phoneDisplay} ou ${site.email}.`,
       },
     ],
   },

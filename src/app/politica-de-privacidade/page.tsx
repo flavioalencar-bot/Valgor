@@ -14,7 +14,7 @@ const sections = [
   {
     heading: "1. Quem somos",
     paragraphs: [
-      `Esta política se aplica aos serviços digitais operados por ${site.legalName}, marca ${site.brand}, com sede em ${site.city}, ${site.state}, CNPJ ${site.cnpj}.`,
+      `Esta política se aplica aos serviços digitais operados por ${site.legalName}, marca ${site.brand}, com sede em ${site.streetAddress}, ${site.neighborhood}, ${site.city}, ${site.state}, CEP ${site.postalCode}, CNPJ ${site.cnpj}.`,
       `Controlador dos dados: ${site.legalName}. Contato do encarregado/DPO: ${site.email} ou telefone ${site.phoneDisplay}.`,
     ],
   },

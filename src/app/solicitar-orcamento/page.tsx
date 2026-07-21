@@ -50,7 +50,11 @@ export default function SolicitarOrcamentoPage() {
                     </a>
                   </li>
                   <li>
-                    {site.city}, {site.state} · {site.hours}
+                    {site.streetAddress}
+                    <br />
+                    {site.neighborhood} — {site.city}, {site.state}
+                    <br />
+                    CEP {site.postalCode} · {site.hours}
                   </li>
                 </ul>
               </div>

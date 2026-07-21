@@ -49,7 +49,11 @@ export function Footer() {
             <div className="mt-5 flex items-start gap-2 text-sm text-muted">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-valgor-500 dark:text-valgor-400" />
               <span>
-                {site.city}, {site.state}
+                {site.streetAddress}
+                <br />
+                {site.neighborhood} — {site.city}, {site.state}
+                <br />
+                CEP {site.postalCode}
                 <br />
                 {site.hours}
               </span>

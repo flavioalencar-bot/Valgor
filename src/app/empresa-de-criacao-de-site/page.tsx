@@ -41,6 +41,10 @@ export default function EmpresaPage() {
                 lojas virtuais, portais e marketing digital.
               </p>
               <p>
+                Estamos na {site.streetAddress}, bairro {site.neighborhood} — {site.city}/{site.state},
+                CEP {site.postalCode}. Atendimento: {site.hours}.
+              </p>
+              <p>
                 Combinamos design, desenvolvimento e estratégia para entregar projetos que geram
                 resultado — do institucional ao e-commerce e plataformas SaaS como portais
                 imobiliários.
