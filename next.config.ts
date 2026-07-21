@@ -49,16 +49,8 @@ const nextConfig: NextConfig = {
         destination: "/criacao-de-sites",
         permanent: true,
       },
-      {
-        source: "/Portal-Imobiliario",
-        destination: "/portal-imobiliario",
-        permanent: true,
-      },
-      {
-        source: "/Portal-de-Classificados",
-        destination: "/portal-de-classificados",
-        permanent: true,
-      },
+      // Redirects das URLs antigas /Portal-* (maiúsculas) ficam no Caddy:
+      // o matcher do Next é case-insensitive e criaria loop na URL minúscula.
     ];
   },
 };

@@ -4,6 +4,14 @@
 
 www.valgor.com.br {
 	encode gzip
+
+	# 301 das URLs legadas com maiúsculas (regex é case-sensitive)
+	@oldPortalImob path_regexp ^/Portal-Imobiliario/?$
+	redir @oldPortalImob /portal-imobiliario permanent
+
+	@oldPortalClass path_regexp ^/Portal-de-Classificados/?$
+	redir @oldPortalClass /portal-de-classificados permanent
+
 	reverse_proxy http://app:3000
 }
 
