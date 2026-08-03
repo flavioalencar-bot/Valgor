@@ -271,11 +271,11 @@ const nichePages: NicheConfig[] = [
     slug: "criacao-de-sites-em-sao-jose-do-rio-preto",
     niche: "empresas de São José do Rio Preto",
     audience: "empresas de Rio Preto",
-    title: "Criação de Sites em São José do Rio Preto",
-    metaTitle: "Criação de Sites em São José do Rio Preto",
+    title: "Criação de site em Rio Preto",
+    metaTitle: "Criação de Site em Rio Preto | Orçamento em 24h",
     description:
-      "Criação de site em Rio Preto: empresa local de criação de sites profissionais, SEO e landing pages. Atendimento em SJRP, proposta rápida e suporte próximo.",
-    lead: `Procurando criação de site em Rio Preto? A ${site.brand} é agência web em ${site.city} com atendimento local, SEO regional e planos com desenvolvimento incluso.`,
+      "Criação de site em Rio Preto com atendimento local: site profissional, SEO e WhatsApp. Orçamento em até 24h — empresa em SJRP, proposta sem compromisso.",
+    lead: `Procurando criação de site em Rio Preto? A ${site.brand} é empresa local em ${site.city}: site profissional, SEO regional, WhatsApp e orçamento em até 24 horas.`,
     features: [
       "Atendimento presencial em SJRP",
       "SEO para São José do Rio Preto",
