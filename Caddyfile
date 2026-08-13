@@ -24,3 +24,45 @@ valgor.vps-uni5.net {
 	encode gzip
 	reverse_proxy http://app:3000
 }
+
+
+
+gestao.valgor.vps-uni5.net {
+	encode gzip
+	reverse_proxy valgor-gestao-app:3000
+}
+
+evolution.valgor.vps-uni5.net {
+	encode gzip
+	reverse_proxy evolution-api:8080
+}
+
+www.riopretoesportes.com.br, riopretoesportes.com.br, rota.valgor.vps-uni5.net {
+	encode gzip
+	reverse_proxy 172.17.0.1:3022
+}
+
+# Luximobi / Ricardo Fernandes — ambos os domínio no mesmo portal
+# luximobi — apex cedralrural aguardando DNS A -> 177.153.194.236
+www.cedralrural.com.br, imoveiscedral.com.br, www.imoveiscedral.com.br {
+
+	encode gzip
+	reverse_proxy 172.17.0.1:3081
+}
+
+imoveis.valgor.vps-uni5.net {
+	encode gzip
+	reverse_proxy 172.17.0.1:3081
+}
+
+# CatenaDash / Prodata Jira Dash (homolog)
+dash.valgor.vps-uni5.net {
+	encode gzip
+	reverse_proxy 172.17.0.1:3040
+}
+
+# DirectPaper (Valgor Commerce) — nginx no host :3080
+directpaper.com.br, www.directpaper.com.br {
+	encode gzip
+	reverse_proxy 172.17.0.1:3080
+}
